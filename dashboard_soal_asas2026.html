@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> asas2026_SMPN8_CIKARANG_UTARA</title>
+  <title>asas2026_SMPN8_CIKARANG_UTARA</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts: Plus Jakarta Sans -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-   <link rel="icon" type="image/png" href="https://i.imgur.com/mRmw86t.jpeg">
+  <link rel="icon" type="image/png" href="https://i.imgur.com/mRmw86t.jpeg">
   <style>
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
@@ -52,7 +52,7 @@
           </div>
           <div>
             <h1 class="text-base sm:text-lg font-extrabold tracking-tight text-white leading-tight">
-              Dashboard Sumatif AKhir Semeter
+              Dashboard Sumatif Akhir Semester
             </h1>
             <p class="text-xs text-purple-200 font-medium">SMP Negeri 8 Cikarang Utara</p>
           </div>
@@ -105,10 +105,9 @@
   <main class="max-w-6xl w-full mx-auto px-4 sm:px-6 py-8 flex-1">
     
     <!-- ===================================================================== -->
-    <!-- VIEW 1: PORTAL SOAL (MAPEL & MODAL PILIH KELAS)                       -->
+    <!-- VIEW 1: PORTAL SOAL (DARI SHEET link_soal)                           -->
     <!-- ===================================================================== -->
     <section id="viewSoal">
-      <!-- Banner Info Soal -->
       <div class="glass-card rounded-3xl p-6 sm:p-8 mb-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 relative overflow-hidden shadow-2xl">
         <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-gradient-to-br from-pink-500/25 to-purple-500/25 rounded-full blur-2xl pointer-events-none"></div>
         <div class="relative z-10">
@@ -124,7 +123,7 @@
             <i data-lucide="unlock" class="w-4 h-4 text-emerald-300"></i> Bisa Diakses
           </div>
           <div class="px-4 py-2.5 rounded-2xl bg-slate-900/60 border border-slate-700 text-slate-400 flex items-center gap-2 font-medium">
-            <i data-lucide="lock" class="w-4 h-4 text-slate-500"></i> Belum Dibuka
+            <i data-lucide="lock" class="w-4 h-4 text-slate-500"></i> Tidak Aktif
           </div>
         </div>
       </div>
@@ -159,7 +158,7 @@
     </section>
 
     <!-- ===================================================================== -->
-    <!-- VIEW 2: LIHAT HASIL UJIAN (PILIH KELAS -> FILTER MAPEL -> TUNTAS/REM)  -->
+    <!-- VIEW 2: LIHAT HASIL UJIAN (DARI SHEET link_hasil)                    -->
     <!-- ===================================================================== -->
     <section id="viewHasil" class="hidden">
       
@@ -172,7 +171,7 @@
             Rekapitulasi Nilai & Ketuntasan (KKM)
           </span>
           <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Hasil Evaluasi Siswa</h2>
-          <p class="text-sm text-purple-200/90 mt-1">Pilih kelas terlebih dahulu, lalu pilih mata pelajaran untuk melihat daftar siswa <span class="text-emerald-300 font-bold">Tuntas</span> dan <span class="text-rose-300 font-bold">Perlu Remedial</span>.</p>
+          <p class="text-sm text-purple-200/90 mt-1">Pilih kelas terlebih dahulu, lalu pilih mata pelajaran berstatus <span class="text-emerald-300 font-bold">Aktif</span> untuk melihat daftar siswa <span class="text-emerald-300 font-bold">Tuntas</span> dan <span class="text-rose-300 font-bold">Perlu Remedial</span>.</p>
         </div>
 
         <!-- Info KKM per Jenjang -->
@@ -192,8 +191,17 @@
       <!-- Loading State Hasil CSV -->
       <div id="hasilLoading" class="glass-card rounded-3xl p-10 text-center">
         <div class="w-12 h-12 border-4 border-pink-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-        <p class="text-base font-bold text-white">Memuat Data Nilai dari 36 Sheet Mata Pelajaran...</p>
-        <p class="text-xs text-purple-200 mt-1">Sedang menyinkronkan data Kelas 7, 8, dan 9. Mohon tunggu sebentar.</p>
+        <p id="hasilLoadingTitle" class="text-base font-bold text-white">Mengambil Daftar Link CSV dari Sheet link_hasil...</p>
+        <p id="hasilLoadingDesc" class="text-xs text-purple-200 mt-1">Memeriksa status Aktif dan Tidak Aktif per mapel.</p>
+      </div>
+
+      <!-- Error / Empty State Hasil CSV -->
+      <div id="hasilEmptyOrError" class="hidden glass-card rounded-3xl p-8 text-center max-w-lg mx-auto">
+        <div class="w-14 h-14 rounded-2xl bg-amber-500/20 text-amber-300 flex items-center justify-center mx-auto mb-4">
+          <i data-lucide="info" class="w-7 h-7"></i>
+        </div>
+        <h3 id="hasilEmptyTitle" class="text-lg font-bold text-white">Hasil Ujian Tidak Ditampilkan</h3>
+        <p id="hasilEmptyDesc" class="text-xs text-purple-200 mt-2">Tidak ada link CSV yang berstatus Aktif pada sheet link_hasil.</p>
       </div>
 
       <!-- Container Pilihan Kelas -->
@@ -206,13 +214,10 @@
           <span id="totalKelasBadge" class="text-xs font-bold px-3 py-1 rounded-full bg-white/10 text-purple-200 border border-white/15">0 Kelas</span>
         </div>
         
-        <!-- Grid Tombol Kelas -->
-        <div id="hasilKelasButtons" class="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-2.5">
-          <!-- Diisi dinamis -->
-        </div>
+        <div id="hasilKelasButtons" class="grid grid-cols-3 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-2.5"></div>
       </div>
 
-      <!-- Container Filter Mata Pelajaran (Muncul setelah kelas dipilih) -->
+      <!-- Container Filter Mata Pelajaran -->
       <div id="hasilMapelSelector" class="hidden mb-8 glass-card rounded-3xl p-5 border-white/15">
         <div class="flex items-center justify-between mb-3">
           <h3 class="text-sm sm:text-base font-extrabold text-white flex items-center gap-2">
@@ -220,9 +225,7 @@
             <span>Langkah 2: Pilih Mata Pelajaran (<span id="mapelStepKelasLabel" class="text-pink-300">Kelas</span>)</span>
           </h3>
         </div>
-        <div id="hasilMapelButtons" class="flex flex-wrap gap-2">
-          <!-- Tombol mapel diisi dinamis -->
-        </div>
+        <div id="hasilMapelButtons" class="flex flex-wrap gap-2"></div>
       </div>
 
       <!-- Container Hasil Per Kelas (Terpisah Tuntas vs Remedial) -->
@@ -259,7 +262,7 @@
         <!-- Dua Kolom Terpisah: Tuntas & Remedial -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           
-          <!-- KOLOM 1: SISWA TUNTAS (LULUS KKM) -->
+          <!-- KOLOM 1: SISWA TUNTAS -->
           <div class="glass-card rounded-3xl overflow-hidden border-emerald-400/40 flex flex-col shadow-xl">
             <div class="p-5 bg-gradient-to-r from-emerald-600/40 to-teal-600/30 border-b border-emerald-400/30 flex items-center justify-between">
               <div class="flex items-center gap-3">
@@ -284,14 +287,12 @@
                     <th class="py-3 px-3.5 text-right w-20">Skor</th>
                   </tr>
                 </thead>
-                <tbody id="tableBodyTuntas" class="divide-y divide-white/10 text-sm">
-                  <!-- Diisi dinamis -->
-                </tbody>
+                <tbody id="tableBodyTuntas" class="divide-y divide-white/10 text-sm"></tbody>
               </table>
             </div>
           </div>
 
-          <!-- KOLOM 2: SISWA REMEDIAL (DI BAWAH KKM) -->
+          <!-- KOLOM 2: SISWA REMEDIAL -->
           <div class="glass-card rounded-3xl overflow-hidden border-rose-400/40 flex flex-col shadow-xl">
             <div class="p-5 bg-gradient-to-r from-rose-600/40 to-orange-600/30 border-b border-rose-400/30 flex items-center justify-between">
               <div class="flex items-center gap-3">
@@ -316,9 +317,7 @@
                     <th class="py-3 px-3.5 text-right w-20">Skor</th>
                   </tr>
                 </thead>
-                <tbody id="tableBodyRemedial" class="divide-y divide-white/10 text-sm">
-                  <!-- Diisi dinamis -->
-                </tbody>
+                <tbody id="tableBodyRemedial" class="divide-y divide-white/10 text-sm"></tbody>
               </table>
             </div>
           </div>
@@ -369,67 +368,13 @@
 
   <script>
     // =========================================================================
-    // 1. KONFIGURASI API GOOGLE APPS SCRIPT (/exec)
+    // 1. SATU URL WEB APP (/exec) UNTUK 2 SHEET ("link_soal" & "link_hasil")
     // =========================================================================
-    const API_URL = "https://script.google.com/macros/s/AKfycbxIhXrVNgIoAoRc3h6857MiMzLijb41iUd_qwx8i2Z7euKihbAGhzbur-hrEEK0OsTm/exec";
-
-    // =========================================================================
-    // 2. MAPPING 36 CSV HASIL UJIAN BESERTA NAMA MAPEL & JENJANGNYA
-    // =========================================================================
-    const CSV_SOURCES = [
-      // B.INDO
-      { mapel: "B.INDO", jenjang: 7, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRsApgqE7QyRbrFXaep-KiWaFwfnI39qSEdbY3NXk1__dP5rI5YHEfWLSKzhNpURn3XPjwXCpozDmyK/pub?gid=107493068&single=true&output=csv" },
-      { mapel: "B.INDO", jenjang: 8, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdf73lB9D2QeFUqOQ0VDVOZaQRBLkR1ZkDZxtFkLf_UVKjrsm0DTks6UhGH2W1CoX5s6ooUb3rjvte/pub?gid=107493068&single=true&output=csv" },
-      { mapel: "B.INDO", jenjang: 9, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQBv_FC_qqzVY6QiTEXKePzRwBuUNZRoPEjK7OUY3lwS6LWn250ohBJ88yWLrhq0Mz7B1oQ3niHcL0v/pub?gid=107493068&single=true&output=csv" },
-      // B.INGG
-      { mapel: "B.INGG", jenjang: 7, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTXCJMh-ORxtaFUpUgIyOvCD1sKtE9GDBjPc_mInIWVVH06kRrVvodPDPu7zjlfz0W90zeJroMDVyWp/pub?gid=107493068&single=true&output=csv" },
-      { mapel: "B.INGG", jenjang: 8, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRGKSs3hmMqYzC_2eeE0kw7H74EDNy_8W71jhHOmfOQ-5DJ_LiA7jMLuverDeLYAznl3ofgfvF5eeF3/pub?gid=107493068&single=true&output=csv" },
-      { mapel: "B.INGG", jenjang: 9, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQBO355dkuZ0ZpLIcowxGmSEjBmjfEIWPHZESlEETQQUHvDE20Qcls14TQVE6jXYOL7U1QNcQlBq9Vc/pub?gid=107493068&single=true&output=csv" },
-      // B.SUNDA
-      { mapel: "B.SUNDA", jenjang: 7, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQC0hEwGqF2c0wW5c9XqleJfrW0yGZc1YytHW5t0cXAQfrmTMsCr5ClQsQZCimBRGTno4CwETNTnPwt/pub?gid=107493068&single=true&output=csv" },
-      { mapel: "B.SUNDA", jenjang: 8, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSsBmJ88DYhzx1DCYOaqrFUVuBdUPoIhRV-pax7SFg1TXgdpFmcawYYIn-gDQTePOuaaGfkjyYMvZGk/pub?gid=107493068&single=true&output=csv" },
-      { mapel: "B.SUNDA", jenjang: 9, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ7HPdSeo8I-FVEahx6zdBz2rGRETTjTmtVqRhJuzv6mIRi-onx-gNGdvOi9s02soxqwSbDwllIpnLM/pub?gid=107493068&single=true&output=csv" },
-      // BTQ
-      { mapel: "BTQ", jenjang: 7, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSdEAAmwM-cOL1utgvhKI4EvQv9tNSONJLlktJCHrbTPMGi67PvM36RR5U-LOEYqdBBNA4UpfP2DiKZ/pub?gid=107493068&single=true&output=csv" },
-      { mapel: "BTQ", jenjang: 8, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQEynoSKpespd7viGZdJHMNSZ416q_De3BjusXjTlpQK-fwkrLxeA9IGGCeSsgkYH0eB6E_y4IP1P12/pub?gid=107493068&single=true&output=csv" },
-      { mapel: "BTQ", jenjang: 9, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRiMRpsDH3OH5oC4sDkGTaxU609E1hFfYlNDjK9YETuln5bp8xKjaAmihy4xqoqRJDifRj6EU_xTL6u/pub?gid=107493068&single=true&output=csv" },
-      // INFORMATIKA
-      { mapel: "INFORMATIKA", jenjang: 7, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTUMxTsvvzAaQUcOD_cT_S0QsQl79lcmIRKA2AvJrloottO5vvZn1Q5pYJ53l5zpsQeascI3mcsHcMK/pub?gid=107493068&single=true&output=csv" },
-      { mapel: "INFORMATIKA", jenjang: 8, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vS8td-srU62AQmDthQZ0FVEeqQn6SRQPVhiDEGtVZlkb99ANtbRx_j6yVewn0erk93Q2l8t8Z2ZbfnM/pub?gid=107493068&single=true&output=csv" },
-      { mapel: "INFORMATIKA", jenjang: 9, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRa2q8ndQNhFe_Jkvb7bWYbaebfg85b6sa858KHFOzUNKr6ccDGxHfQDPrA3hY82FFRKzmOmB2zOcMc/pub?gid=107493068&single=true&output=csv" },
-      // IPA
-      { mapel: "IPA", jenjang: 7, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQW1Gikom1csfeSRDiXmDPWYFFPN_ox2_RgwwWGsU7lcK-JHN4AfSj3ryEmjQQlhQgRYqqTF9jLu8f2/pub?gid=107493068&single=true&output=csv" },
-      { mapel: "IPA", jenjang: 8, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ9t8jquLhdyGMoHIttYq5YGuAxzLzg69tkAmxuRr7DCH6TZV9VajMaEi2q6rudBQ9_BmCPzvOnHhSF/pub?gid=107493068&single=true&output=csv" },
-      { mapel: "IPA", jenjang: 9, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQwQMUN1EtAQdVTbpw-UhG0Z6_sBzP-bcGC8MPq7LjvgDeFAyAaXsqPTQqI8JuvwkchcTZtc7_IF7Nc/pub?gid=107493068&single=true&output=csv" },
-      // IPS
-      { mapel: "IPS", jenjang: 7, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSE44n6J2l98Y38udbb4VEN-8NCiqMOslh-mod7hULHdkwIbdLHFGMLzXS8rQ1JKXr1UK59fiuR6y3o/pub?gid=107493068&single=true&output=csv" },
-      { mapel: "IPS", jenjang: 8, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vT1smDv4Jk7He-_v_kawajiB2WE2apJNkg2MV_KELiHs-acP1aOF2F0_mx04cV4VyrLya_7XB6wOK89/pub?gid=107493068&single=true&output=csv" },
-      { mapel: "IPS", jenjang: 9, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTcRAmbnhBn9BoykyH5F9Y7y1DW5CvBHnk2YbW7OA4QaW35r-260f4r0UAVbQbzXtwzy94OMJ8gLPDC/pub?gid=107493068&single=true&output=csv" },
-      // PAIBP
-      { mapel: "PAIBP", jenjang: 7, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTMSXrVBRr8usSQ881T5zVMuEISTP345mY4LFNt7KzN3LS7q7NlGQUkNTQw2SJ4dwv1RNDkRIQA-rSa/pub?gid=107493068&single=true&output=csv" },
-      { mapel: "PAIBP", jenjang: 8, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQc_DddJWAA0pzvgt7odZIGHz_uD_YiS1m1s3tqNiuKuUzvdGi-4PsjAKgA9Vuh0LaDgdu2KAuhSBdE/pub?gid=107493068&single=true&output=csv" },
-      { mapel: "PAIBP", jenjang: 9, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTmuVn_bIkaFWXOvs8lO4eW6I_RpysKjFAX04bhIkPO8Pl8t4_24_0ok6lLckB4YEcsPK-zajuIvTL_/pub?gid=107493068&single=true&output=csv" },
-      // PJOK
-      { mapel: "PJOK", jenjang: 7, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRCkrsZ16W2LlBasTjv0qI_XTf3iVL8AuC0BlTHRfllDd94HdlzXNHOH0uZhzIbtvWYndGe8bi8tB7Q/pub?gid=107493068&single=true&output=csv" },
-      { mapel: "PJOK", jenjang: 8, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTnIkrjV9UttKGDLwUCa46q021R3XaA09CStqaycQqpRKOz-LMhyNRvUZus9DzI_U_LYjTwmoy-K7z8/pub?gid=107493068&single=true&output=csv" },
-      { mapel: "PJOK", jenjang: 9, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQk0eyb4m_QtEsrqpcF0hmM9hIroOLnL7YaFf3nLfwF9RaMTgCL7_p3PqrkYX6qYBo8byGMEF4r35iJ/pub?gid=107493068&single=true&output=csv" },
-      // PKN
-      { mapel: "PKN", jenjang: 7, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTuFtbk8SqWsnUrJ4RSURrbyFp6aevl-dX-9uZxK8c7ME39z1e8dIhxdF-0rgS2qni-CCyl_XW4YVqd/pub?gid=107493068&single=true&output=csv" },
-      { mapel: "PKN", jenjang: 8, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vS6gx78WZwB599NSbTTCuyoyopyt-rZhsm5RbgcHqnX2T2rwCHJ4Bg8Ed-fM3nIE0dFpbkbW64PahKE/pub?gid=107493068&single=true&output=csv" },
-      { mapel: "PKN", jenjang: 9, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTHbULz7AegH5Bf2x4B4N4hRraED8qZpiIm5_Xnvf-hUCa8pDS0hvjB_oRFnn1f5yCJA9YzauD_S-ZZ/pub?gid=107493068&single=true&output=csv" },
-      // SENI
-      { mapel: "SENI", jenjang: 7, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTmcXqF1DUrBf-rhK1AVDhD80xsgiuefcBdUY84BcXxiG8YnxZcp5GiP7pKK0hsSLRYIAyWSybK0KaP/pub?gid=107493068&single=true&output=csv" },
-      { mapel: "SENI", jenjang: 8, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vR6Z_dhQ__PpLHb8UDCCrD-t-VQfyTynN9V9WwD2M0Wg7-B0ENjo10IknNNimr80t4-p6czPEA5lnAv/pub?gid=107493068&single=true&output=csv" },
-      { mapel: "SENI", jenjang: 9, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTspixtjnuPaeUD9wEXW3deEFWNpv2ONs--S84fQVVZqcsAOVoazvM9Ny8xjv7wPYsDl_hKOkUkBT2R/pub?gid=107493068&single=true&output=csv" },
-      // MTK
-      { mapel: "MTK", jenjang: 7, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTy_wJcN8ymXv410_VxmTg0IlL6du_7PVswTd4sdR5NFDPVB7fW_cYzFL0YVOStGhWHWZbB0t5v78Ar/pub?gid=107493068&single=true&output=csv" },
-      { mapel: "MTK", jenjang: 8, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQRjPCtFpxXej0TbMBbiBMCtKTS_nOAzdlpRfpO3VkhAmdJaO6pac5XGnanxOKLL2rB254M5IXj-yBj/pub?gid=107493068&single=true&output=csv" },
-      { mapel: "MTK", jenjang: 9, url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQYNwf_AkxdZocvK2KIvLZaxsD8shJmmaXTBj-n2p767CA2h5WwtVD8EaaBtne_Gnas95V96d6ARrZ0/pub?gid=107493068&single=true&output=csv" }
-    ];
+    const API_URL = "https://script.google.com/macros/s/AKfycbxcNc_1aQhAXov4hXPLObn7KlDYqN_vQ4vDmzG70J53VBCRnao3gzumx7_W0RCcByuE/exec";
 
     let currentTab = 'soal';
     let allMapelData = [];
-    let allHasilData = []; // Menampung seluruh baris dari 36 CSV beserta properti .mapel
+    let allHasilData = [];
     let hasilLoaded = false;
     let selectedKelas = null;
     let selectedFilterMapel = "ALL";
@@ -440,7 +385,6 @@
       fetchData();
     });
 
-    // Navigasi antar Tab
     function switchTab(tabName) {
       currentTab = tabName;
       const viewSoal = document.getElementById("viewSoal");
@@ -479,7 +423,6 @@
       }
     }
 
-    // Pencarian Dinamis Sesuai Tab Aktif
     document.getElementById("searchInput").addEventListener("input", (e) => {
       const keyword = e.target.value.toLowerCase().trim();
       if (currentTab === 'soal') {
@@ -493,7 +436,7 @@
     });
 
     // =========================================================================
-    // LOGIKA 1: FETCH & RENDER PORTAL SOAL
+    // LOGIKA 1: FETCH & RENDER PORTAL SOAL (?type=soal -> sheet "link_soal")
     // =========================================================================
     async function fetchData() {
       const loadingEl = document.getElementById("loadingState");
@@ -509,14 +452,14 @@
       refreshIcon.classList.add("animate-spin");
 
       try {
-        const response = await fetch(API_URL);
+        const response = await fetch(`${API_URL}?type=soal`);
         const result = await response.json();
 
         if (result.status !== "success") {
           throw new Error(result.message || "Terjadi kesalahan pada server Apps Script.");
         }
 
-        allMapelData = result.data;
+        allMapelData = result.data || [];
         loadingEl.classList.add("hidden");
         renderCards(allMapelData);
 
@@ -565,7 +508,7 @@
                 </span>
               </div>
               <h3 class="text-xl font-extrabold text-white group-hover:text-pink-300 transition">${item.mapel}</h3>
-              <p class="text-xs text-purple-200 mt-1 font-medium">${activeCount} dari ${totalCount} kelas tersedia</p>
+              <p class="text-xs text-purple-200 mt-1 font-medium">${activeCount} dari ${totalCount} kelas aktif</p>
             </div>
             <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-bold text-pink-300">
               <span>Pilih Kelas</span>
@@ -583,11 +526,11 @@
                   <i data-lucide="lock" class="w-6 h-6"></i>
                 </div>
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-slate-800 text-slate-400 border border-slate-700">
-                  Nonaktif
+                  Tidak Aktif
                 </span>
               </div>
               <h3 class="text-xl font-bold text-slate-400">${item.mapel}</h3>
-              <p class="text-xs text-slate-500 mt-1">Belum dibuka oleh admin</p>
+              <p class="text-xs text-slate-500 mt-1">Soal belum dibuka</p>
             </div>
             <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-medium text-slate-500">
               <span>Akses Terkunci</span>
@@ -651,7 +594,7 @@
     });
 
     // =========================================================================
-    // LOGIKA 2: FETCH & PARSE 36 CSV DENGAN LABEL MAPEL MASING-MASING
+    // LOGIKA 2: FETCH & RENDER HASIL (?type=hasil -> sheet "link_hasil")
     // =========================================================================
     function parseCSVLine(line) {
       const result = [];
@@ -677,28 +620,80 @@
       return result;
     }
 
+    function isKelasMatch(sheetKelas, studentKelas) {
+      const sKelas = String(sheetKelas || "").toUpperCase().trim();
+      const stKelas = String(studentKelas || "").toUpperCase().trim();
+      if (!sKelas) return true;
+      if (sKelas === stKelas) return true;
+
+      if (sKelas === "7" && (stKelas.startsWith("7") || stKelas.startsWith("VII"))) return true;
+      if (sKelas === "8" && (stKelas.startsWith("8") || stKelas.startsWith("VIII"))) return true;
+      if (sKelas === "9" && (stKelas.startsWith("9") || stKelas.startsWith("IX"))) return true;
+
+      return false;
+    }
+
     async function fetchAllCsvData() {
       const loadingEl = document.getElementById("hasilLoading");
+      const loadingTitle = document.getElementById("hasilLoadingTitle");
+      const loadingDesc = document.getElementById("hasilLoadingDesc");
+      const emptyOrErrorEl = document.getElementById("hasilEmptyOrError");
       const selectorEl = document.getElementById("hasilClassSelector");
       const mapelSelectorEl = document.getElementById("hasilMapelSelector");
       const detailEl = document.getElementById("hasilDetailContainer");
       const refreshIcon = document.getElementById("refreshIcon");
 
       loadingEl.classList.remove("hidden");
+      emptyOrErrorEl.classList.add("hidden");
       selectorEl.classList.add("hidden");
       mapelSelectorEl.classList.add("hidden");
       detailEl.classList.add("hidden");
       refreshIcon.classList.add("animate-spin");
 
+      loadingTitle.textContent = "Mengambil Daftar Link CSV dari Sheet link_hasil...";
+      loadingDesc.textContent = "Memeriksa status Aktif dan Tidak Aktif.";
+
       try {
-        // Ambil seluruh 36 CSV beserta metadata mapel dan jenjangnya
+        const configRes = await fetch(`${API_URL}?type=hasil`);
+        const configJson = await configRes.json();
+
+        if (configJson.status !== "success") {
+          throw new Error(configJson.message || "Gagal membaca sheet link_hasil.");
+        }
+
+        // Hanya proses baris yang statusnya "Aktif"
+        const activeSources = (configJson.data || []).filter(item =>
+          item.aktif === true || String(item.status || "").trim().toLowerCase() === "aktif"
+        );
+
+        if (activeSources.length === 0) {
+          loadingEl.classList.add("hidden");
+          emptyOrErrorEl.classList.remove("hidden");
+          document.getElementById("hasilEmptyTitle").textContent = "Hasil Ujian Tidak Ditampilkan";
+          document.getElementById("hasilEmptyDesc").textContent = "Semua baris pada sheet link_hasil berstatus Tidak Aktif.";
+          hasilLoaded = true;
+          return;
+        }
+
+        loadingTitle.textContent = `Memuat Data dari ${activeSources.length} CSV Aktif...`;
+        loadingDesc.textContent = "Mapel berstatus Tidak Aktif tidak ditampilkan.";
+
         const responses = await Promise.all(
-          CSV_SOURCES.map(src => 
-            fetch(src.url)
+          activeSources.map(src => {
+            const csvUrl = src.linkCsv || src.url || "";
+            return fetch(csvUrl)
               .then(res => res.ok ? res.text() : "")
-              .then(text => ({ mapel: src.mapel, jenjang: src.jenjang, text }))
-              .catch(() => ({ mapel: src.mapel, jenjang: src.jenjang, text: "" }))
-          )
+              .then(text => ({
+                mapel: src.mapel,
+                targetKelas: src.kelas,
+                text
+              }))
+              .catch(() => ({
+                mapel: src.mapel,
+                targetKelas: src.kelas,
+                text: ""
+              }));
+          })
         );
 
         const parsedRecords = [];
@@ -727,14 +722,14 @@
             const skor = parseFloat(skorRaw);
 
             if (!nama || !kelas || isNaN(skor)) continue;
+            if (!isKelasMatch(item.targetKelas, kelas)) continue;
 
             parsedRecords.push({
               no: cols[idxNo] || i,
               nama: nama,
               kelas: kelas,
               skor: skor,
-              mapel: item.mapel,     // Nama mapel disematkan dari konfigurasi CSV_SOURCES
-              jenjang: item.jenjang
+              mapel: item.mapel
             });
           }
         });
@@ -745,13 +740,15 @@
 
       } catch (err) {
         console.error("Gagal memuat CSV:", err);
+        emptyOrErrorEl.classList.remove("hidden");
+        document.getElementById("hasilEmptyTitle").textContent = "Gagal Memuat Hasil Ujian";
+        document.getElementById("hasilEmptyDesc").textContent = err.message;
       } finally {
         loadingEl.classList.add("hidden");
         refreshIcon.classList.remove("animate-spin");
       }
     }
 
-    // Menentukan KKM otomatis berdasarkan tingkat kelas
     function getKKMByKelas(kelasStr) {
       const clean = kelasStr.toUpperCase().trim();
       if (clean.startsWith("7") || clean.startsWith("VII-") || clean.startsWith("VII ")) return 70;
@@ -776,7 +773,7 @@
       btnContainer.innerHTML = "";
 
       if (uniqueClasses.length === 0) {
-        btnContainer.innerHTML = `<p class="col-span-full text-sm text-purple-200">Belum ada data nilai yang masuk pada CSV.</p>`;
+        btnContainer.innerHTML = `<p class="col-span-full text-sm text-purple-200">Belum ada data nilai siswa pada CSV yang berstatus Aktif.</p>`;
         selectorEl.classList.remove("hidden");
         return;
       }
@@ -811,7 +808,6 @@
         clickedBtn.classList.add("ring-2", "ring-white", "scale-105");
       }
 
-      // Render tombol filter Mapel yang tersedia di kelas ini
       renderMapelFilterButtons(kelasName);
 
       const keyword = document.getElementById("searchInput").value.toLowerCase().trim();
@@ -828,14 +824,12 @@
 
       mapelButtonsEl.innerHTML = "";
 
-      // Tombol "Semua Mapel"
       const allBtn = document.createElement("button");
       allBtn.onclick = () => selectHasilMapel("ALL", allBtn);
       allBtn.className = "mapel-filter-btn px-3.5 py-2 rounded-xl text-xs font-extrabold transition bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-md ring-2 ring-white/70";
-      allBtn.textContent = `Semua Mapel (${uniqueMapels.length})`;
+      allBtn.textContent = `Semua Mapel Aktif (${uniqueMapels.length})`;
       mapelButtonsEl.appendChild(allBtn);
 
-      // Tombol masing-masing Mapel
       uniqueMapels.forEach(mapelName => {
         const btn = document.createElement("button");
         btn.onclick = () => selectHasilMapel(mapelName, btn);
@@ -865,20 +859,16 @@
       const detailEl = document.getElementById("hasilDetailContainer");
       const kkm = getKKMByKelas(kelasName);
 
-      // Filter berdasarkan kelas
       let filteredData = allHasilData.filter(d => d.kelas === kelasName);
 
-      // Filter berdasarkan mapel jika tidak "ALL"
       if (mapelFilter !== "ALL") {
         filteredData = filteredData.filter(d => d.mapel === mapelFilter);
       }
       
-      // Filter berdasarkan pencarian nama siswa
       if (searchKeyword) {
         filteredData = filteredData.filter(d => d.nama.toLowerCase().includes(searchKeyword));
       }
 
-      // Pisahkan menjadi TUNTAS (>= KKM) dan REMEDIAL (< KKM)
       const listTuntas = filteredData
         .filter(s => s.skor >= kkm)
         .sort((a, b) => a.mapel.localeCompare(b.mapel) || b.skor - a.skor || a.nama.localeCompare(b.nama));
@@ -887,9 +877,8 @@
         .filter(s => s.skor < kkm)
         .sort((a, b) => a.mapel.localeCompare(b.mapel) || b.skor - a.skor || a.nama.localeCompare(b.nama));
 
-      // Update Header Info
       document.getElementById("selectedKelasTitle").textContent = `Kelas ${kelasName}`;
-      document.getElementById("selectedMapelBadge").textContent = mapelFilter === "ALL" ? "Semua Mapel" : mapelFilter;
+      document.getElementById("selectedMapelBadge").textContent = mapelFilter === "ALL" ? "Semua Mapel Aktif" : mapelFilter;
       document.getElementById("selectedKelasKKM").textContent = `KKM: ${kkm}`;
       document.getElementById("selectedKelasSummary").textContent = `Total ${filteredData.length} data hasil ujian ditampilkan`;
 
@@ -898,7 +887,6 @@
       document.getElementById("badgeTuntas").textContent = `${listTuntas.length} Data`;
       document.getElementById("badgeRemedial").textContent = `${listRemedial.length} Data`;
 
-      // Render Tabel Tuntas
       const tbodyTuntas = document.getElementById("tableBodyTuntas");
       tbodyTuntas.innerHTML = "";
       if (listTuntas.length === 0) {
@@ -920,7 +908,6 @@
         });
       }
 
-      // Render Tabel Remedial
       const tbodyRemedial = document.getElementById("tableBodyRemedial");
       tbodyRemedial.innerHTML = "";
       if (listRemedial.length === 0) {
