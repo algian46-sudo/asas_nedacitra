@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASAS BAHASA INDONESIA KELAS IX 2026/2027</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- Google Fonts untuk Font Arab Standar Utsmani -->
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- MathJax untuk Render Persamaan Matematika -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script id="MathJax-Script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="icon" type="image/png" href="https://i.imgur.com/mRmw86t.jpeg">
+  
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+      --card-bg: rgba(30, 41, 59, 0.7);
+      --card-border: rgba(255, 255, 255, 0.1);
+      --accent-color: #6366f1;
+      --accent-hover: #4f46e5;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    body {
+      background: var(--bg-gradient);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .header-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 15px 20px;
+      text-align: center;
+      margin-bottom: 15px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+
+    .header-card h1 {
+      font-size: 1.2rem;
+      color: #38bdf8;
+      margin-bottom: 4px;
+    }
+
+    .header-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      margin-bottom: 15px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    select, button, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid var(--card-border);
+      background: rgba(15, 23, 42, 0.8);
+      color: var(--text-main);
+      font-size: 0.95rem;
+      outline: none;
+      transition: all 0.3s;
+    }
+
+    select:focus, textarea:focus {
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #4f46e5, #06b6d4);
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 10px;
+      color: #ffffff;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .btn-disabled {
+      background: rgba(255, 255, 255, 0.05) !important;
+      color: var(--text-muted) !important;
+      cursor: not-allowed !important;
+      border: 1px dashed var(--card-border) !important;
+    }
+
+    .progress-bar {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      text-align: right;
+    }
+
+    .question-box {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 10px;
+      white-space: pre-line;
+    }
+
+    .arabic-text {
+      font-family: 'Amiri', 'Scheherazade New', serif;
+      font-size: 1.5rem;
+      direction: rtl;
+      text-align: right;
+      line-height: 2.2;
+      color: #38bdf8;
+      margin: 10px 0;
+      display: block;
+    }
+
+    .question-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin: 10px 0 15px 0;
+      display: block;
+      border: 1px solid var(--card-border);
+    }
+
+    .option-item {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      background: rgba(15, 23, 42, 0.4);
+      transition: 0.2s;
+    }
+
+    .option-item:hover {
+      background: rgba(99, 102, 241, 0.15);
+    }
+
+    .option-item.selected {
+      border-color: var(--accent-color);
+      background: rgba(99, 102, 241, 0.3);
+    }
+
+    .option-prefix {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 12px;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .option-item.selected .option-prefix {
+      background: var(--accent-color);
+    }
+
+    .nav-controls {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .btn-nav {
+      width: 48%;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      border: 1px solid var(--card-border);
+      padding: 12px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .warning-box {
+      background: rgba(239, 68, 68, 0.2);
+      border: 1px solid #ef4444;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      color: #fca5a5;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 20px;
+    }
+
+    .modal-card {
+      background: rgba(30, 41, 59, 0.95);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 25px 20px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-icon-danger { font-size: 3rem; color: #ef4444; margin-bottom: 12px; }
+    .modal-icon-warning { font-size: 3rem; color: #f59e0b; margin-bottom: 12px; }
+
+    .modal-card h3 { font-size: 1.2rem; color: var(--text-main); margin-bottom: 8px; }
+    .modal-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 20px; }
+
+    .modal-buttons { display: flex; gap: 10px; }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      cursor: pointer;
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+    }
+
+    .modal-score-card {
+      max-width: 700px !important;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      text-align: left;
+    }
+
+    .score-table-container {
+      overflow-y: auto;
+      max-height: 50vh;
+      margin-top: 15px;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+    }
+
+    .score-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+
+    .score-table th, .score-table td {
+      padding: 10px;
+      border: 1px solid var(--card-border);
+      text-align: left;
+    }
+
+    .score-table th {
+      background: rgba(15, 23, 42, 0.9);
+      position: sticky;
+      top: 0;
+      color: #38bdf8;
+    }
+
+    .badge-lolos {
+      background: rgba(34, 197, 94, 0.2);
+      color: #4ade80;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 0.75rem;
+    }
+
+    .badge-remedial {
+      background: rgba(239, 68, 68, 0.2);
+      color: #fca5a5;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 0.75rem;
+    }
+
+    .countdown-timer {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #f59e0b;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px dashed #f59e0b;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header-card">
+      <h1><i class="fa-solid fa-flask"></i> ASAS BAHASA INDONESIA KELAS IX 2026/2027</h1>
+      <p>SMP NEGERI 8 CIKARANG UTARA</p>
+    </div>
+
+    <!-- HALAMAN PENUTUPAN UJIAN (JIKA TERKUNCI JADWAL) -->
+    <div id="closed-page" class="card hidden" style="text-align: center;">
+      <i class="fa-solid fa-lock" style="font-size: 3rem; color: #ef4444; margin-bottom: 12px;"></i>
+      <h2 id="closed-title">Halaman Ditutup</h2>
+      <p id="closed-msg" style="margin-top: 8px; color: var(--text-muted);"></p>
+      <div id="countdown-container" class="countdown-timer hidden">--:--:--:--</div>
+      <button class="btn-primary" style="margin-top: 15px;" onclick="openScoreModal()">
+        <i class="fa-solid fa-list-check"></i> Lihat Skor Akhir Siswa
+      </button>
+    </div>
+
+    <!-- 1. HALAMAN LOGIN -->
+    <div id="login-page" class="card">
+      <h2 style="font-size: 1.1rem; margin-bottom: 15px; text-align: center;">Masuk Ke Ujian</h2>
+      
+      <div class="warning-box">
+        <i class="fa-solid fa-triangle-exclamation"></i> Dilarang keluar dari layar/tab selama ujian. Jika Anda keluar atau berpindah aplikasi, ujian akan otomatis direset!
+      </div>
+
+      <div class="form-group">
+        <label>Pilih Kelas</label>
+        <select id="select-kelas" onchange="filterNama()">
+          <option value="">-- Memuat Kelas... --</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Pilih Nama Siswa</label>
+        <select id="select-nama" disabled>
+          <option value="">-- Pilih Kelas Terlebih Dahulu --</option>
+        </select>
+      </div>
+
+      <button class="btn-primary" onclick="proceedToMenu()">Lanjutkan <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+    <!-- 2. HALAMAN MENU PILIH MODE (PG / ESAI) -->
+    <div id="menu-page" class="card hidden" style="text-align: center;">
+      <h2 style="font-size: 1.1rem; margin-bottom: 5px;">Pilih Bagian Ujian</h2>
+      <p id="student-info-label" style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;"></p>
+      
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <button class="btn-primary" onclick="startQuiz('pg')" style="padding: 15px;">
+          <i class="fa-solid fa-list-check"></i> Kerjakan Pilihan Ganda (PG)
+        </button>
+        <button id="btn-menu-esai" class="btn-primary" style="padding: 15px; background: linear-gradient(90deg, #f59e0b, #d97706);">
+          <i class="fa-solid fa-pen-to-square"></i> Kerjakan Soal Esai
+        </button>
+      </div>
+      <button class="btn-secondary" style="margin-top: 15px;" onclick="location.reload()">Ganti Akun / Kelas</button>
+    </div>
+
+    <!-- 3. HALAMAN UJIAN -->
+    <div id="quiz-page" class="card hidden">
+      <div class="progress-bar" id="progress-text">Progress: 1 / 0</div>
+
+      <div class="question-box" id="question-text"></div>
+      <img id="question-img" class="question-image hidden" alt="Gambar Soal">
+      <div id="options-container"></div>
+
+      <div class="nav-controls">
+        <button class="btn-nav" id="btn-prev" onclick="changeQuestion(-1)"><i class="fa-solid fa-chevron-left"></i> Sebelum</button>
+        <button class="btn-nav" id="btn-next" onclick="changeQuestion(1)">Berikut <i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+
+      <button class="btn-primary hidden" id="btn-submit" style="margin-top: 15px; background: linear-gradient(90deg, #22c55e, #10b981);" onclick="confirmSubmit()">
+        Kirim Jawaban <i class="fa-solid fa-check"></i>
+      </button>
+    </div>
+
+    <!-- 4. HALAMAN HASIL -->
+    <div id="result-page" class="card hidden" style="text-align: center;">
+      <i class="fa-solid fa-circle-check" style="font-size: 3rem; color: #22c55e; margin-bottom: 10px;"></i>
+      <h2 id="result-title">Bagian Selesai!</h2>
+      <p style="color: var(--text-muted); margin-top: 5px;" id="result-subtitle">Jawaban Anda telah tersimpan.</p>
+      <div id="score-display" style="font-size: 1.8rem; font-weight: bold; color: #38bdf8; margin: 20px 0;"></div>
+      <button class="btn-primary" onclick="backToMenu()">Kembali ke Menu Utama</button>
+    </div>
+  </div>
+
+  <!-- MODAL PERINGATAN CURANG -->
+  <div id="cheat-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <i class="fa-solid fa-triangle-exclamation modal-icon-danger"></i>
+      <h3>Pelanggaran Terdeteksi!</h3>
+      <p>Anda terdeteksi meninggalkan layar/tab ujian. Ujian Anda direset.</p>
+      <button class="btn-primary" style="background: #ef4444; width: 100%; padding: 12px; border-radius: 10px;" onclick="location.reload()">Mengerti & Ulangi</button>
+    </div>
+  </div>
+
+  <!-- MODAL KONFIRMASI SUBMIT -->
+  <div id="submit-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <i class="fa-solid fa-circle-question modal-icon-warning"></i>
+      <h3 id="submit-modal-title">Konfirmasi Selesai</h3>
+      <p id="submit-modal-msg">Apakah Anda yakin ingin mengirimkan jawaban?</p>
+      <div class="modal-buttons">
+        <button class="btn-secondary" onclick="closeSubmitModal()">Batal</button>
+        <button class="btn-primary" style="margin-top:0; background: linear-gradient(90deg, #22c55e, #10b981); width: 100%; padding: 12px; border-radius: 10px;" onclick="executeSubmit()">Kirim</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL INFORMASI -->
+  <div id="info-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <i class="fa-solid fa-circle-info modal-icon-warning"></i>
+      <h3>Pemberitahuan</h3>
+      <p id="info-modal-msg">Pesan</p>
+      <button class="btn-primary" style="width: 100%; padding: 12px; border-radius: 10px;" onclick="closeInfoModal()">OK</button>
+    </div>
+  </div>
+
+  <!-- MODAL HASIL SKOR SISWA (DARI CSV) -->
+  <div id="score-modal" class="modal-overlay hidden">
+    <div class="modal-card modal-score-card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+        <h3><i class="fa-solid fa-trophy" style="color: #f59e0b;"></i> Hasil Skor Siswa</h3>
+        <button class="btn-secondary" style="width: auto; padding: 5px 12px;" onclick="closeScoreModal()">Tutup</button>
+      </div>
+
+      <div class="form-group" style="margin-bottom: 10px;">
+        <label>Pilih Kelas:</label>
+        <select id="modal-select-kelas" onchange="renderScoreTable()">
+          <option value="">-- Pilih Kelas --</option>
+        </select>
+      </div>
+
+      <div class="score-table-container">
+        <table class="score-table">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama</th>
+              <th>Kelas</th>
+              <th>Skor</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="score-table-body">
+            <tr>
+              <td colspan="5" style="text-align: center; color: var(--text-muted);">Silakan pilih kelas terlebih dahulu.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const API_URL = "https://script.google.com/macros/s/AKfycby97j9gUH_F7w2G5XfJEpv_S4F8XbPvQ9jB30fG3SYa5ktgPaEoQ39wKWuQBs28yxg/exec";
+    const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQBv_FC_qqzVY6QiTEXKePzRwBuUNZRoPEjK7OUY3lwS6LWn250ohBJ88yWLrhq0Mz7B1oQ3niHcL0v/pub?gid=107493068&single=true&output=csv";
+
+    // Konfigurasi Jadwal Ujian (Set ke tahun 2099 agar terbuka sekarang)
+    const SCHEDULE_CONFIG = {
+      closeTime: "2099-12-31T09:59:59+07:00",
+      remedStart: "2099-12-31T23:59:59+07:00",
+      remedEnd: "2099-12-31T23:59:59+07:00",
+      closedMsgText: "Ujian telah ditutup."
+    };
+
+    // ==========================================
+    // 1. DATA SOAL PILIHAN GANDA (PG) - Diacak
+    // ==========================================
+    const rawQuestionsPG = [
+ {
+    id: 1,
+    q: "Cermati kutipan teks berikut!\n\nPantai Kuta terletak di Kabupaten Badung, Bali. Pantai ini memiliki pasir putih yang halus dan membentang sepanjang kurang lebih lima kilometer. Ombak di Pantai Kuta cukup besar sehingga cocok untuk olahraga selancar. Di sepanjang pantai, terdapat banyak pedagang yang menjual berbagai makanan dan minuman. Wisatawan domestik maupun mancanegara sering berkunjung ke pantai ini. Pada sore hari, pengunjung dapat menikmati pemandangan matahari terbenam yang sangat indah. Suasana Pantai Kuta selalu ramai dan meriah hingga malam hari.\n\nTeks di atas termasuk jenis teks ....",
+    img: "",
+    options: ["Narasi", "Prosedur", "Deskripsi", "Argumentasi"],
+    key: "C"
+  },
+  {
+    id: 2,
+    q: "Cermati teks deskripsi berikut!\n\nRuang kelas 9A berada di lantai dua gedung sekolah. Ruangan berukuran sekitar delapan kali tujuh meter ini memiliki dua puluh empat meja dan kursi kayu yang tertata rapi. Dinding ruangan berwarna putih bersih dan dihiasi poster-poster pelajaran. Di depan kelas terdapat papan tulis putih dan proyektor yang selalu siap digunakan. Jendela besar di sisi kanan ruangan membuat cahaya matahari masuk dengan leluasa. Udara di dalam kelas terasa sejuk karena terdapat dua kipas angin di langit-langit. Dengan tata letak seperti itu, ruang kelas 9A menjadi tempat belajar yang nyaman dan menyenangkan.\n\nObjek yang dideskripsikan dalam teks di atas adalah ....",
+    img: "",
+    options: ["gedung sekolah", "ruang kelas 9A", "papan tulis dan proyektor", "siswa kelas 9A"],
+    key: "B"
+  },
+  {
+    id: 3,
+    q: "Cermati teks deskripsi berikut!\n\nPantai Senggigi memiliki pemandangan yang sangat memesona. Pasirnya berwarna putih kecokelatan dan terasa lembut di kaki. Air lautnya berwarna biru kehijauan dan jernih. Di sepanjang pantai, deretan pohon kelapa tumbuh rindang. Ombaknya tenang sehingga cocok untuk berenang. Pada sore hari, langit di atas pantai berwarna jingga keemasan. Keindahan Pantai Senggigi memang membuat siapa pun betah berlama-lama di sana.\n\nJenis paragraf di atas adalah ....",
+    img: "",
+    options: ["Deduktif", "Induktif", "Campuran", "Ineratif"],
+    key: "A"
+  },
+  {
+    id: 4,
+    q: "Cermati teks deskripsi berikut!\n\nKucing persia memiliki bulu yang sangat panjang dan lebat. Warna bulunya beragam, seperti putih, abu-abu, dan keemasan. Wajahnya bulat dengan hidung pesek yang khas. Matanya bulat besar dan tampak sayu. Tubuhnya gemuk dan berukuran besar. Gerakannya lambat dan tenang. Dengan ciri-ciri seperti itu, kucing persia dikenal sebagai kucing yang anggun dan menggemaskan.\n\nJenis paragraf di atas adalah ....",
+    img: "",
+    options: ["Deduktif", "Induktif", "Campuran", "Ineratif"],
+    key: "B"
+  },
+  {
+    id: 5,
+    q: "Cermati teks deskripsi berikut!\n\nSepeda gunung memiliki desain yang kokoh dan tangguh. Rangkanya terbuat dari bahan aluminium yang ringan namun kuat. Ban sepeda ini tebal dan bergerigi agar tidak mudah tergelincir. Setangnya lebar sehingga mudah dikendalikan di medan berat. Sepeda gunung dilengkapi sistem persneling dengan banyak gigi. Suspensinya mampu meredam guncangan saat melewati jalan berbatu. Jadi, sepeda gunung memang dirancang khusus untuk medan yang menantang.\n\nJenis paragraf di atas adalah ....",
+    img: "",
+    options: ["Deduktif", "Induktif", "Campuran", "Ineratif"],
+    key: "C"
+  },
+  {
+    id: 6,
+    q: "Cermati teks deskripsi berikut!\n\nSetiap pagi, alun-alun kota selalu dipenuhi pengunjung. Anak-anak bermain layang-layang di lapangan rumput yang luas. Alun-alun kota ini memiliki daya tarik tersendiri bagi warganya. Pedagang kaki lima berjajar menjual berbagai jajanan. Bangku-bangku taman dipenuhi orang yang bersantai. Di sisi utara terdapat masjid megah dengan kubah hijau. Pada malam hari, lampu-lampu taman menyala indah menghiasi suasana.\n\nJenis paragraf di atas adalah ....",
+    img: "",
+    options: ["Deduktif", "Induktif", "Campuran", "Ineratif"],
+    key: "D"
+  },
+  {
+    id: 7,
+    q: "Cermati teks deskripsi berikut!\n\nPantai Nihiwatu terletak di Pulau Sumba, Nusa Tenggara Timur. Pantai ini memiliki pasir putih yang halus dan membentang sepanjang kurang lebih dua kilometer. Air lautnya berwarna biru toska yang jernih. Ombaknya besar dan cocok untuk olahraga selancar. Di sepanjang pantai, pepohonan kelapa tumbuh rindang dan memberi keteduhan. Udara di sekitar pantai terasa sejuk meskipun matahari bersinar terik. Pengunjung dapat menikmati pemandangan matahari terbenam yang memesona. Suasana Pantai Nihiwatu selalu asri dan jauh dari kebisingan kota.\n\nMakna kata \"asri\" pada kalimat ke delapan dalam konteks teks adalah ....",
+    img: "",
+    options: ["ramai dan bising", "kotor dan tidak terawat", "indah, segar, dan nyaman dipandang", "panas dan gersang"],
+    key: "C"
+  },
+  {
+    id: 8,
+    q: "Cermati teks deskripsi berikut!\n\nPantai Kuta terletak di Kabupaten Badung, Bali. Pantai ini memiliki pasir putih yang halus. Ombaknya besar dan cocok untuk olahraga selancar. Di sepanjang pantai, terdapat banyak warung yang menjual makanan dan minuman. Para wisatawan sering membeli jaje sebagai oleh-oleh. Beberapa pengunjung juga menikmati tuak di sore hari. Suasana pantai semakin ramai saat matahari terbenam. Keindahan Pantai Kuta memang memesona wisatawan dari berbagai negara.\n\nKata serapan daerah yang terdapat pada teks tersebut adalah ....",
+    img: "",
+    options: ["Wisatawan", "Membeli", "Jaje", "oleh-oleh"],
+    key: "C"
+  },
+  {
+    id: 9,
+    q: "Cermati kalimat berikut!\n\"Mataku ke arah buku yang kubaca, tetapi telingaku mendengar semuanya.\"\n\nSudut pandang yang digunakan tokoh \"aku\" dalam kutipan cerita di atas adalah ....",
+    img: "",
+    options: [
+      "Sudut pandang orang ketiga serbatahu",
+      "Sudut pandang orang pertama pelaku utama",
+      "Sudut pandang orang pertama pelaku sampingan",
+      "Sudut pandang orang ketiga pengamat"
+    ],
+    key: "B"
+  },
+  {
+    id: 10,
+    q: "Dari rangkaian kalimat berikut, mana yang memiliki koherensi paling lemah ....",
+    img: "",
+    options: [
+      "Taman itu indah. Bunga-bunga bermekaran. Angin berhembus sejuk.",
+      "Kakakku seorang dokter. Ia selalu membantu orang lain. Ia bekerja di rumah sakit umum.",
+      "Ayahku sangat sabar. Ia tidak pernah marah. Ia adalah panutan bagi kami semua.",
+      "Ibu sedang memasak di dapur. Buku Bahasa Indonesia kelas 9 sangat tebal. Makanan di meja itu enak sekali."
+    ],
+    key: "D"
+  },
+  {
+    id: 11,
+    q: "Kalimat yang menunjukkan adanya kohesi leksikal (pengulangan kata atau sinonim) adalah ....",
+    img: "",
+    options: [
+      "Kakakku pergi ke pasar. Dia membeli sayur.",
+      "Kami berjalan kaki, kemudian kami naik angkot.",
+      "Ayahku bergembira, ibuku bergembira.",
+      "Rumah Gadang adalah rumah adat Minangkabau. Rumah adat ini memiliki bentuk atap yang unik."
+    ],
+    key: "D"
+  },
+  {
+    id: 12,
+    q: "Cermati kalimat berikut\n(1) Ia mengamati orang-orang yang berlalu lalang.\n(2) Lantas, ia mengambil buku di tasnya.\n(3) Ia duduk di kursi tunggu rumah sakit.\n(4) Akhirnya, ia pun mulai membaca.\n\nAgar menjadi paragraf yang koheren, urutan kalimat yang tepat adalah ....",
+    img: "",
+    options: [
+      "(3) - (2) - (1) - (4)",
+      "(1) - (3) - (2) - (4)",
+      "(3) - (1) - (2) - (4)",
+      "(2) - (4) - (3) - (1)"
+    ],
+    key: "C"
+  },
+  {
+    id: 13,
+    q: "Salah satu ciri kebahasaan teks prosedur yang dominan adalah penggunaan kalimat ....",
+    img: "",
+    options: ["Interogatif", "Deklaratif", "Imperatif", "Eksklamatif"],
+    key: "C"
+  },
+  {
+    id: 14,
+    q: "Cermati kutipan teks prosedur berikut!\n\"Setelah langkah-langkah di atas dilakukan dengan benar, niscaya buku yang kamu baca akan bermanfaat dan menambah wawasan.\"\n\nBagian ini termasuk struktur ....",
+    img: "",
+    options: ["Tujuan", "Langkah-langkah", "Penegasan Ulang", "Argumentasi"],
+    key: "C"
+  },
+  {
+    id: 15,
+    q: "Kalimat yang merupakan contoh kalimat imperatif dalam teks prosedur adalah ....",
+    img: "",
+    options: [
+      "Sebaiknya kamu memilih buku sesuai minat.",
+      "Campurkan dua sendok gula ke dalam adonan.",
+      "Apakah kamu sudah membuat poster?",
+      "Perpustakaan mini itu sudah berdiri sejak tahun lalu."
+    ],
+    key: "B"
+  },
+  {
+    id: 16,
+    q: "Cermati urutan kalimat berikut\n(1) Hapus sisa sabun dengan air mengalir.\n(2) Gosok telapak tangan dan punggung tangan secara bergantian.\n(3) Basahi tangan dengan air.\n(4) Keringkan tangan dengan lap bersih.\n(5) Tuang sabun secukupnya.\n\nUrutan yang logis untuk prosedur mencuci tangan yang benar adalah ....",
+    img: "",
+    options: [
+      "(1) - (3) - (5) - (2) - (4)",
+      "(5) - (3) - (2) - (1) - (4)",
+      "(3) - (5) - (1) - (2) - (4)",
+      "(3) - (5) - (2) - (1) - (4)"
+    ],
+    key: "D"
+  },
+  {
+    id: 17,
+    q: "Cermati kalimat berikut\n\"TBM (Taman Baca Masyarakat) sebaiknya dipimpin oleh seorang koordinator yang memiliki semangat literasi tinggi.\"\n\nKalimat tersebut jika diposisikan dalam Teks Prosedur Pendirian TBM paling tepat berfungsi sebagai ....",
+    img: "",
+    options: [
+      "Langkah awal yang wajib dilakukan.",
+      "Saran atau rekomendasi dalam bagian penegasan ulang.",
+      "Tujuan dari pendirian TBM.",
+      "Persyaratan wajib yang harus dipenuhi."
+    ],
+    key: "B"
+  },
+  {
+    id: 18,
+    q: "Anda ingin mengajak teman-teman Anda untuk menjadi relawan di TBM (Taman Baca Masyarakat). Kalimat ajakan (persuasif) yang paling efektif untuk dimasukkan dalam bagian penutup teks prosedur pendaftaran relawan adalah ....",
+    img: "",
+    options: [
+      "Segeralah mendaftar sebelum ditutup.",
+      "Ayo jadi relawan TBM untuk mengisi waktu luang!",
+      "Mari bergotong royong menebar semangat literasi, karena satu jam waktumu sangat berharga bagi masa depan bangsa.",
+      "Pendaftar yang terpilih akan mendapatkan sertifikat sebagai penghargaan."
+    ],
+    key: "C"
+  },
+  {
+    id: 19,
+    q: "Cermati kalimat berikut\n\"Mengajak siswa untuk lebih mencintai perpustakaan sekolah.\"\n\nKalimat yang tepat untuk bagian struktur Tujuan dalam teks prosedur membuat kampanye perpustakaan adalah ....",
+    img: "",
+    options: [
+      "Ayo kunjungi perpustakaan kita sekarang!",
+      "Kita harus tahu cara membuat poster yang baik.",
+      "Teks ini bertujuan memandu langkah-langkah membuat kampanye yang efektif untuk meningkatkan kunjungan ke perpustakaan sekolah.",
+      "Kampanye ini harus dilakukan agar siswa lebih banyak membaca buku."
+    ],
+    key: "C"
+  },
+  {
+    id: 20,
+    q: "Dalam langkah-langkah membuat kerajinan dari barang bekas, langkah \"kumpulkan semua bahan yang dibutuhkan\" diletakkan di bagian awal. Mengapa langkah ini penting dievaluasi agar teks prosedur menjadi baik?",
+    img: "",
+    options: [
+      "Karena mengumpulkan bahan membutuhkan waktu yang lama.",
+      "Karena bahan yang dibutuhkan tidak selalu ada di pasaran.",
+      "Karena memastikan semua bahan siap di awal mencegah terhentinya proses kerja di tengah jalan.",
+      "Karena bahan yang dikumpulkan harus dicatat terlebih dahulu."
+    ],
+    key: "C"
+  },
+  {
+    id: 21,
+    q: "Cermati kutipan cerpen berikut\n\nPagi itu, Rina bangun lebih awal dari biasanya. Ia segera menuju dapur untuk menyiapkan sarapan. Pertama, ia merebus air di dalam panci. Sambil menunggu air mendidih, ia memotong sayuran dan bawang. Setelah air mendidih, ia memasukkan mi ke dalam panci. Ia menambahkan bumbu dan sayuran ke dalam rebusan mi. Mi yang matang kemudian ia tiriskan dan letakkan di mangkuk. Akhirnya, Rina menyajikan mi rebus hangat untuk keluarganya.\n\nJika petikan cerpen di atas diubah menjadi teks prosedur, judul yang paling tepat adalah ....",
+    img: "",
+    options: ["Kisah Rina di Pagi Hari", "Cara Membuat Mi Rebus", "Sarapan Keluarga Rina", "Kegiatan Pagi Rina"],
+    key: "B"
+  },
+  {
+    id: 22,
+    q: "Cermati kutipan cerpen berikut\n(1) Pak Tono bersiap menanam bibit mangga di halaman belakang. (2) Ia mengambil cangkul dan sekop dari gudang. (3) Langkah pertama, ia menggali lubang sedalam setengah meter. (4) Ia memasukkan pupuk kandang ke dalam lubang. (5) Bibit mangga kemudian ia letakkan di tengah lubang. (6) Ia menutup lubang dengan tanah sambil memadatkannya. (7) Setelah itu, ia menyiram bibit dengan air secukupnya. (8) Pak Tono tersenyum puas melihat bibit mangga yang telah ditanamnya.\n\nBerdasarkan cerpen tersebut pada kalimat (3) jika diubah menjadi kalimat prosedur adalah ....",
+    img: "",
+    options: [
+      "Pak Tono menggali lubang sedalam setengah meter.",
+      "Galilah lubang sedalam setengah meter.",
+      "Lubang digali oleh Pak Tono.",
+      "Ia menggali lubang sedalam setengah meter."
+    ],
+    key: "B"
+  },
+  {
+    id: 23,
+    q: "Cermati kutipan cerpen berikut\n\nMalam itu, Andi berencana membuat kopi untuk ayahnya. Ia mengambil cangkir, sendok, dan kopi bubuk. Ia merebus air hingga mendidih. Setelah air mendidih, ia menuangkannya ke dalam cangkir. Ia menambahkan kopi bubuk dan gula secukupnya. Ia mengaduk campuran itu hingga larut. Ia menunggu sebentar agar kopi sedikit mendingin. Andi kemudian menyerahkan kopi hangat itu kepada ayahnya dengan senyum bangga.\n\nJika petikan cerpen di atas diubah menjadi teks prosedur, kalimat yang tidak tepat dimasukkan sebagai langkah adalah ....",
+    img: "",
+    options: [
+      "merebus air hingga mendidih",
+      "menuangkan air ke dalam cangkir",
+      "menambahkan kopi bubuk dan gula",
+      "menyerahkan kopi kepada ayah dengan senyum bangga"
+    ],
+    key: "D"
+  },
+  {
+    id: 24,
+    q: "Teks yang bertujuan menceritakan kembali peristiwa masa lalu secara kronologis disebut ....",
+    img: "",
+    options: ["Teks Deskripsi", "Teks Prosedur", "Teks Eksplanasi", "Teks Rekon"],
+    key: "D"
+  },
+  {
+    id: 25,
+    q: "Istilah yang merujuk pada berita bohong yang sengaja disebarkan untuk memicu perpecahan atau menyesatkan publik adalah ....",
+    img: "",
+    options: ["Virus", "Narasi", "Hoax", "Opini"],
+    key: "C"
+  },
+  {
+    id: 26,
+    q: "Manakah di antara pernyataan berikut yang merupakan opini?",
+    img: "",
+    options: [
+      "Indonesia memiliki lebih dari 250 juta pengguna internet.",
+      "Media sosial dapat memicu pertengkaran.",
+      "Tahun 2024 adalah tahun pemilu.",
+      "Internet adalah penemuan paling hebat abad ini."
+    ],
+    key: "D"
+  },
+  {
+    id: 27,
+    q: "Manakah di antara pernyataan berikut yang merupakan asumsi?",
+    img: "",
+    options: [
+      "Gedung itu sudah dibangun sejak tahun 1990.",
+      "Pengguna Facebook lebih banyak dari Twitter.",
+      "Jika kamu jarang membuka media sosial, kamu pasti adalah orang yang bahagia.",
+      "Kemarin terjadi pemadaman listrik di seluruh kota."
+    ],
+    key: "C"
+  },
+  {
+    id: 28,
+    q: "Cermati teks rekon pribadi berikut\n(1) Pada hari Selasa, 12 Maret 2024, kelas 9A mengunjungi Museum Nasional di Jakarta.\n(2) Kami berangkat dari sekolah pukul 07.00 menggunakan dua bus sekolah.\n(3) Perjalanan memakan waktu sekitar satu jam.\n(4) Sesampainya di museum, kami disambut pemandu wisata.\n(5) Pemandu tersebut menjelaskan sejarah koleksi museum dengan sangat menarik.\n(6) Menurut saya, koleksi arca di museum itu paling mengagumkan.\n(7) Sepertinya museum ini akan menjadi tujuan wisata edukasi favorit siswa.\n(8) Kami pulang pukul 14.00 dengan membawa banyak pengalaman baru.\n\nKalimat yang mengandung fakta terdapat pada nomor ....",
+    img: "",
+    options: ["(1) dan (2)", "(5) dan (6)", "(6) dan (7)", "(7) dan (8)"],
+    key: "A"
+  },
+  {
+    id: 29,
+    q: "Cermati teks rekon pribadi berikut\n(1) Pada hari Sabtu, 18 Mei 2025, sekolah kami mengadakan karnaval budaya dalam rangka memperingati Hari Pendidikan Nasional. (2) Kegiatan dimulai pukul 08.00 di lapangan sekolah. (3) Setiap kelas menampilkan pertunjukan tari daerah dengan kostum yang beragam. (4) Kelas 9A menampilkan Tari Saman dari Aceh, sedangkan kelas 9B membawakan Tari Kecak dari Bali. (5) Menurut saya, penampilan Tari Saman dari kelas 9A paling memukau penonton. (6) Sepertinya kegiatan seperti ini akan menjadi agenda tahunan sekolah kami. (7) Para penonton tampak antusias menyaksikan setiap penampilan. (8) Karnaval budaya ini sungguh meriah dan menumbuhkan rasa cinta terhadap budaya bangsa.\n\nPerbedaan kalimat (5) dan kalimat (4) dalam teks tersebut adalah ....",
+    img: "",
+    options: [
+      "kalimat (4) opini, kalimat (5) fakta",
+      "kalimat (4) fakta, kalimat (5) opini",
+      "kalimat (4) fakta, kalimat (5) asumsi",
+      "kalimat (4) asumsi, kalimat (5) opini"
+    ],
+    key: "B"
+  },
+  {
+    id: 30,
+    q: "Cermati teks rekon pribadi berikut\n(1) Pada tanggal 10 Mei 2025, sekolah kami mengadakan pameran karya siswa di aula sekolah. (2) Pameran menampilkan 50 karya berupa lukisan, kerajinan tangan, dan produk daur ulang. (3) Setiap karya diberi label berisi nama pembuat dan deskripsi singkat. (4) Pengunjung dapat memberikan komentar pada buku tamu yang disediakan. (5) Menurut saya, karya kerajinan dari bahan bekas paling kreatif. (6) Sepertinya pameran ini akan menarik minat sekolah lain untuk berkunjung. (7) Beberapa pengunjung tampak kagum melihat karya yang dipamerkan. (8) Pameran berlangsung hingga pukul 15.00 dan ditutup dengan pengumuman karya terbaik.\n\nKalimat yang mengandung asumsi dalam teks tersebut adalah ....",
+    img: "",
+    options: ["(2)", "(4)", "(6)", "(8)"],
+    key: "C"
+  },
+  {
+    id: 31,
+    q: "Seorang penulis artikel tentang media sosial membuat pernyataan \"Seharusnya setiap orang menyadari bahwa tidak semua yang ada di internet itu benar. Oleh karena itu, kita harus bijak.\" Manakah yang menjadi inti dari evaluasi penulis terhadap perilaku warganet?",
+    img: "",
+    options: [
+      "Internet selalu menyajikan informasi yang salah.",
+      "Warganet harus berhenti menggunakan internet.",
+      "Setiap orang sudah sadar akan bahaya hoax.",
+      "Pentingnya kesadaran dan sikap kritis warganet terhadap kebenaran informasi digital."
+    ],
+    key: "D"
+  },
+  {
+    id: 32,
+    q: "Bagian Reorientasi dalam Teks Rekon memiliki peran penting untuk ....",
+    img: "",
+    options: [
+      "Menentukan tujuan dari teks rekon tersebut.",
+      "Menceritakan secara detail urutan peristiwa utama.",
+      "Menyampaikan kesan, pandangan, atau simpulan personal penulis terhadap peristiwa yang diceritakan.",
+      "Menjelaskan latar tempat dan waktu terjadinya peristiwa."
+    ],
+    key: "C"
+  },
+  {
+    id: 33,
+    q: "Anda ingin membuat kalimat yang berfungsi sebagai reorientasi pada Teks Rekon tentang pengalaman buruk saat menyebarkan hoax. Kalimat tersebut harus menunjukkan penyesalan sekaligus menawarkan solusi.",
+    img: "",
+    options: [
+      "Setelah kejadian itu, saya jadi tahu bahwa hoax adalah berita bohong dan saya tidak akan melakukannya lagi.",
+      "Siapa pun bisa membuat kesalahan, dan menyebarkan berita adalah hal biasa di internet.",
+      "Kejadian itu membuat saya trauma, saya memutuskan untuk tidak menggunakan media sosial lagi.",
+      "Memang, penyesalan datang terlambat, tetapi pelajaran ini mengajarkan satu hal: Mari hentikan rantai kebohongan ini dengan selalu menekan tombol verifikasi sebelum menekan tombol share."
+    ],
+    key: "D"
+  },
+  {
+    id: 34,
+    q: "Kalimat yang paling jelas menunjukkan adanya fakta terkait media komunikasi adalah ....",
+    img: "",
+    options: [
+      "Media sosial adalah penemuan paling bermanfaat abad ini.",
+      "Semua orang di dunia pasti memiliki akun Instagram.",
+      "Aplikasi TikTok pertama kali diluncurkan pada tahun 2016.",
+      "Sebaiknya kita berhenti menggunakan ponsel pada malam hari."
+    ],
+    key: "C"
+  },
+  {
+    id: 35,
+    q: "Cermati teks berikut\n\nHobi memasak dapat berkembang menjadi usaha katering yang menguntungkan. Pada awalnya, seseorang memasak hanya untuk kebutuhan keluarga. Karena sering menerima pesanan dari tetangga, ia mulai memberanikan diri membuka usaha kecil-kecilan. Kualitas masakan yang baik menyebabkan pesanan terus bertambah. Oleh karena itu, ia menambah peralatan dapur dan merekrut tenaga bantu. Seiring berjalannya waktu, usahanya berkembang dan mampu memenuhi pesanan acara besar. Dengan demikian, hobi memasak yang ditekuni dengan serius dapat menjadi sumber penghasilan. Hal ini menunjukkan bahwa hobi tidak hanya menyenangkan, tetapi juga berpotensi menghasilkan keuntungan.\n\nTeks di atas termasuk jenis teks ....",
+    img: "",
+    options: ["Deskripsi", "Narasi", "Eksplanasi", "Prosedur"],
+    key: "C"
+  },
+  {
+    id: 36,
+    q: "Cermati teks eksplanasi berikut\n(1) Hobi fotografi kini banyak berkembang menjadi jasa foto profesional. (2) Awalnya, seseorang memotret hanya untuk mengabadikan momen pribadi. (3) Karena hasil fotonya dinilai bagus, teman-temannya mulai meminta bantuan untuk memotret acara mereka. (4) Permintaan yang terus bertambah menyebabkan ia membeli kamera dan peralatan pendukung yang lebih lengkap. (5) Ia kemudian belajar teknik pencahayaan dan pengeditan foto secara otodidak. (6) Akibatnya, kualitas hasil fotonya semakin meningkat dan pelanggannya bertambah. (7) Dengan demikian, hobi fotografi yang ditekuni dapat menjadi sumber penghasilan yang menjanjikan. (8) Fenomena ini menunjukkan bahwa hobi dapat berkembang menjadi profesi.\n\nKalimat yang merupakan bagian pernyataan umum adalah ....",
+    img: "",
+    options: ["(1)", "(3)", "(5)", "(7)"],
+    key: "A"
+  },
+  {
+    id: 37,
+    q: "Cermati teks eksplanasi berikut\n(1) Hobi membuat kue dapat berkembang menjadi usaha rumahan yang menguntungkan. (2) Pada mulanya, seseorang membuat kue hanya untuk konsumsi keluarga. (3) Ketika tetangga mencicipi kuenya, mereka mulai memesan untuk acara keluarga. (4) Pesanan yang semakin banyak menyebabkan ia menambah modal untuk membeli bahan dan oven baru. (5) Ia juga mulai mempromosikan kuenya melalui media sosial. (6) Karena promosi berjalan efektif, pelanggannya semakin bertambah dan omzetnya meningkat. (7) Oleh karena itu, hobi membuat kue yang dikelola dengan serius dapat menjadi pundi-pundi penghasilan. (8) Hal ini membuktikan bahwa keterampilan yang diasah dari hobi dapat bernilai ekonomi.\n\nBagian deretan penjelas sebab akibat pada teks tersebut terdapat pada kalimat ....",
+    img: "",
+    options: ["(1)", "(2)–(6)", "(7)–(8)", "(1)–(3)"],
+    key: "B"
+  },
+  {
+    id: 38,
+    q: "Cermati teks eksplanasi berikut\n(1) Hobi beternak ikan hias dapat berkembang menjadi usaha yang menguntungkan. (2) Awalnya, seseorang memelihara ikan hias hanya untuk mengisi waktu luang. (3) Karena ikan hiasnya berkembang biak dengan cepat, ia mulai menjual sebagian anak ikan kepada teman-temannya. (4) Permintaan yang meningkat menyebabkan ia memperluas kolam dan menambah jenis ikan. (5) Ia juga mempelajari cara merawat ikan agar tetap sehat dan berkualitas. (6) Akibatnya, ikan hias yang dijualnya semakin diminati pasar dan harganya pun meningkat. (7) Oleh sebab itu, hobi beternak ikan hias dapat menjadi sumber penghasilan tambahan. (8) Fenomena ini membuktikan bahwa hobi yang ditekuni dapat menjadi peluang usaha.\n\nBagian interpretasi pada teks tersebut terdapat pada kalimat ....",
+    img: "",
+    options: ["(1)", "(2)–(3)", "(4)–(6)", "(7)–(8)"],
+    key: "D"
+  },
+  {
+    id: 39,
+    q: "Cermati teks eksplanasi berikut!\n(1) Hobi fotografi kini banyak berkembang menjadi jasa foto profesional. (2) Awalnya, seseorang memotret hanya untuk mengabadikan momen pribadi. (3) Karena hasil fotonya dinilai bagus, teman-temannya mulai meminta bantuan untuk memotret acara mereka. (4) Setelah itu, ia membeli kamera dan peralatan pendukung yang lebih lengkap. (5) Permintaan yang terus bertambah menyebabkan ia belajar teknik pencahayaan secara otodidak. (6) Akibatnya, kualitas hasil fotonya semakin meningkat. (7) Kini, jasa foto tersebut dipromosikan melalui media sosial. (8) Dengan demikian, hobi fotografi yang ditekuni dapat menjadi sumber penghasilan.\n\nPerbedaan konjungsi pada kalimat (2) dan kalimat (3) adalah ....",
+    img: "",
+    options: [
+      "kalimat (2) konjungsi kausalitas, kalimat (3) konjungsi kronologis",
+      "kalimat (2) konjungsi kronologis, kalimat (3) konjungsi kausalitas",
+      "keduanya konjungsi kausalitas",
+      "keduanya konjungsi kronologis"
+    ],
+    key: "B"
+  },
+  {
+    id: 40,
+    q: "Kalimat pasif yang tepat untuk mengubah kalimat aktif \"Pemerintah menetapkan kebijakan baru\" adalah…",
+    img: "",
+    options: [
+      "Kebijakan baru ditetapkan oleh pemerintah.",
+      "Kebijakan baru menetapkan oleh pemerintah.",
+      "Pemerintah ditetapkan kebijakan baru.",
+      "Kebijakan baru pemerintah menetapkan."
+    ],
+    key: "A"
+  },
+  {
+    id: 41,
+    q: "Pilihlah kalimat pasif yang tepat untuk menyatakan hubungan sebab-akibat dalam teks eksplanasi!",
+    img: "",
+    options: [
+      "Banjir menyebabkan kerusakan rumah warga.",
+      "Kerusakan rumah warga disebabkan oleh banjir.",
+      "Warga mengalami kerusakan akibat banjir.",
+      "Banjir dan kerusakan rumah warga terjadi bersamaan."
+    ],
+    key: "B"
+  },
+  {
+    id: 42,
+    q: "Cermati teks eksplanasi berikut!\n(1) Banjir terjadi ketika air meluap dari sungai atau saluran air. (2) Air hujan mengalir ke sungai. (3) Sampah menumpuk dan menyumbat saluran air. (4) Air tidak dapat mengalir dengan lancar. (5) Volume air sungai meningkat secara cepat. (6) Air meluap dan menggenangi permukaan jalan. (7) Warga membersihkan saluran air yang tersumbat. (8) Pemerintah memperbaiki drainase di kota. (9) Penanaman pohon membantu menyerap air hujan. (10) Banjir dapat dicegah dengan menjaga kebersihan lingkungan.\n\nKata kerja material pada kalimat (7) adalah…",
+    img: "",
+    options: ["Warga", "Membersihkan", "Saluran", "Tersumbat"],
+    key: "B"
+  },
+  {
+    id: 43,
+    q: "Cermati teks eksplanasi berikut!\n\nGerhana matahari terjadi ketika posisi bulan terletak di antara bumi dan matahari sehingga menutup sebagian atau seluruh cahaya matahari. Meskipun bulan berukuran lebih kecil, bayangan bulan mampu melindungi cahaya matahari sepenuhnya karena bulan yang berjarak rata-rata 384.400 kilometer dari bumi lebih dekat dibandingkan matahari yang berjarak rata-rata 149.680.000 kilometer. Ketika gerhana matahari terjadi, cahaya matahari yang menuju bumi terhalang oleh bulan. Akibatnya, terjadi penurunan suhu dan perubahan perilaku hewan yang mengira malam telah tiba.\n\nKata teknis yang terdapat dalam teks tersebut adalah ....",
+    img: "",
+    options: [
+      "posisi, cahaya, hewan",
+      "gerhana, bayangan, suhu",
+      "menutup, melindungi, tiba",
+      "sebagian, seluruh, rata-rata"
+    ],
+    key: "B"
+  },
+  {
+    id: 44,
+    q: "Cermati teks eksplanasi berikut!\n\nTeks 1\nBanjir adalah peristiwa terendamnya suatu daratan akibat air yang meluap dari sungai atau saluran air. Banjir terjadi karena curah hujan yang tinggi, berkurangnya daerah resapan air, dan tersumbatnya saluran drainase oleh sampah. Ketika hujan turun dengan intensitas tinggi dalam waktu lama, air hujan tidak mampu diserap tanah secara maksimal sehingga meluap ke permukiman. Akibatnya, aktivitas warga terganggu, muncul penyakit kulit, dan kerugian ekonomi.\n\nTeks 2\nGempa bumi adalah getaran yang merambat melalui permukaan bumi akibat pelepasan energi secara tiba-tiba dari dalam bumi. Gempa tektonik terjadi karena pergeseran lempeng bumi, sedangkan gempa vulkanik terjadi karena aktivitas gunung berapi. Ketika lempeng bumi bergeser, energi yang dilepaskan merambat dalam bentuk gelombang seismik. Akibatnya, bangunan dapat roboh, jalan retak, dan korban jiwa mungkin terjadi.\n\nPersamaan pola pengembangan kedua teks tersebut adalah ....",
+    img: "",
+    options: [
+      "keduanya diawali dengan definisi, dilanjutkan sebab, lalu akibat",
+      "keduanya diawali dengan definisi, dilanjutkan akibat, lalu sebab",
+      "keduanya diawali akibat, dilanjutkan definisi, lalu sebab",
+      "keduanya diawali sebab, dilanjutkan definisi, lalu akibat"
+    ],
+    key: "A"
+  },
+  {
+    id: 45,
+    q: "Cermati teks eksplanasi berikut!\n\nTeks 1\nGerhana matahari adalah peristiwa terhalangnya cahaya matahari yang menuju bumi oleh bulan. Peristiwa ini terjadi ketika bulan berada pada posisi sejajar di antara bumi dan matahari. Karena jarak bulan lebih dekat ke bumi dibandingkan matahari, bayangan bulan dapat menutupi sebagian atau seluruh piringan matahari. Ketika bulan bergerak menutupi matahari, terjadi kontak awal, puncak gerhana, dan kontak akhir. Akibatnya, langit menjadi gelap, suhu udara menurun, dan cahaya matahari yang sampai ke bumi berkurang drastis.\n\nTeks 2\nGerhana matahari merupakan peristiwa alam yang berpengaruh terhadap kehidupan di bumi. Saat cahaya matahari tertutup bulan, intensitas cahaya di permukaan bumi menurun sehingga suasana menjadi gelap seperti senja. Penurunan cahaya ini memengaruhi perilaku hewan, misalnya burung yang kembali ke sarang dan ayam yang bersiap tidur karena mengira malam telah tiba. Selain itu, suhu udara di sekitar wilayah yang dilalui gerhana ikut menurun. Bagi manusia, gerhana matahari menjadi momen penting untuk penelitian atmosfer dan pengamatan fenomena korona matahari.\n\nPerbedaan arah pembahasan kedua teks adalah ....",
+    img: "",
+    options: [
+      "Teks 1 membahas proses terjadinya gerhana, Teks 2 membahas dampaknya bagi makhluk hidup dan lingkungan",
+      "Teks 1 membahas dampak gerhana, Teks 2 membahas proses gerhana",
+      "Teks 1 membahas perilaku hewan, Teks 2 membahas posisi bulan",
+      "Teks 1 dan Teks 2 membahas hal yang persis sama"
+    ],
+    key: "A"
+  }
+];
+
+// ========================================================
+// 2. DATA SOAL ESAI - TIDAK DIAKAP (Urut sesuai urutan di bawah)
+// ========================================================
+const rawQuestionsEssay = [
+  {
+    id: 1,
+    q: "(Soal 1)\nCermati teks deskripsi berikut!\n\nPagi itu, pasar tradisional di dekat rumahku benar-benar ramai dan penuh warna. Aku melangkah pelan di antara tikar-tikar pedagang sayur yang sibuk menata dagangan mereka. Bau rempah dan ikan segar langsung menusuk hidungku begitu aku masuk ke area basah. Suara tawa para pedagang dan teriakan penjual gorengan saling bersahutan, membuat suasana semakin hidup. Di sudut pasar, kulihat seorang ibu paruh baya telaten merangkai bunga sedap malam sambil sesekali menawar harga kepada pembeli.\n\nAku lalu berjalan menyusuri lorong pasar yang dipenuhi deretan gerobak pedagang. Seorang bapak tua mengayunkan pisau memotong daging ayam dengan cekatan, sedangkan di sebelahnya penjual buah menyusun jeruk dan apel dalam piramida kecil yang menggoda. Beberapa anak sekolah tampak mampir membeli gorengan hangat sebelum berangkat, ditemani senyum ramah si penjual. Di ujung lorong, kulihat seorang nenek menggendong keranjang bambu berisi sayuran hijau yang masih segar. Aku tersenyum sendiri, karena semua pemandangan itu menyatu menjadi gambaran pasar tradisional yang sederhana, hangat, dan penuh kehidupan.\n\nTentukan jenis paragraf dan ide pokok pada teks eksplanasi di atas, lalu tuliskan hasilnya dalam tabel berikut!\nhttps://imgur.com/a/9oOfiIA",
+    img: "https://i.imgur.com/U7xmUrG.png"
+  },
+  {
+    id: 2,
+    q: "(Soal 2)\nCermati paragraf berikut!\n\nOlahraga rutin sangat penting untuk menjaga kesehatan tubuh. Dengan berolahraga, peredaran darah menjadi lancar dan daya tahan tubuh meningkat. Selain itu, olahraga dapat membantu mengurangi stres dan memperbaiki kualitas tidur. Banyak orang memilih berolahraga pada pagi hari karena udaranya masih segar. Oleh karena itu, setiap orang sebaiknya menyisihkan waktu untuk berolahraga secara teratur.\n\nJelaskan apakah paragraf tersebut koheren dan tunjukkan kalimat yang mengganggu kepaduan!",
+    img: ""
+  },
+  {
+    id: 3,
+    q: "(Soal 3)\nBacalah setiap pernyataan dalam tabel, lalu isilah tabel dengan memberi tanda ceklis (✓) pada kolom Asumsi, Opini, atau Fakta sesuai jenis pernyataan tersebut!\nhttps://imgur.com/a/IURgUGp",
+    img: "https://i.imgur.com/aauIYwi.png"
+  },
+  {
+    id: 4,
+    q: "(Soal 4)\nMengapa teks eksplanasi penting digunakan dalam konteks promosi atau presentasi sebuah produk usaha berbasis hobi? Kaitkan jawabanmu dengan tujuan teks eksplanasi!",
+    img: ""
+  },
+  {
+    id: 5,
+    q: "(Soal 5)\nUbahlah kalimat-kalimat aktif berikut menjadi kalimat pasif yang sesuai untuk teks eksplanasi!\na. Banyak remaja memanfaatkan media sosial untuk mempromosikan karya mereka.\nb. Pemerintah memberikan pelatihan kewirausahaan kepada para pemuda.",
+    img: ""
+  }
+];
+
+    let studentData = [];
+    let currentMode = ""; // 'pg' atau 'essay'
+    let activeQuestions = [];
+    let userAnswers = [];
+    let currentIdx = 0;
+    let quizActive = false;
+    let csvScoresData = [];
+
+    window.onload = function() {
+      checkAccessSchedule();
+      fetchStudentData();
+      setupAntiCheating();
+      setupSecurityProtections();
+      setInterval(checkAccessSchedule, 1000);
+    };
+
+    // FUNGSI JADWAL DAN TIMER
+    function checkAccessSchedule() {
+      const now = new Date();
+      const closeTime = new Date(SCHEDULE_CONFIG.closeTime);
+      const remedStart = new Date(SCHEDULE_CONFIG.remedStart);
+      const remedEnd = new Date(SCHEDULE_CONFIG.remedEnd);
+
+      const loginPage = document.getElementById("login-page");
+      const closedPage = document.getElementById("closed-page");
+      const closedTitle = document.getElementById("closed-title");
+      const closedMsg = document.getElementById("closed-msg");
+      const countdownEl = document.getElementById("countdown-container");
+
+      if (now >= closeTime && now < remedStart) {
+        loginPage.classList.add("hidden");
+        document.getElementById("menu-page").classList.add("hidden");
+        closedPage.classList.remove("hidden");
+        closedTitle.innerText = "Halaman Ujian Ditutup";
+        closedMsg.innerText = SCHEDULE_CONFIG.closedMsgText;
+        countdownEl.classList.remove("hidden");
+        updateCountdown(remedStart - now);
+      } else if (now >= remedStart && now <= remedEnd) {
+        closedPage.classList.add("hidden");
+        if (!quizActive && document.getElementById("result-page").classList.contains("hidden")) {
+          loginPage.classList.remove("hidden");
+        }
+      } else if (now > remedEnd) {
+        loginPage.classList.add("hidden");
+        document.getElementById("menu-page").classList.add("hidden");
+        closedPage.classList.remove("hidden");
+        closedTitle.innerText = "Sesi Ujian & Remedial Telah Berakhir";
+        closedMsg.innerText = "Ujian dan Remedial telah resmi ditutup secara permanen.";
+        countdownEl.classList.add("hidden");
+      } else {
+        closedPage.classList.add("hidden");
+      }
+    }
+
+    function updateCountdown(diffMs) {
+      if (diffMs <= 0) return;
+      const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diffMs % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown-container").innerText = 
+        `${days} Hari ${hours} Jam ${minutes} Menit ${seconds} Detik`;
+    }
+
+    // FUNGSI LOAD & RENDER MODAL CSV HASIL SKOR
+    function openScoreModal() {
+      document.getElementById("score-modal").classList.remove("hidden");
+      if (csvScoresData.length === 0) {
+        fetchCSVData();
+      }
+    }
+
+    function closeScoreModal() {
+      document.getElementById("score-modal").classList.add("hidden");
+    }
+
+    function fetchCSVData() {
+      fetch(CSV_URL)
+        .then(res => res.text())
+        .then(csvText => {
+          parseCSV(csvText);
+        })
+        .catch(err => {
+          console.error("Error CSV:", err);
+          showInfoModal("Gagal memuat data nilai dari spreadsheet.");
+        });
+    }
+
+    function parseCSV(text) {
+      const lines = text.split('\n').filter(line => line.trim() !== '');
+      if (lines.length < 2) return;
+
+      const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
+      const idxNo = headers.findIndex(h => h.toLowerCase() === 'no');
+      const idxNama = headers.findIndex(h => h.toLowerCase() === 'nama');
+      const idxKelas = headers.findIndex(h => h.toLowerCase() === 'kelas');
+      const idxSkor = headers.findIndex(h => h.toLowerCase() === 'skor');
+
+      csvScoresData = [];
+      const classesSet = new Set();
+
+      for (let i = 1; i < lines.length; i++) {
+        const row = lines[i].split(',').map(cell => cell.trim().replace(/^"|"$/g, ''));
+        if (row.length >= 4) {
+          const item = {
+            no: row[idxNo] || i,
+            nama: row[idxNama] || '',
+            kelas: row[idxKelas] || '',
+            skor: parseFloat(row[idxSkor]) || 0
+          };
+          if(item.kelas) classesSet.add(item.kelas);
+          csvScoresData.push(item);
+        }
+      }
+
+      const modalSelect = document.getElementById("modal-select-kelas");
+      modalSelect.innerHTML = '<option value="">-- Pilih Kelas --</option>';
+      Array.from(classesSet).sort().forEach(c => {
+        modalSelect.innerHTML += `<option value="${c}">${c}</option>`;
+      });
+    }
+
+    function renderScoreTable() {
+      const selectedClass = document.getElementById("modal-select-kelas").value;
+      const tbody = document.getElementById("score-table-body");
+      tbody.innerHTML = "";
+
+      if (!selectedClass) {
+        tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; color: var(--text-muted);">Silakan pilih kelas terlebih dahulu.</td></tr>';
+        return;
+      }
+
+      const filtered = csvScoresData.filter(d => d.kelas === selectedClass);
+      const lolosList = filtered.filter(d => d.skor >= 75);
+      const remedList = filtered.filter(d => d.skor < 75);
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; color: var(--text-muted);">Tidak ada data untuk kelas ini.</td></tr>';
+        return;
+      }
+
+      if(lolosList.length > 0) {
+        tbody.innerHTML += `<tr><td colspan="5" style="background: rgba(34, 197, 94, 0.15); font-weight: bold; color: #4ade80;">SISWA LOLOS (SKOR ≥ 75)</td></tr>`;
+        lolosList.forEach((d, index) => {
+          tbody.innerHTML += `
+            <tr>
+              <td>${index + 1}</td>
+              <td>${d.nama}</td>
+              <td>${d.kelas}</td>
+              <td>${d.skor}</td>
+              <td><span class="badge-lolos">Lolos</span></td>
+            </tr>
+          `;
+        });
+      }
+
+      if(remedList.length > 0) {
+        tbody.innerHTML += `<tr><td colspan="5" style="background: rgba(239, 68, 68, 0.15); font-weight: bold; color: #fca5a5;">SISWA REMEDIAL (SKOR < 75)</td></tr>`;
+        remedList.forEach((d, index) => {
+          tbody.innerHTML += `
+            <tr>
+              <td>${index + 1}</td>
+              <td>${d.nama}</td>
+              <td>${d.kelas}</td>
+              <td>${d.skor}</td>
+              <td><span class="badge-remedial">Remedial</span></td>
+            </tr>
+          `;
+        });
+      }
+    }
+
+    function fetchStudentData() {
+      fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({ action: "getStudents" })
+      })
+      .then(res => res.json())
+      .then(data => {
+        if(data.status === "success") {
+          studentData = data.students;
+          populateClasses(data.classes);
+        } else {
+          showInfoModal("Gagal mengambil data siswa: " + data.message);
+        }
+      })
+      .catch(err => {
+        console.error("Detail Error:", err);
+        showInfoModal("Gagal terhubung ke Backend Spreadsheet!");
+      });
+    }
+
+    function populateClasses(classes) {
+      const selectKelas = document.getElementById("select-kelas");
+      selectKelas.innerHTML = '<option value="">-- Pilih Kelas --</option>';
+      classes.forEach(c => {
+        selectKelas.innerHTML += `<option value="${c}">${c}</option>`;
+      });
+    }
+
+    function filterNama() {
+      const selectedClass = document.getElementById("select-kelas").value;
+      const selectNama = document.getElementById("select-nama");
+      
+      selectNama.innerHTML = '<option value="">-- Pilih Nama Siswa --</option>';
+      if(!selectedClass) {
+        selectNama.disabled = true;
+        return;
+      }
+
+      const filtered = studentData.filter(s => s.kelas === selectedClass);
+      filtered.forEach(s => {
+        selectNama.innerHTML += `<option value="${s.nama}">${s.nama}</option>`;
+      });
+      selectNama.disabled = false;
+    }
+
+    function proceedToMenu() {
+      const kelas = document.getElementById("select-kelas").value;
+      const nama = document.getElementById("select-nama").value;
+
+      if(!kelas || !nama) {
+        showInfoModal("Pilih Kelas dan Nama Anda terlebih dahulu!");
+        return;
+      }
+
+      document.getElementById("student-info-label").innerText = `Siswa: ${nama} (${kelas})`;
+      document.getElementById("login-page").classList.add("hidden");
+      document.getElementById("menu-page").classList.remove("hidden");
+
+      const btnEsai = document.getElementById("btn-menu-esai");
+      if (rawQuestionsEssay.length === 0) {
+        btnEsai.classList.add("btn-disabled");
+        btnEsai.onclick = () => showInfoModal("Soal esai belum tersedia / kosong untuk ujian ini.");
+      } else {
+        btnEsai.classList.remove("btn-disabled");
+        btnEsai.onclick = () => startQuiz('essay');
+      }
+    }
+
+    function backToMenu() {
+      document.getElementById("result-page").classList.add("hidden");
+      document.getElementById("menu-page").classList.remove("hidden");
+    }
+
+    function shuffleArray(array) {
+      let arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    function startQuiz(mode) {
+      currentMode = mode;
+      document.getElementById("menu-page").classList.add("hidden");
+      document.getElementById("quiz-page").classList.remove("hidden");
+
+      if (mode === 'pg') {
+        activeQuestions = shuffleArray(rawQuestionsPG).map(q => {
+          const originalKeyIndex = ["A", "B", "C", "D", "E"].indexOf(q.key);
+          const correctText = q.options[originalKeyIndex];
+          return {
+            id: q.id,
+            q: q.q,
+            img: q.img || "",
+            options: shuffleArray(q.options),
+            correctText: correctText
+          };
+        });
+      } else {
+        activeQuestions = [...rawQuestionsEssay];
+      }
+
+      userAnswers = new Array(activeQuestions.length).fill(null);
+      quizActive = true;
+      showQuestion(0);
+    }
+
+    function showQuestion(idx) {
+      currentIdx = idx;
+      const total = activeQuestions.length;
+      document.getElementById("progress-text").innerText = `Progress: ${idx + 1} / ${total}`;
+      
+      const q = activeQuestions[idx];
+      document.getElementById("question-text").innerHTML = q.q;
+
+      const imgElement = document.getElementById("question-img");
+      if (q.img && q.img.trim() !== "") {
+        imgElement.src = q.img;
+        imgElement.classList.remove("hidden");
+      } else {
+        imgElement.src = "";
+        imgElement.classList.add("hidden");
+      }
+
+      const optionsContainer = document.getElementById("options-container");
+      optionsContainer.innerHTML = "";
+
+      if (currentMode === 'essay') {
+        const savedAnswer = userAnswers[idx] ? userAnswers[idx].selectedText : "";
+        optionsContainer.innerHTML = `
+          <div class="form-group" style="margin-top: 15px;">
+            <label style="color: var(--text-main); font-weight: 600; margin-bottom: 8px;">Jawaban Esai Anda:</label>
+            <textarea id="essay-input" rows="6" placeholder="Ketik jawaban esai Anda di sini..." 
+              oninput="saveEssayAnswer(this.value)">${savedAnswer}</textarea>
+          </div>
+        `;
+      } else {
+        const prefixes = ["A", "B", "C", "D", "E"];
+        q.options.forEach((optText, i) => {
+          const char = prefixes[i];
+          const selectedAns = userAnswers[idx];
+          const isSelected = selectedAns && selectedAns.selectedText === optText;
+          
+          const div = document.createElement("div");
+          div.className = `option-item ${isSelected ? 'selected' : ''}`;
+          div.onclick = () => selectOption(optText);
+          
+          div.innerHTML = `
+            <div class="option-prefix">${char}</div>
+            <div>${optText}</div>
+          `;
+          optionsContainer.appendChild(div);
+        });
+      }
+
+      document.getElementById("btn-prev").style.visibility = idx === 0 ? "hidden" : "visible";
+      
+      if(idx === total - 1) {
+        document.getElementById("btn-next").classList.add("hidden");
+        document.getElementById("btn-submit").classList.remove("hidden");
+      } else {
+        document.getElementById("btn-next").classList.remove("hidden");
+        document.getElementById("btn-submit").classList.add("hidden");
+      }
+
+      if (window.MathJax && typeof MathJax.typesetPromise === 'function') {
+        MathJax.typesetPromise().catch((err) => console.log('MathJax error:', err));
+      }
+    }
+
+    function selectOption(optText) {
+      const q = activeQuestions[currentIdx];
+      userAnswers[currentIdx] = {
+        questionId: q.id,
+        selectedText: optText,
+        isCorrect: optText === q.correctText
+      };
+      showQuestion(currentIdx);
+    }
+
+    function saveEssayAnswer(text) {
+      const q = activeQuestions[currentIdx];
+      userAnswers[currentIdx] = {
+        questionId: q.id,
+        selectedText: text,
+        isCorrect: null
+      };
+    }
+
+    function changeQuestion(dir) {
+      const newIdx = currentIdx + dir;
+      if(newIdx >= 0 && newIdx < activeQuestions.length) {
+        showQuestion(newIdx);
+      }
+    }
+
+    function confirmSubmit() {
+      const unanswered = userAnswers.filter(a => a === null || a.selectedText.trim() === "").length;
+      const titleEl = document.getElementById("submit-modal-title");
+      const msgEl = document.getElementById("submit-modal-msg");
+
+      if(unanswered > 0) {
+        titleEl.innerText = "Soal Belum Lengkap!";
+        msgEl.innerText = `Masih ada ${unanswered} soal yang belum Anda isi/jawab. Yakin ingin mengirim sekarang?`;
+      } else {
+        titleEl.innerText = "Konfirmasi Selesai";
+        msgEl.innerText = "Apakah Anda yakin ingin menyelesaikan dan mengirim jawaban ini?";
+      }
+
+      document.getElementById("submit-modal").classList.remove("hidden");
+    }
+
+    function closeSubmitModal() {
+      document.getElementById("submit-modal").classList.add("hidden");
+    }
+
+    function executeSubmit() {
+      closeSubmitModal();
+      quizActive = false;
+      const kelas = document.getElementById("select-kelas").value;
+      const nama = document.getElementById("select-nama").value;
+
+      document.getElementById("quiz-page").classList.add("hidden");
+      document.getElementById("result-page").classList.remove("hidden");
+      
+      let payload = { nama: nama, kelas: kelas };
+
+      if (currentMode === 'pg') {
+        document.getElementById("result-title").innerText = "Pilihan Ganda Selesai!";
+        document.getElementById("score-display").innerText = "Mengirim Nilai PG...";
+        document.getElementById("result-subtitle").innerText = "Jawaban PG Anda telah tersimpan di spreadsheet.";
+
+        // Hitung Skor Langsung di HTML Berdasarkan Properti 'key' di rawQuestionsPG
+        let correctCount = 0;
+        let formattedAnswers = new Array(rawQuestionsPG.length).fill("");
+
+        userAnswers.forEach(ans => {
+          if(ans) {
+            const rawQ = rawQuestionsPG.find(rq => rq.id === ans.questionId);
+            if(rawQ) {
+              const optIndex = rawQ.options.indexOf(ans.selectedText);
+              if(optIndex !== -1) {
+                const charOption = ["A", "B", "C", "D", "E"][optIndex];
+                formattedAnswers[rawQ.id - 1] = charOption;
+                
+                // Cek apakah jawaban siswa sesuai dengan 'key' di rawQuestionsPG
+                if(charOption === rawQ.key) {
+                  correctCount++;
+                }
+              }
+            }
+          }
+        });
+
+        const finalScore = rawQuestionsPG.length > 0 ? Math.round((correctCount / rawQuestionsPG.length) * 100) : 0;
+
+        payload.action = "submitQuiz";
+        payload.jawaban = formattedAnswers;
+        payload.score = finalScore;
+
+        // Kirim ke Google Apps Script
+        fetch(API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(payload)
+        })
+        .then(res => res.json())
+        .then(data => {
+          if(data.status === "success") {
+            document.getElementById("score-display").innerText = "Terima kasih, jawaban Anda telah direkam.";
+          } else {
+            showInfoModal("Error: " + data.message);
+          }
+        })
+        .catch(err => {
+          console.error("Detail Error:", err);
+          showInfoModal("Gagal koneksi ke server saat mengirim jawaban.");
+        });
+
+      } else {
+        document.getElementById("result-title").innerText = "Esai Berhasil Dikirim!";
+        document.getElementById("score-display").innerText = "Menunggu Koreksi Guru";
+        document.getElementById("result-subtitle").innerText = "Jawaban esai tersimpan terpisah dan tidak mempengaruhi nilai otomatis PG.";
+
+        let essayAnswersMap = {};
+        userAnswers.forEach(ans => {
+          if(ans) {
+            essayAnswersMap[`Soal_${ans.questionId}`] = ans.selectedText;
+          }
+        });
+
+        payload.action = "submitEssay";
+        payload.jawabanEsai = essayAnswersMap;
+
+        fetch(API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(payload)
+        })
+        .then(res => res.json())
+        .then(data => {
+          if(data.status === "success") {
+            document.getElementById("score-display").innerText = `Esai Tersimpan`;
+          } else {
+            showInfoModal("Error: " + data.message);
+          }
+        })
+        .catch(err => {
+          console.error("Detail Error:", err);
+          showInfoModal("Gagal koneksi ke server saat mengirim jawaban.");
+        });
+      }
+    }
+
+    function logViolationToSheet(catatanTeks) {
+      const kelas = document.getElementById("select-kelas") ? document.getElementById("select-kelas").value : "-";
+      const nama = document.getElementById("select-nama") ? document.getElementById("select-nama").value : "Anonim";
+
+      const payload = {
+        action: "logViolation",
+        nama: nama,
+        kelas: kelas,
+        catatan: catatanTeks
+      };
+
+      fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(payload),
+        keepalive: true
+      }).catch(err => console.error("Gagal kirim log pelanggaran:", err));
+    }
+
+    function setupAntiCheating() {
+      window.addEventListener("blur", function() {
+        if(quizActive) {
+          quizActive = false;
+          logViolationToSheet("Keluar dari layar/tab ujian (Ujian tereset)");
+          document.getElementById("cheat-modal").classList.remove("hidden");
+        }
+      });
+    }
+
+    function setupSecurityProtections() {
+      document.addEventListener('contextmenu', e => { e.preventDefault(); return false; });
+      document.addEventListener('copy', e => { e.preventDefault(); });
+    }
+
+    function showInfoModal(msg) {
+      document.getElementById("info-modal-msg").innerText = msg;
+      document.getElementById("info-modal").classList.remove("hidden");
+    }
+
+    function closeInfoModal() {
+      document.getElementById("info-modal").classList.add("hidden");
+    }
+  </script>
+</body>
+</html>

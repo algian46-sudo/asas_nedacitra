@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASAS ILMU PENGETAHUAN SOSIAL KELAS VII 2026/2027</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- Google Fonts untuk Font Arab Standar Utsmani -->
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- MathJax untuk Render Persamaan Matematika -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script id="MathJax-Script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="icon" type="image/png" href="https://i.imgur.com/mRmw86t.jpeg">
+  
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+      --card-bg: rgba(30, 41, 59, 0.7);
+      --card-border: rgba(255, 255, 255, 0.1);
+      --accent-color: #6366f1;
+      --accent-hover: #4f46e5;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    body {
+      background: var(--bg-gradient);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .header-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 15px 20px;
+      text-align: center;
+      margin-bottom: 15px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+
+    .header-card h1 {
+      font-size: 1.2rem;
+      color: #38bdf8;
+      margin-bottom: 4px;
+    }
+
+    .header-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      margin-bottom: 15px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    select, button, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid var(--card-border);
+      background: rgba(15, 23, 42, 0.8);
+      color: var(--text-main);
+      font-size: 0.95rem;
+      outline: none;
+      transition: all 0.3s;
+    }
+
+    select:focus, textarea:focus {
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #4f46e5, #06b6d4);
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 10px;
+      color: #ffffff;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .btn-disabled {
+      background: rgba(255, 255, 255, 0.05) !important;
+      color: var(--text-muted) !important;
+      cursor: not-allowed !important;
+      border: 1px dashed var(--card-border) !important;
+    }
+
+    .progress-bar {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      text-align: right;
+    }
+
+    .question-box {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 10px;
+      white-space: pre-line;
+    }
+
+    .arabic-text {
+      font-family: 'Amiri', 'Scheherazade New', serif;
+      font-size: 1.5rem;
+      direction: rtl;
+      text-align: right;
+      line-height: 2.2;
+      color: #38bdf8;
+      margin: 10px 0;
+      display: block;
+    }
+
+    .question-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin: 10px 0 15px 0;
+      display: block;
+      border: 1px solid var(--card-border);
+    }
+
+    .option-item {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      background: rgba(15, 23, 42, 0.4);
+      transition: 0.2s;
+    }
+
+    .option-item:hover {
+      background: rgba(99, 102, 241, 0.15);
+    }
+
+    .option-item.selected {
+      border-color: var(--accent-color);
+      background: rgba(99, 102, 241, 0.3);
+    }
+
+    .option-prefix {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 12px;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .option-item.selected .option-prefix {
+      background: var(--accent-color);
+    }
+
+    .nav-controls {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .btn-nav {
+      width: 48%;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      border: 1px solid var(--card-border);
+      padding: 12px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .warning-box {
+      background: rgba(239, 68, 68, 0.2);
+      border: 1px solid #ef4444;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      color: #fca5a5;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 20px;
+    }
+
+    .modal-card {
+      background: rgba(30, 41, 59, 0.95);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 25px 20px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-icon-danger { font-size: 3rem; color: #ef4444; margin-bottom: 12px; }
+    .modal-icon-warning { font-size: 3rem; color: #f59e0b; margin-bottom: 12px; }
+
+    .modal-card h3 { font-size: 1.2rem; color: var(--text-main); margin-bottom: 8px; }
+    .modal-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 20px; }
+
+    .modal-buttons { display: flex; gap: 10px; }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      cursor: pointer;
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+    }
+
+    .modal-score-card {
+      max-width: 700px !important;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      text-align: left;
+    }
+
+    .score-table-container {
+      overflow-y: auto;
+      max-height: 50vh;
+      margin-top: 15px;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+    }
+
+    .score-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+
+    .score-table th, .score-table td {
+      padding: 10px;
+      border: 1px solid var(--card-border);
+      text-align: left;
+    }
+
+    .score-table th {
+      background: rgba(15, 23, 42, 0.9);
+      position: sticky;
+      top: 0;
+      color: #38bdf8;
+    }
+
+    .badge-lolos {
+      background: rgba(34, 197, 94, 0.2);
+      color: #4ade80;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 0.75rem;
+    }
+
+    .badge-remedial {
+      background: rgba(239, 68, 68, 0.2);
+      color: #fca5a5;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 0.75rem;
+    }
+
+    .countdown-timer {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #f59e0b;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px dashed #f59e0b;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header-card">
+      <h1><i class="fa-solid fa-flask"></i> ASAS ILMU PENGETAHUAN SOSIAL KELAS VII 2026/2027</h1>
+      <p>SMP NEGERI 8 CIKARANG UTARA</p>
+    </div>
+
+    <!-- HALAMAN PENUTUPAN UJIAN (JIKA TERKUNCI JADWAL) -->
+    <div id="closed-page" class="card hidden" style="text-align: center;">
+      <i class="fa-solid fa-lock" style="font-size: 3rem; color: #ef4444; margin-bottom: 12px;"></i>
+      <h2 id="closed-title">Halaman Ditutup</h2>
+      <p id="closed-msg" style="margin-top: 8px; color: var(--text-muted);"></p>
+      <div id="countdown-container" class="countdown-timer hidden">--:--:--:--</div>
+      <button class="btn-primary" style="margin-top: 15px;" onclick="openScoreModal()">
+        <i class="fa-solid fa-list-check"></i> Lihat Skor Akhir Siswa
+      </button>
+    </div>
+
+    <!-- 1. HALAMAN LOGIN -->
+    <div id="login-page" class="card">
+      <h2 style="font-size: 1.1rem; margin-bottom: 15px; text-align: center;">Masuk Ke Ujian</h2>
+      
+      <div class="warning-box">
+        <i class="fa-solid fa-triangle-exclamation"></i> Dilarang keluar dari layar/tab selama ujian. Jika Anda keluar atau berpindah aplikasi, ujian akan otomatis direset!
+      </div>
+
+      <div class="form-group">
+        <label>Pilih Kelas</label>
+        <select id="select-kelas" onchange="filterNama()">
+          <option value="">-- Memuat Kelas... --</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Pilih Nama Siswa</label>
+        <select id="select-nama" disabled>
+          <option value="">-- Pilih Kelas Terlebih Dahulu --</option>
+        </select>
+      </div>
+
+      <button class="btn-primary" onclick="proceedToMenu()">Lanjutkan <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+    <!-- 2. HALAMAN MENU PILIH MODE (PG / ESAI) -->
+    <div id="menu-page" class="card hidden" style="text-align: center;">
+      <h2 style="font-size: 1.1rem; margin-bottom: 5px;">Pilih Bagian Ujian</h2>
+      <p id="student-info-label" style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;"></p>
+      
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <button class="btn-primary" onclick="startQuiz('pg')" style="padding: 15px;">
+          <i class="fa-solid fa-list-check"></i> Kerjakan Pilihan Ganda (PG)
+        </button>
+        <button id="btn-menu-esai" class="btn-primary" style="padding: 15px; background: linear-gradient(90deg, #f59e0b, #d97706);">
+          <i class="fa-solid fa-pen-to-square"></i> Kerjakan Soal Esai
+        </button>
+      </div>
+      <button class="btn-secondary" style="margin-top: 15px;" onclick="location.reload()">Ganti Akun / Kelas</button>
+    </div>
+
+    <!-- 3. HALAMAN UJIAN -->
+    <div id="quiz-page" class="card hidden">
+      <div class="progress-bar" id="progress-text">Progress: 1 / 0</div>
+
+      <div class="question-box" id="question-text"></div>
+      <img id="question-img" class="question-image hidden" alt="Gambar Soal">
+      <div id="options-container"></div>
+
+      <div class="nav-controls">
+        <button class="btn-nav" id="btn-prev" onclick="changeQuestion(-1)"><i class="fa-solid fa-chevron-left"></i> Sebelum</button>
+        <button class="btn-nav" id="btn-next" onclick="changeQuestion(1)">Berikut <i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+
+      <button class="btn-primary hidden" id="btn-submit" style="margin-top: 15px; background: linear-gradient(90deg, #22c55e, #10b981);" onclick="confirmSubmit()">
+        Kirim Jawaban <i class="fa-solid fa-check"></i>
+      </button>
+    </div>
+
+    <!-- 4. HALAMAN HASIL -->
+    <div id="result-page" class="card hidden" style="text-align: center;">
+      <i class="fa-solid fa-circle-check" style="font-size: 3rem; color: #22c55e; margin-bottom: 10px;"></i>
+      <h2 id="result-title">Bagian Selesai!</h2>
+      <p style="color: var(--text-muted); margin-top: 5px;" id="result-subtitle">Jawaban Anda telah tersimpan.</p>
+      <div id="score-display" style="font-size: 1.8rem; font-weight: bold; color: #38bdf8; margin: 20px 0;"></div>
+      <button class="btn-primary" onclick="backToMenu()">Kembali ke Menu Utama</button>
+    </div>
+  </div>
+
+  <!-- MODAL PERINGATAN CURANG -->
+  <div id="cheat-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <i class="fa-solid fa-triangle-exclamation modal-icon-danger"></i>
+      <h3>Pelanggaran Terdeteksi!</h3>
+      <p>Anda terdeteksi meninggalkan layar/tab ujian. Ujian Anda direset.</p>
+      <button class="btn-primary" style="background: #ef4444; width: 100%; padding: 12px; border-radius: 10px;" onclick="location.reload()">Mengerti & Ulangi</button>
+    </div>
+  </div>
+
+  <!-- MODAL KONFIRMASI SUBMIT -->
+  <div id="submit-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <i class="fa-solid fa-circle-question modal-icon-warning"></i>
+      <h3 id="submit-modal-title">Konfirmasi Selesai</h3>
+      <p id="submit-modal-msg">Apakah Anda yakin ingin mengirimkan jawaban?</p>
+      <div class="modal-buttons">
+        <button class="btn-secondary" onclick="closeSubmitModal()">Batal</button>
+        <button class="btn-primary" style="margin-top:0; background: linear-gradient(90deg, #22c55e, #10b981); width: 100%; padding: 12px; border-radius: 10px;" onclick="executeSubmit()">Kirim</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL INFORMASI -->
+  <div id="info-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <i class="fa-solid fa-circle-info modal-icon-warning"></i>
+      <h3>Pemberitahuan</h3>
+      <p id="info-modal-msg">Pesan</p>
+      <button class="btn-primary" style="width: 100%; padding: 12px; border-radius: 10px;" onclick="closeInfoModal()">OK</button>
+    </div>
+  </div>
+
+  <!-- MODAL HASIL SKOR SISWA (DARI CSV) -->
+  <div id="score-modal" class="modal-overlay hidden">
+    <div class="modal-card modal-score-card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+        <h3><i class="fa-solid fa-trophy" style="color: #f59e0b;"></i> Hasil Skor Siswa</h3>
+        <button class="btn-secondary" style="width: auto; padding: 5px 12px;" onclick="closeScoreModal()">Tutup</button>
+      </div>
+
+      <div class="form-group" style="margin-bottom: 10px;">
+        <label>Pilih Kelas:</label>
+        <select id="modal-select-kelas" onchange="renderScoreTable()">
+          <option value="">-- Pilih Kelas --</option>
+        </select>
+      </div>
+
+      <div class="score-table-container">
+        <table class="score-table">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama</th>
+              <th>Kelas</th>
+              <th>Skor</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="score-table-body">
+            <tr>
+              <td colspan="5" style="text-align: center; color: var(--text-muted);">Silakan pilih kelas terlebih dahulu.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const API_URL = "https://script.google.com/macros/s/AKfycbwGV-0SoqmNrAo0EdwNio8YGNZ--HX1GK2GZE6XRgalXLZpsRGpMU4Q0XIG0SPQtA/exec";
+    const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSE44n6J2l98Y38udbb4VEN-8NCiqMOslh-mod7hULHdkwIbdLHFGMLzXS8rQ1JKXr1UK59fiuR6y3o/pub?gid=107493068&single=true&output=csv";
+
+    // Konfigurasi Jadwal Ujian (Set ke tahun 2099 agar terbuka sekarang)
+    const SCHEDULE_CONFIG = {
+      closeTime: "2099-12-31T09:59:59+07:00",
+      remedStart: "2099-12-31T23:59:59+07:00",
+      remedEnd: "2099-12-31T23:59:59+07:00",
+      closedMsgText: "Ujian telah ditutup."
+    };
+
+    // ==========================================
+    // 1. DATA SOAL PILIHAN GANDA (PG) - Diacak
+    // ==========================================
+    const rawQuestionsPG = [
+{
+    id: 1,
+    q: "Fasilitas berikut ini yang merupakan contoh kebutuhan kolektif (kelompok) bagi seluruh siswa di sekolah adalah ....",
+    img: "",
+    options: ["sepatu sekolah milik pribadi", "ruang kelas, perpustakaan, dan lapangan olahraga", "bekal makan siang masing-masing siswa", "kacamata baca milik seorang siswa"],
+    key: "B"
+  },
+  {
+    id: 2,
+    q: "Syarat adanya interaksi sosial adalah kontak sosial yang terjadi karena....",
+    img: "",
+    options: ["keterlibatan satu individu dengan individu", "keterlibatan satu individu dengan kelompok", "keterlibatan satu kelompok dengan kelompok", "keterlibatan satu individu dengan individu atau kelompok dengan kelompok lain."],
+    key: "D"
+  },
+  {
+    id: 3,
+    q: "Berbagai bukti mengenai asal muasal leluhur bangsa Indonesia masih menimbulkan perdebatan, tetapi di luar hal tersebut dapat direfleksikan bahwa....",
+    img: "",
+    options: ["leluhur bangsa Indonesia merupakan pendatang dari daerah lain", "leluhur bangsa Indonesia membutuhkan waktu untuk menetap", "leluhur bangsa Indonesia berasal dari daerah Indonesia sendiri", "leluhur bangsa Indonesia mempunyai identitas dan kebanggaan"],
+    key: "D"
+  },
+  {
+    id: 4,
+    q: "Kegiatan membaca buku cerita inspiratif di perpustakaan dan mengikuti ekstrakurikuler seni musik di sekolah membantu siswa memenuhi kebutuhan ....",
+    img: "",
+    options: ["jasmani", "rohani", "primer", "fisik"],
+    key: "B"
+  },
+  {
+    id: 5,
+    q: "Semenjak revolusi hijau, para petani di Indonesia menggunakan bahan kimia seperti pestisida dan pupuk untuk meningkatkan produksi pertanian. Tetapi dampak buruknya adalah pencemaran tanah yang menjadikan tanah tidak menjadi subur dan produktif. Solusi dari hal tersebut adalah....",
+    img: "",
+    options: ["memecah zat racun dalam tanah", "mencegah racun dalam tanah", "mendegradasi zat pencemar", "mendegradasi zat racun"],
+    key: "C"
+  },
+  {
+    id: 6,
+    q: "Menuntut ilmu pengetahuan, belajar, dan beribadah merupakan contoh kebutuhan manusia yang pemenuhannya berlangsung ....",
+    img: "",
+    options: ["hanya saat masa kanak-kanak", "sepanjang waktu selama manusia hidup", "hanya ketika mengalami musibah", "pada hari libur nasional saja"],
+    key: "B"
+  },
+  {
+    id: 7,
+    q: "Perubahan potensi sumber daya alam di suatu wilayah umumnya terjadi akibat ....",
+    img: "",
+    options: ["berkurangnya jumlah penduduk secara drastis", "pertumbuhan jumlah penduduk yang pesat dan eksploitasi sumber daya secara berlebihan", "berhentinya seluruh aktivitas industri dan pertanian", "tidak adanya pemanfaatan hasil hutan dan tambang"],
+    key: "B"
+  },
+  {
+    id: 8,
+    q: "Perbedaan utama antara kebutuhan masa mendatang dengan kebutuhan tidak terduga terletak pada ....",
+    img: "",
+    options: ["kebutuhan masa mendatang dapat direncanakan sejak awal, sedangkan kebutuhan tidak terduga muncul secara mendadak", "kebutuhan masa mendatang selalu berupa barang mewah", "kebutuhan tidak terduga tidak memerlukan biaya sama sekali", "kebutuhan masa mendatang hanya berlaku bagi pelajar"],
+    key: "A"
+  },
+  {
+    id: 9,
+    q: "Pembelian barang mewah seperti mobil sport, kapal pesiar, dan perhiasan berlian yang bertujuan meningkatkan status sosial atau prestise termasuk jenis kebutuhan ....",
+    img: "",
+    options: ["primer", "sekunder", "tersier", "rohani"],
+    key: "C"
+  },
+  {
+    id: 10,
+    q: "Kacamata minus bagi siswa yang mengalami rabun jauh serta alat lukis bagi seorang pelukis merupakan contoh kebutuhan ....",
+    img: "",
+    options: ["kelompok (kolektif)", "individu (perorangan)", "umum", "negara"],
+    key: "B"
+  },
+  {
+    id: 11,
+    q: "Berdasarkan sifatnya atau dampaknya terhadap diri manusia, kebutuhan dibedakan menjadi dua macam, yaitu kebutuhan ....",
+    img: "",
+    options: ["primer dan sekunder", "jasmani dan rohani", "individu dan kelompok", "sekarang dan masa depan"],
+    key: "B"
+  },
+  {
+    id: 12,
+    q: "Berolahraga secara rutin, mengonsumsi vitamin, dan tidur yang cukup bertujuan untuk memenuhi kebutuhan jasmani agar ....",
+    img: "",
+    options: ["meningkatkan status sosial di lingkungan tempat tinggal", "menjaga kesehatan, kebugaran, dan daya tahan tubuh", "memperoleh pujian dari masyarakat luas", "menumbuhkan rasa bangga terhadap barang mewah"],
+    key: "B"
+  },
+  {
+    id: 13,
+    q: "Raket bulu tangkis bagi seorang atlet bulu tangkis dan gitar akustik bagi seorang musisi dikategorikan sebagai kebutuhan ....",
+    img: "",
+    options: ["kolektif", "individu", "publik", "sepanjang waktu"],
+    key: "B"
+  },
+  {
+    id: 14,
+    q: "Manusia pada masa berburu dan mengumpulkan makanan tingkat sederhana telah mengenal pembagian kerja. Pada zaman itu, wanita bertugas untuk....",
+    img: "",
+    options: ["berburu binatang", "membuat pakaian hangat", "menjaga tempat tinggal", "mengumpulkan makanan"],
+    key: "D"
+  },
+  {
+    id: 15,
+    q: "Setelah kebutuhan makan, pakaian, dan rumah terpenuhi, keluarga Pak Arman membeli lemari es, mesin cuci, dan sepeda motor untuk mempermudah aktivitas sehari-hari. Barang-barang tersebut termasuk kebutuhan ....",
+    img: "",
+    options: ["primer", "sekunder", "tersier", "darurat"],
+    key: "B"
+  },
+  {
+    id: 16,
+    q: "Pembuangan limbah industri dan sampah plastik ke sungai hingga bermuara ke laut menyebabkan perubahan potensi sumber daya kelautan, yaitu ....",
+    img: "",
+    options: ["meningkatnya populasi ikan konsumsi di perairan pesisir", "rusaknya terumbu karang dan menurunnya hasil tangkapan nelayan", "bertambah luasnya kawasan hutan mangrove alami", "jernihnya air laut di sekitar muara sungai"],
+    key: "B"
+  },
+  {
+    id: 17,
+    q: "Alih fungsi lahan hutan menjadi kawasan permukiman, perkebunan monokultur, dan industri berdampak pada perubahan potensi sumber daya hutan berupa ....",
+    img: "",
+    options: ["meningkatnya keanekaragaman hayati satwa langka", "menyusutnya daerah resapan air sehingga memicu banjir dan tanah longsor", "bertambahnya cadangan oksigen di wilayah perkotaan", "semakin suburnya tanah di daerah aliran sungai"],
+    key: "B"
+  },
+  {
+    id: 18,
+    q: "Kebutuhan yang berhubungan langsung dengan keadaan fisik atau raga manusia agar tetap sehat dan bugar disebut kebutuhan ....",
+    img: "",
+    options: ["rohani", "jasmani", "kolektif", "tersier"],
+    key: "B"
+  },
+  {
+    id: 19,
+    q: "Upaya yang paling tepat dilakukan untuk menjaga agar potensi sumber daya alam tetap lestari dan dapat dinikmati generasi mendatang adalah ....",
+    img: "",
+    options: ["melakukan reboisasi, menerapkan tebang pilih, dan mengembangkan energi terbarukan", "membuka seluruh kawasan hutan lindung untuk pertambangan", "menangkap ikan menggunakan pukat harimau agar hasilnya melimpah", "menggunakan bahan bakar fosil secara boros dalam kehidupan sehari-hari"],
+    key: "A"
+  },
+  {
+    id: 20,
+    q: "Menjalankan ibadah sesuai keyakinan, mendengarkan musik yang menenangkan, serta berekreasi untuk menyegarkan pikiran merupakan pemenuhan kebutuhan ....",
+    img: "",
+    options: ["jasmani", "rohani", "fisik", "materiil"],
+    key: "B"
+  },
+  {
+    id: 21,
+    q: "Berdasarkan subjek atau pihak yang membutuhkannya, kebutuhan manusia dibedakan menjadi kebutuhan ....",
+    img: "",
+    options: ["jasmani dan rohani", "individu dan kelompok (kolektif)", "sekarang dan akan datang", "primer dan tersier"],
+    key: "B"
+  },
+  {
+    id: 22,
+    q: "(1) Menggunakan sarana transportasi umum\n(2) Mengembangkan kendaraan bertenaga listrik\n(3) Menanam pohon-pohon di hutan\n(4) Memakai masker ketika beraktivitas\nSolusi yang tepat untuk menanggulangi pencemaran udara dari pernyataan di atas yaitu....",
+    img: "",
+    options: ["1 dan 2", "2 dan 3", "3 dan 4", "1 dan 4"],
+    key: "A"
+  },
+  {
+    id: 23,
+    q: "Konversi lahan sawah subur menjadi kawasan pabrik dan perumahan di berbagai daerah mengakibatkan perubahan potensi sumber daya pertanian berupa ....",
+    img: "",
+    options: ["meningkatnya kapasitas produksi beras nasional secara otomatis", "menurunnya luas lahan produktif sehingga berpotensi mengancam ketahanan pangan", "bertambahnya jumlah petani muda di pedesaan", "melimpahnya pasokan air irigasi bagi sawah sekitar"],
+    key: "B"
+  },
+  {
+    id: 24,
+    q: "Contoh tindakan seorang pelajar SMP yang mencerminkan persiapan pemenuhan kebutuhan masa mendatang adalah ....",
+    img: "",
+    options: ["membeli jajanan di kantin saat jam istirahat", "menabung secara rutin untuk membeli perlengkapan sekolah tahun ajaran baru", "meminjam penghapus teman saat ujian berlangsung", "minum air putih setelah selesai berolahraga"],
+    key: "B"
+  },
+  {
+    id: 25,
+    q: "Membeli seragam sekolah merupakan kebutuhan individu, sedangkan membangun pos keamanan lingkungan (pos ronda) merupakan kebutuhan kolektif karena pos ronda ....",
+    img: "",
+    options: ["hanya dipakai oleh ketua RT saja", "dimanfaatkan secara bersama-sama demi keamanan seluruh warga desa", "dapat dibawa pulang ke rumah masing-masing", "dibeli menggunakan uang saku pelajar"],
+    key: "B"
+  },
+  {
+    id: 26,
+    q: "Pembangunan jalan raya, jembatan penghubung antardesa, puskesmas, dan sekolah negeri merupakan contoh pemenuhan kebutuhan ....",
+    img: "",
+    options: ["individu", "kelompok (kolektif)", "pribadi", "tersier"],
+    key: "B"
+  },
+  {
+    id: 27,
+    q: "Kebutuhan manusia bersifat tidak terbatas dan selalu bertambah dari waktu ke waktu karena dipengaruhi oleh ....",
+    img: "",
+    options: ["berkurangnya jumlah penduduk dunia", "sifat manusia yang tidak pernah puas serta kemajuan ilmu pengetahuan dan teknologi", "melimpahnya seluruh sumber daya alam tanpa batas", "menurunnya daya beli masyarakat secara terus-menerus"],
+    key: "B"
+  },
+  {
+    id: 28,
+    q: "Kebutuhan pokok yang mutlak harus dipenuhi agar manusia dapat mempertahankan kelangsungan hidupnya secara layak disebut kebutuhan ....",
+    img: "",
+    options: ["tersier", "sekunder", "primer", "pelengkap"],
+    key: "C"
+  },
+  {
+    id: 29,
+    q: "Kota-kota metropolitan seperti Jakarta, Surabaya, dan Bandung mempunyai pencemaran udara yang cukup tinggi karena aktivitas penduduknya yang cukup banyak menggunakan kendaraan bermotor. Sebaliknya di kota-kota yang pencemaran udaranya rendah mempunyai aktivitas penduduk yang cenderung sedikit menggunakan kendaraan bermotor dalam aktivitas sehari-harinya. Maka dapat disimpulkan bahwa ....",
+    img: "",
+    options: ["kota-kota metropolitan mempunyai sumbangan yang kecil terhadap pencemaran udara dibandingkan kota-kota kecil", "kota-kota metropolitan mempunyai sumbangan yang besar terhadap pencemaran udara dibandingkan kota-kota kecil", "kota-kota metropolitan mempunyai sumbangan yang sama dengan pencemaran udara yang terjadi di kota kecil", "kota-kota metropolitan mempunyai sumbangan yang cukup terhadap pencemaran udara yang terjadi di kota kecil"],
+    key: "B"
+  },
+  {
+    id: 30,
+    q: "Kebutuhan kolektif seperti jalan tol, rumah sakit umum daerah, dan jaringan listrik nasional umumnya disediakan oleh pemerintah karena ....",
+    img: "",
+    options: ["hanya digunakan oleh pejabat negara saja", "menyangkut hajat hidup orang banyak dan membutuhkan biaya pembangunan yang besar", "tidak memiliki manfaat bagi kegiatan ekonomi warga", "merupakan kebutuhan tersier yang jarang dipakai"],
+    key: "B"
+  },
+  {
+    id: 31,
+    q: "Perhatikan daftar kebutuhan berikut:\n(1) Makanan bergizi\n(2) Siraman rohani/ceramah agama\n(3) Olahraga teratur\n(4) Pakaian yang nyaman\n(5) Hiburan dan rekreasi\nKelompok yang termasuk kebutuhan jasmani ditunjukkan oleh nomor ....",
+    img: "",
+    options: ["(1), (2), dan (3)", "(1), (3), dan (4)", "(2), (3), dan (5)", "(3), (4), dan (5)"],
+    key: "B"
+  },
+  {
+    id: 32,
+    q: "Seseorang yang memiliki makanan melimpah dan rumah mewah namun sering merasa cemas, kesepian, dan tertekan menunjukkan bahwa ia belum terpenuhi kebutuhan ....",
+    img: "",
+    options: ["jasmaninya", "rohaninya", "primernya", "fisiknya"],
+    key: "B"
+  },
+  {
+    id: 33,
+    q: "Sumber daya alam tambang seperti minyak bumi dan batu bara termasuk sumber daya yang tidak dapat diperbarui, sehingga penambangan secara terus-menerus mengakibatkan ....",
+    img: "",
+    options: ["cadangan sumber daya tambang semakin menipis dan terancam habis", "terbentuknya cadangan minyak bumi baru dalam waktu singkat", "kualitas udara di sekitar tambang menjadi semakin bersih", "harga bahan bakar fosil menjadi tidak bernilai"],
+    key: "A"
+  },
+  {
+    id: 34,
+    q: "Berdasarkan tingkat intensitas atau kepentingannya, kebutuhan manusia dibedakan menjadi tiga jenis, yaitu kebutuhan ....",
+    img: "",
+    options: ["jasmani, rohani, dan sosial", "primer, sekunder, dan tersier", "sekarang, masa depan, dan tidak terduga", "individu, kelompok, dan masyarakat"],
+    key: "B"
+  },
+  {
+    id: 35,
+    q: "Masyarakat di sekitar Pegunungan Kendeng dan aktivis peduli lingkungan menentang perusahaan pabrik semen karena dikhawatirkan dapat merusak ekosistem di Pegunungan Kendeng yang berdampak kepada lingkungan sekitar. Hal tersebut dapat disimpulkan merupakan bentuk interaksi sosial yaitu....",
+    img: "",
+    options: ["konflik", "persaingan", "kontravensi", "kerusuhan"],
+    key: "A"
+  },
+  {
+    id: 36,
+    q: "Orang tua yang menyisihkan sebagian penghasilannya untuk tabungan pendidikan kuliah anak di masa depan sedang memenuhi kebutuhan ....",
+    img: "",
+    options: ["sekarang", "masa mendatang", "tidak terduga", "jasmani"],
+    key: "B"
+  },
+  {
+    id: 37,
+    q: "Makhluk hidup yang muncul di awal permukaan bumi menandakan bumi sudah mulai stabil pada zaman....",
+    img: "",
+    options: ["Arkaekum", "Mesozoikum", "Paleozoikum", "Neozoikum"],
+    key: "C"
+  },
+  {
+    id: 38,
+    q: "Selain aktivitas manusia, perubahan potensi sumber daya alam juga dapat disebabkan oleh faktor alam, seperti ....",
+    img: "",
+    options: ["pembangunan pusat perbelanjaan modern", "letusan gunung berapi, gempa bumi, dan perubahan iklim global", "kegiatan perdagangan antarpulau", "penggunaan pupuk organik oleh petani"],
+    key: "B"
+  },
+  {
+    id: 39,
+    q: "Usaha Mikro Kecil dan Menengah (UMKM) di bidang makanan moci mengalami peningkatan permintaan dari konsumen sebanyak dua kali lipat. Pemilik UMKM tersebut kemudian memesan mesin yang dapat memenuhi permintaan konsumen dan dapat menambah variasi rasa dari mocinya. Hal tersebut dapat disimpulkan bahwa perkembangan Iptek dapat memengaruhi kuantitas dan kualitas produk supaya....",
+    img: "",
+    options: ["menciptakan varian rasa yang baru", "memaksimalkan proses produksi", "memaksimalkan kualitas fungsi barang", "memaksimalkan kepuasan konsumen"],
+    key: "D"
+  },
+  {
+    id: 40,
+    q: "Ketika seorang pelajar memiliki uang saku terbatas namun harus membeli buku paket, kuota belajar, dan sepatu baru, sikap ekonomi yang paling tepat dilakukan adalah ....",
+    img: "",
+    options: ["membeli semua barang dengan cara berutang", "menyusun skala prioritas berdasarkan tingkat urgensi kebutuhan", "mendahulukan keinginan yang paling mahal harganya", "membelanjakan seluruh uang untuk hiburan terlebih dahulu"],
+    key: "B"
+  },
+  {
+    id: 41,
+    q: "Mobil listrik mengalami kenaikan pembelian pada masa sekarang ini. Peminat dari mobil listrik meningkat dan pengembangan mobil listrik oleh perusahaan-perusahaan dan bahkan negara seperti Indonesia terus dikembangkan. Fenomena mobil listrik merupakan respon terhadap sumber daya alam yang....",
+    img: "",
+    options: ["tidak terbatas", "dapat didaur ulang", "mudah dimanfaatkan", "terbatas"],
+    key: "D"
+  },
+  {
+    id: 42,
+    q: "Seorang dokter sangat membutuhkan stetoskop dan alat medis, sedangkan seorang petani membutuhkan cangkul dan traktor. Perbedaan kebutuhan tersebut terutama dipengaruhi oleh faktor ....",
+    img: "",
+    options: ["selera pribadi", "jenis profesi atau pekerjaan", "tingkat pendidikan", "kondisi iklim wilayah"],
+    key: "B"
+  },
+  {
+    id: 43,
+    q: "Menurut waktu pemenuhannya, kebutuhan manusia dibedakan menjadi kebutuhan sekarang, kebutuhan masa mendatang, kebutuhan tidak terduga, dan kebutuhan ....",
+    img: "",
+    options: ["primer", "sepanjang waktu", "jasmani", "kolektif"],
+    key: "B"
+  },
+  {
+    id: 44,
+    q: "Obat-obatan bagi orang yang sedang sakit dan makanan bagi orang yang sedang kelaparan merupakan contoh kebutuhan berdasarkan waktu yaitu kebutuhan ....",
+    img: "",
+    options: ["masa mendatang", "sekarang (saat ini)", "sepanjang waktu", "sekunder"],
+    key: "B"
+  },
+  {
+    id: 45,
+    q: "Dana darurat yang digunakan untuk membiayai perawatan rumah sakit akibat kecelakaan lalu lintas secara tiba-tiba termasuk kategori kebutuhan ....",
+    img: "",
+    options: ["sepanjang waktu", "tidak terduga (insidental)", "tersier", "kolektif"],
+    key: "B"
+  }
+];
+
+    // ========================================================
+    // 2. DATA SOAL ESAI - TIDAK DIAKAP (Urut sesuai urutan di bawah)
+    // ========================================================
+    const rawQuestionsEssay = [
+  {
+    id: 1,
+    q: "(Soal 1)\nBumi diciptakan dalam proses yang cukup lama hingga stabil dan mengalami proses penyempurnaan dengan berbagai fenomena alam di setiap pembagian zamannya dalam pembentukan bumi. Bagaimana ciri-ciri dari zaman Hidup Baru/Neozoikum?",
+    img: ""
+  },
+  {
+    id: 2,
+    q: "(Soal 2)\nSuatu bangsa berinteraksi dengan bangsa lainnya yang menghasilkan kebudayaan baru dari interaksi tersebut. Jelaskan faktor pendukung dari kebudayaan baru yang dihasilkan dari interaksi dari kedua bangsa?",
+    img: ""
+  },
+  {
+    id: 3,
+    q: "(Soal 3)\nPerkembangan manusia zaman Praaksara mengalami perkembangan dari masa ke masa di mana mereka dapat beradaptasi dengan kondisi alam yang selalu berubah. Bagaimana interaksi manusia Praaksara dengan alam dan sesama manusia pada masa bercocok tanam?",
+    img: ""
+  },
+  {
+    id: 4,
+    q: "(Soal 4)\nSirip hiu mempunyai dampak ekonomi yang tinggi bagi nelayan karena dapat dijual dengan harga yang cukup tinggi, tetapi perburuan hiu dapat menurunkan populasinya yang berdampak kepada kepunahan. Bagaimana tanggapan kalian mengenai hal tersebut dalam konsep pembangunan berkelanjutan?",
+    img: ""
+  },
+  {
+    id: 5,
+    q: "(Soal 5)\nSalah satu teori asal muasal leluhur bangsa Indonesia menyebutkan bahwa bangsa Indonesia berasal dari Taiwan yang disebut Out of Taiwan. Bagaimana tahapan migrasi leluhur Indonesia berdasarkan teori Out of Taiwan?",
+    img: ""
+  }
+];
+
+    let studentData = [];
+    let currentMode = ""; // 'pg' atau 'essay'
+    let activeQuestions = [];
+    let userAnswers = [];
+    let currentIdx = 0;
+    let quizActive = false;
+    let csvScoresData = [];
+
+    window.onload = function() {
+      checkAccessSchedule();
+      fetchStudentData();
+      setupAntiCheating();
+      setupSecurityProtections();
+      setInterval(checkAccessSchedule, 1000);
+    };
+
+    // FUNGSI JADWAL DAN TIMER
+    function checkAccessSchedule() {
+      const now = new Date();
+      const closeTime = new Date(SCHEDULE_CONFIG.closeTime);
+      const remedStart = new Date(SCHEDULE_CONFIG.remedStart);
+      const remedEnd = new Date(SCHEDULE_CONFIG.remedEnd);
+
+      const loginPage = document.getElementById("login-page");
+      const closedPage = document.getElementById("closed-page");
+      const closedTitle = document.getElementById("closed-title");
+      const closedMsg = document.getElementById("closed-msg");
+      const countdownEl = document.getElementById("countdown-container");
+
+      if (now >= closeTime && now < remedStart) {
+        loginPage.classList.add("hidden");
+        document.getElementById("menu-page").classList.add("hidden");
+        closedPage.classList.remove("hidden");
+        closedTitle.innerText = "Halaman Ujian Ditutup";
+        closedMsg.innerText = SCHEDULE_CONFIG.closedMsgText;
+        countdownEl.classList.remove("hidden");
+        updateCountdown(remedStart - now);
+      } else if (now >= remedStart && now <= remedEnd) {
+        closedPage.classList.add("hidden");
+        if (!quizActive && document.getElementById("result-page").classList.contains("hidden")) {
+          loginPage.classList.remove("hidden");
+        }
+      } else if (now > remedEnd) {
+        loginPage.classList.add("hidden");
+        document.getElementById("menu-page").classList.add("hidden");
+        closedPage.classList.remove("hidden");
+        closedTitle.innerText = "Sesi Ujian & Remedial Telah Berakhir";
+        closedMsg.innerText = "Ujian dan Remedial telah resmi ditutup secara permanen.";
+        countdownEl.classList.add("hidden");
+      } else {
+        closedPage.classList.add("hidden");
+      }
+    }
+
+    function updateCountdown(diffMs) {
+      if (diffMs <= 0) return;
+      const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diffMs % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown-container").innerText = 
+        `${days} Hari ${hours} Jam ${minutes} Menit ${seconds} Detik`;
+    }
+
+    // FUNGSI LOAD & RENDER MODAL CSV HASIL SKOR
+    function openScoreModal() {
+      document.getElementById("score-modal").classList.remove("hidden");
+      if (csvScoresData.length === 0) {
+        fetchCSVData();
+      }
+    }
+
+    function closeScoreModal() {
+      document.getElementById("score-modal").classList.add("hidden");
+    }
+
+    function fetchCSVData() {
+      fetch(CSV_URL)
+        .then(res => res.text())
+        .then(csvText => {
+          parseCSV(csvText);
+        })
+        .catch(err => {
+          console.error("Error CSV:", err);
+          showInfoModal("Gagal memuat data nilai dari spreadsheet.");
+        });
+    }
+
+    function parseCSV(text) {
+      const lines = text.split('\n').filter(line => line.trim() !== '');
+      if (lines.length < 2) return;
+
+      const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
+      const idxNo = headers.findIndex(h => h.toLowerCase() === 'no');
+      const idxNama = headers.findIndex(h => h.toLowerCase() === 'nama');
+      const idxKelas = headers.findIndex(h => h.toLowerCase() === 'kelas');
+      const idxSkor = headers.findIndex(h => h.toLowerCase() === 'skor');
+
+      csvScoresData = [];
+      const classesSet = new Set();
+
+      for (let i = 1; i < lines.length; i++) {
+        const row = lines[i].split(',').map(cell => cell.trim().replace(/^"|"$/g, ''));
+        if (row.length >= 4) {
+          const item = {
+            no: row[idxNo] || i,
+            nama: row[idxNama] || '',
+            kelas: row[idxKelas] || '',
+            skor: parseFloat(row[idxSkor]) || 0
+          };
+          if(item.kelas) classesSet.add(item.kelas);
+          csvScoresData.push(item);
+        }
+      }
+
+      const modalSelect = document.getElementById("modal-select-kelas");
+      modalSelect.innerHTML = '<option value="">-- Pilih Kelas --</option>';
+      Array.from(classesSet).sort().forEach(c => {
+        modalSelect.innerHTML += `<option value="${c}">${c}</option>`;
+      });
+    }
+
+    function renderScoreTable() {
+      const selectedClass = document.getElementById("modal-select-kelas").value;
+      const tbody = document.getElementById("score-table-body");
+      tbody.innerHTML = "";
+
+      if (!selectedClass) {
+        tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; color: var(--text-muted);">Silakan pilih kelas terlebih dahulu.</td></tr>';
+        return;
+      }
+
+      const filtered = csvScoresData.filter(d => d.kelas === selectedClass);
+      const lolosList = filtered.filter(d => d.skor >= 75);
+      const remedList = filtered.filter(d => d.skor < 75);
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; color: var(--text-muted);">Tidak ada data untuk kelas ini.</td></tr>';
+        return;
+      }
+
+      if(lolosList.length > 0) {
+        tbody.innerHTML += `<tr><td colspan="5" style="background: rgba(34, 197, 94, 0.15); font-weight: bold; color: #4ade80;">SISWA LOLOS (SKOR ≥ 75)</td></tr>`;
+        lolosList.forEach((d, index) => {
+          tbody.innerHTML += `
+            <tr>
+              <td>${index + 1}</td>
+              <td>${d.nama}</td>
+              <td>${d.kelas}</td>
+              <td>${d.skor}</td>
+              <td><span class="badge-lolos">Lolos</span></td>
+            </tr>
+          `;
+        });
+      }
+
+      if(remedList.length > 0) {
+        tbody.innerHTML += `<tr><td colspan="5" style="background: rgba(239, 68, 68, 0.15); font-weight: bold; color: #fca5a5;">SISWA REMEDIAL (SKOR < 75)</td></tr>`;
+        remedList.forEach((d, index) => {
+          tbody.innerHTML += `
+            <tr>
+              <td>${index + 1}</td>
+              <td>${d.nama}</td>
+              <td>${d.kelas}</td>
+              <td>${d.skor}</td>
+              <td><span class="badge-remedial">Remedial</span></td>
+            </tr>
+          `;
+        });
+      }
+    }
+
+    function fetchStudentData() {
+      fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({ action: "getStudents" })
+      })
+      .then(res => res.json())
+      .then(data => {
+        if(data.status === "success") {
+          studentData = data.students;
+          populateClasses(data.classes);
+        } else {
+          showInfoModal("Gagal mengambil data siswa: " + data.message);
+        }
+      })
+      .catch(err => {
+        console.error("Detail Error:", err);
+        showInfoModal("Gagal terhubung ke Backend Spreadsheet!");
+      });
+    }
+
+    function populateClasses(classes) {
+      const selectKelas = document.getElementById("select-kelas");
+      selectKelas.innerHTML = '<option value="">-- Pilih Kelas --</option>';
+      classes.forEach(c => {
+        selectKelas.innerHTML += `<option value="${c}">${c}</option>`;
+      });
+    }
+
+    function filterNama() {
+      const selectedClass = document.getElementById("select-kelas").value;
+      const selectNama = document.getElementById("select-nama");
+      
+      selectNama.innerHTML = '<option value="">-- Pilih Nama Siswa --</option>';
+      if(!selectedClass) {
+        selectNama.disabled = true;
+        return;
+      }
+
+      const filtered = studentData.filter(s => s.kelas === selectedClass);
+      filtered.forEach(s => {
+        selectNama.innerHTML += `<option value="${s.nama}">${s.nama}</option>`;
+      });
+      selectNama.disabled = false;
+    }
+
+    function proceedToMenu() {
+      const kelas = document.getElementById("select-kelas").value;
+      const nama = document.getElementById("select-nama").value;
+
+      if(!kelas || !nama) {
+        showInfoModal("Pilih Kelas dan Nama Anda terlebih dahulu!");
+        return;
+      }
+
+      document.getElementById("student-info-label").innerText = `Siswa: ${nama} (${kelas})`;
+      document.getElementById("login-page").classList.add("hidden");
+      document.getElementById("menu-page").classList.remove("hidden");
+
+      const btnEsai = document.getElementById("btn-menu-esai");
+      if (rawQuestionsEssay.length === 0) {
+        btnEsai.classList.add("btn-disabled");
+        btnEsai.onclick = () => showInfoModal("Soal esai belum tersedia / kosong untuk ujian ini.");
+      } else {
+        btnEsai.classList.remove("btn-disabled");
+        btnEsai.onclick = () => startQuiz('essay');
+      }
+    }
+
+    function backToMenu() {
+      document.getElementById("result-page").classList.add("hidden");
+      document.getElementById("menu-page").classList.remove("hidden");
+    }
+
+    function shuffleArray(array) {
+      let arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    function startQuiz(mode) {
+      currentMode = mode;
+      document.getElementById("menu-page").classList.add("hidden");
+      document.getElementById("quiz-page").classList.remove("hidden");
+
+      if (mode === 'pg') {
+        activeQuestions = shuffleArray(rawQuestionsPG).map(q => {
+          const originalKeyIndex = ["A", "B", "C", "D", "E"].indexOf(q.key);
+          const correctText = q.options[originalKeyIndex];
+          return {
+            id: q.id,
+            q: q.q,
+            img: q.img || "",
+            options: shuffleArray(q.options),
+            correctText: correctText
+          };
+        });
+      } else {
+        activeQuestions = [...rawQuestionsEssay];
+      }
+
+      userAnswers = new Array(activeQuestions.length).fill(null);
+      quizActive = true;
+      showQuestion(0);
+    }
+
+    function showQuestion(idx) {
+      currentIdx = idx;
+      const total = activeQuestions.length;
+      document.getElementById("progress-text").innerText = `Progress: ${idx + 1} / ${total}`;
+      
+      const q = activeQuestions[idx];
+      document.getElementById("question-text").innerHTML = q.q;
+
+      const imgElement = document.getElementById("question-img");
+      if (q.img && q.img.trim() !== "") {
+        imgElement.src = q.img;
+        imgElement.classList.remove("hidden");
+      } else {
+        imgElement.src = "";
+        imgElement.classList.add("hidden");
+      }
+
+      const optionsContainer = document.getElementById("options-container");
+      optionsContainer.innerHTML = "";
+
+      if (currentMode === 'essay') {
+        const savedAnswer = userAnswers[idx] ? userAnswers[idx].selectedText : "";
+        optionsContainer.innerHTML = `
+          <div class="form-group" style="margin-top: 15px;">
+            <label style="color: var(--text-main); font-weight: 600; margin-bottom: 8px;">Jawaban Esai Anda:</label>
+            <textarea id="essay-input" rows="6" placeholder="Ketik jawaban esai Anda di sini..." 
+              oninput="saveEssayAnswer(this.value)">${savedAnswer}</textarea>
+          </div>
+        `;
+      } else {
+        const prefixes = ["A", "B", "C", "D", "E"];
+        q.options.forEach((optText, i) => {
+          const char = prefixes[i];
+          const selectedAns = userAnswers[idx];
+          const isSelected = selectedAns && selectedAns.selectedText === optText;
+          
+          const div = document.createElement("div");
+          div.className = `option-item ${isSelected ? 'selected' : ''}`;
+          div.onclick = () => selectOption(optText);
+          
+          div.innerHTML = `
+            <div class="option-prefix">${char}</div>
+            <div>${optText}</div>
+          `;
+          optionsContainer.appendChild(div);
+        });
+      }
+
+      document.getElementById("btn-prev").style.visibility = idx === 0 ? "hidden" : "visible";
+      
+      if(idx === total - 1) {
+        document.getElementById("btn-next").classList.add("hidden");
+        document.getElementById("btn-submit").classList.remove("hidden");
+      } else {
+        document.getElementById("btn-next").classList.remove("hidden");
+        document.getElementById("btn-submit").classList.add("hidden");
+      }
+
+      if (window.MathJax && typeof MathJax.typesetPromise === 'function') {
+        MathJax.typesetPromise().catch((err) => console.log('MathJax error:', err));
+      }
+    }
+
+    function selectOption(optText) {
+      const q = activeQuestions[currentIdx];
+      userAnswers[currentIdx] = {
+        questionId: q.id,
+        selectedText: optText,
+        isCorrect: optText === q.correctText
+      };
+      showQuestion(currentIdx);
+    }
+
+    function saveEssayAnswer(text) {
+      const q = activeQuestions[currentIdx];
+      userAnswers[currentIdx] = {
+        questionId: q.id,
+        selectedText: text,
+        isCorrect: null
+      };
+    }
+
+    function changeQuestion(dir) {
+      const newIdx = currentIdx + dir;
+      if(newIdx >= 0 && newIdx < activeQuestions.length) {
+        showQuestion(newIdx);
+      }
+    }
+
+    function confirmSubmit() {
+      const unanswered = userAnswers.filter(a => a === null || a.selectedText.trim() === "").length;
+      const titleEl = document.getElementById("submit-modal-title");
+      const msgEl = document.getElementById("submit-modal-msg");
+
+      if(unanswered > 0) {
+        titleEl.innerText = "Soal Belum Lengkap!";
+        msgEl.innerText = `Masih ada ${unanswered} soal yang belum Anda isi/jawab. Yakin ingin mengirim sekarang?`;
+      } else {
+        titleEl.innerText = "Konfirmasi Selesai";
+        msgEl.innerText = "Apakah Anda yakin ingin menyelesaikan dan mengirim jawaban ini?";
+      }
+
+      document.getElementById("submit-modal").classList.remove("hidden");
+    }
+
+    function closeSubmitModal() {
+      document.getElementById("submit-modal").classList.add("hidden");
+    }
+
+    function executeSubmit() {
+      closeSubmitModal();
+      quizActive = false;
+      const kelas = document.getElementById("select-kelas").value;
+      const nama = document.getElementById("select-nama").value;
+
+      document.getElementById("quiz-page").classList.add("hidden");
+      document.getElementById("result-page").classList.remove("hidden");
+      
+      let payload = { nama: nama, kelas: kelas };
+
+      if (currentMode === 'pg') {
+        document.getElementById("result-title").innerText = "Pilihan Ganda Selesai!";
+        document.getElementById("score-display").innerText = "Mengirim Nilai PG...";
+        document.getElementById("result-subtitle").innerText = "Jawaban PG Anda telah tersimpan di spreadsheet.";
+
+        // Hitung Skor Langsung di HTML Berdasarkan Properti 'key' di rawQuestionsPG
+        let correctCount = 0;
+        let formattedAnswers = new Array(rawQuestionsPG.length).fill("");
+
+        userAnswers.forEach(ans => {
+          if(ans) {
+            const rawQ = rawQuestionsPG.find(rq => rq.id === ans.questionId);
+            if(rawQ) {
+              const optIndex = rawQ.options.indexOf(ans.selectedText);
+              if(optIndex !== -1) {
+                const charOption = ["A", "B", "C", "D", "E"][optIndex];
+                formattedAnswers[rawQ.id - 1] = charOption;
+                
+                // Cek apakah jawaban siswa sesuai dengan 'key' di rawQuestionsPG
+                if(charOption === rawQ.key) {
+                  correctCount++;
+                }
+              }
+            }
+          }
+        });
+
+        const finalScore = rawQuestionsPG.length > 0 ? Math.round((correctCount / rawQuestionsPG.length) * 100) : 0;
+
+        payload.action = "submitQuiz";
+        payload.jawaban = formattedAnswers;
+        payload.score = finalScore;
+
+        // Kirim ke Google Apps Script
+        fetch(API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(payload)
+        })
+        .then(res => res.json())
+        .then(data => {
+          if(data.status === "success") {
+            document.getElementById("score-display").innerText = "Terima kasih, jawaban Anda telah direkam.";
+          } else {
+            showInfoModal("Error: " + data.message);
+          }
+        })
+        .catch(err => {
+          console.error("Detail Error:", err);
+          showInfoModal("Gagal koneksi ke server saat mengirim jawaban.");
+        });
+
+      } else {
+        document.getElementById("result-title").innerText = "Esai Berhasil Dikirim!";
+        document.getElementById("score-display").innerText = "Menunggu Koreksi Guru";
+        document.getElementById("result-subtitle").innerText = "Jawaban esai tersimpan terpisah dan tidak mempengaruhi nilai otomatis PG.";
+
+        let essayAnswersMap = {};
+        userAnswers.forEach(ans => {
+          if(ans) {
+            essayAnswersMap[`Soal_${ans.questionId}`] = ans.selectedText;
+          }
+        });
+
+        payload.action = "submitEssay";
+        payload.jawabanEsai = essayAnswersMap;
+
+        fetch(API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(payload)
+        })
+        .then(res => res.json())
+        .then(data => {
+          if(data.status === "success") {
+            document.getElementById("score-display").innerText = `Esai Tersimpan`;
+          } else {
+            showInfoModal("Error: " + data.message);
+          }
+        })
+        .catch(err => {
+          console.error("Detail Error:", err);
+          showInfoModal("Gagal koneksi ke server saat mengirim jawaban.");
+        });
+      }
+    }
+
+    function logViolationToSheet(catatanTeks) {
+      const kelas = document.getElementById("select-kelas") ? document.getElementById("select-kelas").value : "-";
+      const nama = document.getElementById("select-nama") ? document.getElementById("select-nama").value : "Anonim";
+
+      const payload = {
+        action: "logViolation",
+        nama: nama,
+        kelas: kelas,
+        catatan: catatanTeks
+      };
+
+      fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(payload),
+        keepalive: true
+      }).catch(err => console.error("Gagal kirim log pelanggaran:", err));
+    }
+
+    function setupAntiCheating() {
+      window.addEventListener("blur", function() {
+        if(quizActive) {
+          quizActive = false;
+          logViolationToSheet("Keluar dari layar/tab ujian (Ujian tereset)");
+          document.getElementById("cheat-modal").classList.remove("hidden");
+        }
+      });
+    }
+
+    function setupSecurityProtections() {
+      document.addEventListener('contextmenu', e => { e.preventDefault(); return false; });
+      document.addEventListener('copy', e => { e.preventDefault(); });
+    }
+
+    function showInfoModal(msg) {
+      document.getElementById("info-modal-msg").innerText = msg;
+      document.getElementById("info-modal").classList.remove("hidden");
+    }
+
+    function closeInfoModal() {
+      document.getElementById("info-modal").classList.add("hidden");
+    }
+  </script>
+</body>
+</html>

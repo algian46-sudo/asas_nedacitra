@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASAS BAHASA INDONESIA KELAS VIII 2026/2027</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- Google Fonts untuk Font Arab Standar Utsmani -->
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- MathJax untuk Render Persamaan Matematika -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script id="MathJax-Script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="icon" type="image/png" href="https://i.imgur.com/mRmw86t.jpeg">
+  
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+      --card-bg: rgba(30, 41, 59, 0.7);
+      --card-border: rgba(255, 255, 255, 0.1);
+      --accent-color: #6366f1;
+      --accent-hover: #4f46e5;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    body {
+      background: var(--bg-gradient);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .header-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 15px 20px;
+      text-align: center;
+      margin-bottom: 15px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+
+    .header-card h1 {
+      font-size: 1.2rem;
+      color: #38bdf8;
+      margin-bottom: 4px;
+    }
+
+    .header-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      margin-bottom: 15px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    select, button, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid var(--card-border);
+      background: rgba(15, 23, 42, 0.8);
+      color: var(--text-main);
+      font-size: 0.95rem;
+      outline: none;
+      transition: all 0.3s;
+    }
+
+    select:focus, textarea:focus {
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #4f46e5, #06b6d4);
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 10px;
+      color: #ffffff;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .btn-disabled {
+      background: rgba(255, 255, 255, 0.05) !important;
+      color: var(--text-muted) !important;
+      cursor: not-allowed !important;
+      border: 1px dashed var(--card-border) !important;
+    }
+
+    .progress-bar {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      text-align: right;
+    }
+
+    .question-box {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 10px;
+      white-space: pre-line;
+    }
+
+    .arabic-text {
+      font-family: 'Amiri', 'Scheherazade New', serif;
+      font-size: 1.5rem;
+      direction: rtl;
+      text-align: right;
+      line-height: 2.2;
+      color: #38bdf8;
+      margin: 10px 0;
+      display: block;
+    }
+
+    .question-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin: 10px 0 15px 0;
+      display: block;
+      border: 1px solid var(--card-border);
+    }
+
+    .option-item {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      background: rgba(15, 23, 42, 0.4);
+      transition: 0.2s;
+    }
+
+    .option-item:hover {
+      background: rgba(99, 102, 241, 0.15);
+    }
+
+    .option-item.selected {
+      border-color: var(--accent-color);
+      background: rgba(99, 102, 241, 0.3);
+    }
+
+    .option-prefix {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 12px;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .option-item.selected .option-prefix {
+      background: var(--accent-color);
+    }
+
+    .nav-controls {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .btn-nav {
+      width: 48%;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      border: 1px solid var(--card-border);
+      padding: 12px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .warning-box {
+      background: rgba(239, 68, 68, 0.2);
+      border: 1px solid #ef4444;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      color: #fca5a5;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 20px;
+    }
+
+    .modal-card {
+      background: rgba(30, 41, 59, 0.95);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 25px 20px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-icon-danger { font-size: 3rem; color: #ef4444; margin-bottom: 12px; }
+    .modal-icon-warning { font-size: 3rem; color: #f59e0b; margin-bottom: 12px; }
+
+    .modal-card h3 { font-size: 1.2rem; color: var(--text-main); margin-bottom: 8px; }
+    .modal-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 20px; }
+
+    .modal-buttons { display: flex; gap: 10px; }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      cursor: pointer;
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+    }
+
+    .modal-score-card {
+      max-width: 700px !important;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      text-align: left;
+    }
+
+    .score-table-container {
+      overflow-y: auto;
+      max-height: 50vh;
+      margin-top: 15px;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+    }
+
+    .score-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+
+    .score-table th, .score-table td {
+      padding: 10px;
+      border: 1px solid var(--card-border);
+      text-align: left;
+    }
+
+    .score-table th {
+      background: rgba(15, 23, 42, 0.9);
+      position: sticky;
+      top: 0;
+      color: #38bdf8;
+    }
+
+    .badge-lolos {
+      background: rgba(34, 197, 94, 0.2);
+      color: #4ade80;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 0.75rem;
+    }
+
+    .badge-remedial {
+      background: rgba(239, 68, 68, 0.2);
+      color: #fca5a5;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 0.75rem;
+    }
+
+    .countdown-timer {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #f59e0b;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px dashed #f59e0b;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header-card">
+      <h1><i class="fa-solid fa-flask"></i> ASAS BAHASA INDONESIA KELAS VIII 2026/2027</h1>
+      <p>SMP NEGERI 8 CIKARANG UTARA</p>
+    </div>
+
+    <!-- HALAMAN PENUTUPAN UJIAN (JIKA TERKUNCI JADWAL) -->
+    <div id="closed-page" class="card hidden" style="text-align: center;">
+      <i class="fa-solid fa-lock" style="font-size: 3rem; color: #ef4444; margin-bottom: 12px;"></i>
+      <h2 id="closed-title">Halaman Ditutup</h2>
+      <p id="closed-msg" style="margin-top: 8px; color: var(--text-muted);"></p>
+      <div id="countdown-container" class="countdown-timer hidden">--:--:--:--</div>
+      <button class="btn-primary" style="margin-top: 15px;" onclick="openScoreModal()">
+        <i class="fa-solid fa-list-check"></i> Lihat Skor Akhir Siswa
+      </button>
+    </div>
+
+    <!-- 1. HALAMAN LOGIN -->
+    <div id="login-page" class="card">
+      <h2 style="font-size: 1.1rem; margin-bottom: 15px; text-align: center;">Masuk Ke Ujian</h2>
+      
+      <div class="warning-box">
+        <i class="fa-solid fa-triangle-exclamation"></i> Dilarang keluar dari layar/tab selama ujian. Jika Anda keluar atau berpindah aplikasi, ujian akan otomatis direset!
+      </div>
+
+      <div class="form-group">
+        <label>Pilih Kelas</label>
+        <select id="select-kelas" onchange="filterNama()">
+          <option value="">-- Memuat Kelas... --</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Pilih Nama Siswa</label>
+        <select id="select-nama" disabled>
+          <option value="">-- Pilih Kelas Terlebih Dahulu --</option>
+        </select>
+      </div>
+
+      <button class="btn-primary" onclick="proceedToMenu()">Lanjutkan <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+    <!-- 2. HALAMAN MENU PILIH MODE (PG / ESAI) -->
+    <div id="menu-page" class="card hidden" style="text-align: center;">
+      <h2 style="font-size: 1.1rem; margin-bottom: 5px;">Pilih Bagian Ujian</h2>
+      <p id="student-info-label" style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;"></p>
+      
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <button class="btn-primary" onclick="startQuiz('pg')" style="padding: 15px;">
+          <i class="fa-solid fa-list-check"></i> Kerjakan Pilihan Ganda (PG)
+        </button>
+        <button id="btn-menu-esai" class="btn-primary" style="padding: 15px; background: linear-gradient(90deg, #f59e0b, #d97706);">
+          <i class="fa-solid fa-pen-to-square"></i> Kerjakan Soal Esai
+        </button>
+      </div>
+      <button class="btn-secondary" style="margin-top: 15px;" onclick="location.reload()">Ganti Akun / Kelas</button>
+    </div>
+
+    <!-- 3. HALAMAN UJIAN -->
+    <div id="quiz-page" class="card hidden">
+      <div class="progress-bar" id="progress-text">Progress: 1 / 0</div>
+
+      <div class="question-box" id="question-text"></div>
+      <img id="question-img" class="question-image hidden" alt="Gambar Soal">
+      <div id="options-container"></div>
+
+      <div class="nav-controls">
+        <button class="btn-nav" id="btn-prev" onclick="changeQuestion(-1)"><i class="fa-solid fa-chevron-left"></i> Sebelum</button>
+        <button class="btn-nav" id="btn-next" onclick="changeQuestion(1)">Berikut <i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+
+      <button class="btn-primary hidden" id="btn-submit" style="margin-top: 15px; background: linear-gradient(90deg, #22c55e, #10b981);" onclick="confirmSubmit()">
+        Kirim Jawaban <i class="fa-solid fa-check"></i>
+      </button>
+    </div>
+
+    <!-- 4. HALAMAN HASIL -->
+    <div id="result-page" class="card hidden" style="text-align: center;">
+      <i class="fa-solid fa-circle-check" style="font-size: 3rem; color: #22c55e; margin-bottom: 10px;"></i>
+      <h2 id="result-title">Bagian Selesai!</h2>
+      <p style="color: var(--text-muted); margin-top: 5px;" id="result-subtitle">Jawaban Anda telah tersimpan.</p>
+      <div id="score-display" style="font-size: 1.8rem; font-weight: bold; color: #38bdf8; margin: 20px 0;"></div>
+      <button class="btn-primary" onclick="backToMenu()">Kembali ke Menu Utama</button>
+    </div>
+  </div>
+
+  <!-- MODAL PERINGATAN CURANG -->
+  <div id="cheat-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <i class="fa-solid fa-triangle-exclamation modal-icon-danger"></i>
+      <h3>Pelanggaran Terdeteksi!</h3>
+      <p>Anda terdeteksi meninggalkan layar/tab ujian. Ujian Anda direset.</p>
+      <button class="btn-primary" style="background: #ef4444; width: 100%; padding: 12px; border-radius: 10px;" onclick="location.reload()">Mengerti & Ulangi</button>
+    </div>
+  </div>
+
+  <!-- MODAL KONFIRMASI SUBMIT -->
+  <div id="submit-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <i class="fa-solid fa-circle-question modal-icon-warning"></i>
+      <h3 id="submit-modal-title">Konfirmasi Selesai</h3>
+      <p id="submit-modal-msg">Apakah Anda yakin ingin mengirimkan jawaban?</p>
+      <div class="modal-buttons">
+        <button class="btn-secondary" onclick="closeSubmitModal()">Batal</button>
+        <button class="btn-primary" style="margin-top:0; background: linear-gradient(90deg, #22c55e, #10b981); width: 100%; padding: 12px; border-radius: 10px;" onclick="executeSubmit()">Kirim</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL INFORMASI -->
+  <div id="info-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <i class="fa-solid fa-circle-info modal-icon-warning"></i>
+      <h3>Pemberitahuan</h3>
+      <p id="info-modal-msg">Pesan</p>
+      <button class="btn-primary" style="width: 100%; padding: 12px; border-radius: 10px;" onclick="closeInfoModal()">OK</button>
+    </div>
+  </div>
+
+  <!-- MODAL HASIL SKOR SISWA (DARI CSV) -->
+  <div id="score-modal" class="modal-overlay hidden">
+    <div class="modal-card modal-score-card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+        <h3><i class="fa-solid fa-trophy" style="color: #f59e0b;"></i> Hasil Skor Siswa</h3>
+        <button class="btn-secondary" style="width: auto; padding: 5px 12px;" onclick="closeScoreModal()">Tutup</button>
+      </div>
+
+      <div class="form-group" style="margin-bottom: 10px;">
+        <label>Pilih Kelas:</label>
+        <select id="modal-select-kelas" onchange="renderScoreTable()">
+          <option value="">-- Pilih Kelas --</option>
+        </select>
+      </div>
+
+      <div class="score-table-container">
+        <table class="score-table">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama</th>
+              <th>Kelas</th>
+              <th>Skor</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="score-table-body">
+            <tr>
+              <td colspan="5" style="text-align: center; color: var(--text-muted);">Silakan pilih kelas terlebih dahulu.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const API_URL = "https://script.google.com/macros/s/AKfycbwcH2_AAM-s55H43DXpPGQIJBEAYnb4zwnnwFvYJV2nimB7rbteO-ipduJO1azHpik/exec";
+    const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQdf73lB9D2QeFUqOQ0VDVOZaQRBLkR1ZkDZxtFkLf_UVKjrsm0DTks6UhGH2W1CoX5s6ooUb3rjvte/pub?gid=107493068&single=true&output=csv";
+
+    // Konfigurasi Jadwal Ujian (Set ke tahun 2099 agar terbuka sekarang)
+    const SCHEDULE_CONFIG = {
+      closeTime: "2099-12-31T09:59:59+07:00",
+      remedStart: "2099-12-31T23:59:59+07:00",
+      remedEnd: "2099-12-31T23:59:59+07:00",
+      closedMsgText: "Ujian telah ditutup."
+    };
+
+    // ==========================================
+    // 1. DATA SOAL PILIHAN GANDA (PG) - Diacak
+    // ==========================================
+    const rawQuestionsPG = [
+ {
+    id: 1,
+    q: "Cermati kutipan teks berikut!\n\nKomodo adalah spesies kadal terbesar di dunia yang hidup di pulau Komodo, Rinca, Flores, Gili Motang, dan Padar di Nusa Tenggara. Hewan ini merupakan anggota famili biawak Varanidae, dan merupakan salah satu hewan purba yang masih hidup hingga saat ini.\n\nBerdasarkan kutipan teks di atas, bagian struktur teks Laporan Hasil Observasi (LHO) yang tepat adalah .....",
+    img: "",
+    options: [
+      "definisi umum",
+      "deskripsi bagian",
+      "simpulan",
+      "deskripsi manfaat"
+    ],
+    key: "A"
+  },
+  {
+    id: 2,
+    q: "Manakah dari pernyataan berikut yang merupakan kalimat fakta dalam teks LHO?",
+    img: "",
+    options: [
+      "Bunga mawar adalah bunga yang paling indah di taman.",
+      "Sepertinya hujan akan turun dengan sangat lebat sore ini",
+      "Udara di pegunungan sangat segar dan menenangkan hati.",
+      "Paus biru dapat tumbuh hingga mencapai panjang 30 meter."
+    ],
+    key: "D"
+  },
+  {
+    id: 3,
+    q: "Cermati kutipan teks berikut!\n\nLumba-lumba memiliki tubuh yang ramping untuk memudahkan berenang. Mereka memiliki sirip punggung, dua sirip samping, dan ekor yang kuat. Di atas kepalanya terdapat lubang napas untuk menghirup udara.\n\nBagian deskripsi bagian pada teks LHO tersebut menjelaskan tentang ...",
+    img: "",
+    options: [
+      "Habitat asli lumba-lumba di samudra",
+      "Klasifikasi lumba-lumba sebagai mamalia laut",
+      "Ciri fisik lumba-lumba seperti sirip dan lubang napas",
+      "Cara lumba-lumba berkembang biak."
+    ],
+    key: "C"
+  },
+  {
+    id: 4,
+    q: "Cermati kutipan teks berikut!\n\nLebah pekerja memiliki tugas yang sangat berat. Mereka terbang dari satu bunga ke bunga lain untuk mencari nektar. Setelah kembali ke sarang, lebah pekerja menghasilkan madu.\n\nKalimat yang menggunakan kata kerja (verba) aktif dalam teks tersebut adalah .....",
+    img: "",
+    options: [
+      "madu sangat manis dan lezat",
+      "barang lebah berbentuk heksagon",
+      "lebah adalah serangga yang rajin",
+      "lebah pekerja menghasilkan madu dari nektar."
+    ],
+    key: "D"
+  },
+  {
+    id: 5,
+    q: "Cermati kalimat berikut!\nTanaman Lidah Buaya banyak dijual di apotik terdekat sebagai bahan kecantikan.\n\nKesalahan ejaan pada kalimat tersebut terletak pada kata ...",
+    img: "",
+    options: [
+      "lidah",
+      "buaya",
+      "dijual",
+      "apotik"
+    ],
+    key: "D"
+  },
+  {
+    id: 6,
+    q: "Manakah dari kalimat berikut yang bersifat objektif sesuai kaidah teks laporan hasil observasi?",
+    img: "",
+    options: [
+      "Bunga mawar itu terlihat sangat sedih di pagi hari.",
+      "Menurut saya, kucing adalah hewan yang paling malas.",
+      "Suhu air di kawah tersebut mencapai 80 derajat Celcius.",
+      "Mungkin hujan akan turun sangat lebat sore ini."
+    ],
+    key: "C"
+  },
+  {
+    id: 7,
+    q: "Cermati kalimat berikut!\n(1) Kaktus memiliki daun yang berbentuk duri untuk mengurangi penguapan.\n(2) Kaktus mempunyai batang tebal yang berfungsi menyimpan cadangan air.\n\nKonjungsi yang tepat untuk menghubungkan kalimat (1) dan (2) adalah .....",
+    img: "",
+    options: [
+      "tetapi",
+      "selain itu",
+      "meskipun",
+      "padahal"
+    ],
+    key: "B"
+  },
+  {
+    id: 8,
+    q: "Cermati ilustrasi berikut!\n\nKelompok Rina mendapat tugas mengamati kondisi perpustakaan sekolah. Mereka mencatat jumlah buku, jenis koleksi, fasilitas, dan jumlah pengunjung setiap hari. Setelah melakukan pengamatan, mereka menyusun laporan berdasarkan fakta yang ditemukan.\n\nTujuan utama Rina dan kelompoknya menyusun teks laporan hasil observasi adalah .....",
+    img: "",
+    options: [
+      "menghibur pembaca melalui cerita tentang perpustakaan.",
+      "memberikan informasi berdasarkan hasil pengamatan secara objektif dan sistematis.",
+      "mengajak pembaca agar selalu mengunjungi perpustakaan.",
+      "menyampaikan pendapat pribadi tentang fasilitas perpustakaan."
+    ],
+    key: "B"
+  },
+  {
+    id: 9,
+    q: "Cermati data berikut!\n(1) Tinggi pohon 2 meter\n(2) Warna daun hijau tua\n(3) Tekstur kulit batang kasar\n(4) Buah terasa manis\n\nData manakah yang termasuk data hasil pengamatan indra penglihatan?",
+    img: "",
+    options: [
+      "(1) dan (2)",
+      "(2) dan (3)",
+      "(3) dan (4)",
+      "(1) dan (4)"
+    ],
+    key: "A"
+  },
+  {
+    id: 10,
+    q: "Apa yang membedakan teks laporan hasil observasi dengan teks deskripsi biasa?",
+    img: "",
+    options: [
+      "Teks laporan hasil observasi menggunakan bahasa kiasan.",
+      "Teks laporan hasil observasi berisi opini pribadi penulis.",
+      "Deskripsi bersifat ilmiah dan data akurat.",
+      "Teks laporan hasil observasi bersifat global dan objektif, sedangkan deskripsi bersifat personal."
+    ],
+    key: "D"
+  },
+  {
+    id: 11,
+    q: "Cermati paragraf berikut!\n\nTaman sekolah memiliki beberapa manfaat bagi warga sekolah. Pepohonan dapat memberikan keteduhan sehingga lingkungan di sekitarnya terasa lebih sejuk. Tanaman juga membantu menyerap karbon dioksida dan menghasilkan oksigen melalui proses fotosintesis. Selain itu, keberadaan taman dapat dimanfaatkan sebagai tempat pembelajaran tentang lingkungan hidup.\n\nGagasan utama paragraf tersebut adalah .....",
+    img: "",
+    options: [
+      "Pepohonan menghasilkan oksigen melalui proses fotosintesis.",
+      "Taman sekolah memiliki beberapa manfaat bagi warga sekolah.",
+      "Peserta didik dapat mempelajari bentuk dan jenis tumbuhan.",
+      "Tanaman membuat lingkungan sekolah menjadi lebih sejuk."
+    ],
+    key: "B"
+  },
+  {
+    id: 12,
+    q: "Cermati informasi berikut!\n\nSaat melakukan observasi terhadap kantin sekolah, Sinta mencatat beberapa informasi berikut.\n(1) Kantin memiliki luas sekitar 75 meter persegi\n(2) Terdapat 8 meja dan 32 kursi untuk pembeli\n(3) Kantin menyediakan makanan dan minuman\n(4) Tersedia tempat mencuci tangan dan tempat sampah\n(5) Kebersihan kantin dijaga oleh petugas dan pedagang\n(6) Kantin menjadi salah satu fasilitas pendukung kebutuhan peserta didik.\n\nBerdasarkan catatan tersebut, topik yang paling tepat digunakan untuk mengembangkan teks laporan hasil observasi adalah .....",
+    img: "",
+    options: [
+      "Makanan dan Minuman yang Dijual di Kantin Sekolah",
+      "Kebersihan Lingkungan Sekolah dan Tanggung Jawab Petugas",
+      "Kantin Sekolah sebagai Fasilitas Pendukung Kebutuhan Peserta Didik",
+      "Jumlah Meja dan Kursi yang Tersedia di Kantin Sekolah"
+    ],
+    key: "C"
+  },
+  {
+    id: 13,
+    q: "Cermati paragraf berikut!\n\nRuang UKS terletak di dekat ruang guru. Ruangan tersebut memiliki dinding berwarna putih dengan dua jendela di sisi kanan. Di dalamnya terdapat dua tempat tidur yang dilengkapi seprai berwarna hijau. Sebuah lemari obat berada di sudut ruangan, sedangkan meja kecil terletak di samping tempat tidur.\n\nBerdasarkan hasil pengamatan, alasan paragraf tersebut termasuk paragraf deskripsi adalah .....",
+    img: "",
+    options: [
+      "Menjelaskan manfaat ruang UKS bagi kesehatan peserta didik.",
+      "Menggambarkan kondisi fisik dan susunan benda di ruang UKS secara terperinci.",
+      "Menceritakan pengalaman peserta didik ketika menggunakan ruang UKS.",
+      "Mengajak peserta didik untuk menjaga kebersihan ruang UKS."
+    ],
+    key: "B"
+  },
+  {
+    id: 14,
+    q: "Cermati paragraf berikut!\n\nTempat sampah terpilah merupakan fasilitas yang membantu pengelolaan sampah berdasarkan jenisnya. Sampah organik, seperti daun kering dan sisa makanan, dapat diolah menjadi kompos. Sampah anorganik, seperti botol plastik dan kaleng, dapat dipilah untuk didaur ulang. Sementara itu, sampah residu merupakan sampah yang sulit atau tidak dapat didaur ulang melalui proses pengolahan yang tersedia.\n\nParagraf diatas termasuk paragraf eksposisi karena ...",
+    img: "",
+    options: [
+      "menggambarkan bentuk dan warna tempat sampah di lingkungan sekolah",
+      "menjelaskan proses pengelompokan sampah berdasarkan jenis dan karakteristiknya",
+      "menceritakan kegiatan peserta didik ketika membuang sampah",
+      "menggambarkan perasaan peserta didik saat melihat lingkungan sekolah"
+    ],
+    key: "B"
+  },
+  {
+    id: 15,
+    q: "Cermati paragraf berikut!\n\nPerpustakaan sekolah merupakan fasilitas yang menyediakan berbagai sumber bacaan bagi peserta didik. Di dalamnya terdapat buku pelajaran, buku cerita, kamus, dan ensiklopedia. Buku-buku tersebut disusun berdasarkan jenisnya agar mudah ditemukan. Selain itu, perpustakaan dilengkapi meja baca dan tempat duduk yang tertata rapi. Kondisi ruangan yang bersih membuat kegiatan membaca menjadi lebih nyaman.\n\nGagasan utama paragraf tersebut adalah .....",
+    img: "",
+    options: [
+      "Perpustakaan memiliki meja baca dan tempat duduk.",
+      "Perpustakaan sekolah menyediakan berbagai sumber bacaan dan fasilitas pendukung.",
+      "Buku pelajaran dan ensiklopedia merupakan koleksi terbanyak di perpustakaan.",
+      "Kondisi perpustakaan yang bersih membuat siswa senang membaca."
+    ],
+    key: "B"
+  },
+  {
+    id: 16,
+    q: "Cermati iklan berikut!\n\nButuh cuci sepatu kilat\nHanya 30 menit sepatu Anda seperti baru kembali! Hubungi: 0812-XXXX.\n\nIklan tersebut termasuk jenis iklan ...",
+    img: "",
+    options: [
+      "penawaran jasa",
+      "pemberitahuan",
+      "layanan masyarakat",
+      "undangan"
+    ],
+    key: "A"
+  },
+  {
+    id: 17,
+    q: "Cermati teks iklan berikut!\n\nAyo Hemat Air!\nSetetes Air, Berarti untuk Masa Depan!\nGunakan air secukupnya. Tutup keran setelah digunakan. Mari bersama menjaga ketersediaan air bersih!\n\nCiri iklan yang paling menonjol berdasarkan teks tersebut adalah .....",
+    img: "",
+    options: [
+      "menggunakan kalimat panjang untuk menjelaskan proses terjadinya air",
+      "menggunakan bahasa persuasif yang mengajak masyarakat melakukan tindakan tertentu",
+      "menyampaikan informasi yang hanya dapat dipahami oleh kelompok tertentu",
+      "mengutamakan penjelasan ilmiah tentang kandungan air"
+    ],
+    key: "B"
+  },
+  {
+    id: 18,
+    q: "Perhatikan poster berikut!\nhttps://imgur.com/a/x7R6XAF\n\nPoster tersebut bertujuan untuk ...",
+    img: "https://i.imgur.com/r4NyB3P.png",
+    options: [
+      "menjual produk tempat sampah",
+      "menginformasikan jenis-jenis sampah",
+      "mengajak warga menjaga kebersihan demi kesehatan",
+      "melarang warga membuang sampah"
+    ],
+    key: "C"
+  },
+  {
+    id: 19,
+    q: "Cermati kalimat dalam iklan berikut!\n\nSekolah akan membuat iklan layanan masyarakat tentang pentingnya menjaga kesehatan dengan mencuci tangan. Beberapa pilihan kalimat yang tersedia adalah sebagai berikut.\n(1) Mencuci tangan merupakan kegiatan membersihkan tangan menggunakan air dan sabun.\n(2) Tangan Bersih, Tubuh Sehat! Biasakan Cuci Tangan Sebelum Makan!\n(3) Banyak orang mencuci tangan dengan berbagai cara setiap hari.\n(4) Tangan manusia dapat menyentuh berbagai benda di lingkungan sekitarnya.\n\nKalimat yang paling efektif digunakan sebagai iklan layanan masyarakat adalah .....",
+    img: "",
+    options: [
+      "kalimat 1 karena memberikan pengertian tentang mencuci tangan",
+      "kalimat 2 karena singkat, menarik, dan mengandung ajakan",
+      "kalimat 3 karena menjelaskan kebiasaan masyarakat",
+      "kalimat 4 karena memberikan informasi tentang tangan manusia"
+    ],
+    key: "B"
+  },
+  {
+    id: 20,
+    q: "Perhatikan dua slogan berikut!\n\nSlogan 1: \"Buku Adalah Jendela Dunia yang Membuka Pengetahuan dan Wawasan bagi Setiap Orang.\"\nSlogan 2: \"Rajin Membaca, Luas Wawasan!\"\n\nPanitia lomba memilih slogan kedua untuk dipasang di perpustakaan sekolah. Alasan paling tepat yang mendasari keputusan panitia adalah .....",
+    img: "",
+    options: [
+      "menggunakan istilah yang lebih sulit dipahami",
+      "memberikan penjelasan lebih lengkap tentang membaca",
+      "lebih singkat, mudah diingat, dan memiliki pesan yang jelas",
+      "tidak membutuhkan pemahaman dari pembaca"
+    ],
+    key: "C"
+  },
+  {
+    id: 21,
+    q: "Perhatikan poster berikut!\nhttps://imgur.com/a/rmIk95M\n\nKalimat imperatif yang terdapat dalam poster tersebut ditunjukkan oleh kata ...",
+    img: "https://i.imgur.com/FIhf5p3.png",
+    options: [
+      "lampu",
+      "matikan",
+      "hemat",
+      "energi"
+    ],
+    key: "B"
+  },
+  {
+    id: 22,
+    q: "Iklan Layanan Masyarakat biasanya dikeluarkan oleh ...",
+    img: "",
+    options: [
+      "perusahaan swasta yang mencari untung",
+      "pemerintah atau lembaga nirlaba",
+      "perorangan yang ingin menjual barang",
+      "pedagang kaki lima"
+    ],
+    key: "B"
+  },
+  {
+    id: 23,
+    q: "Perhatikan iklan berikut!\n\nBuku adalah Jendela Dunia. Baca Satu Buku, Temukan Sejuta Ilmu!\n\nIklan tersebut bertujuan untuk mempengaruhi khalayak agar ...",
+    img: "",
+    options: [
+      "gemar membaca buku untuk menambah wawasan",
+      "membeli rak buku di toko tertentu",
+      "menulis buku cerita pendek",
+      "menjual buku-buku lama mereka"
+    ],
+    key: "A"
+  },
+  {
+    id: 24,
+    q: "Unsur 'gambar' dalam sebuah poster berfungsi untuk ...",
+    img: "",
+    options: [
+      "sebagai hiasan tambahan saja",
+      "menarik perhatian dan memperjelas pesan teks",
+      "menggantikan seluruh isi tulisan",
+      "membuat poster menjadi sangat mahal harganya"
+    ],
+    key: "B"
+  },
+  {
+    id: 25,
+    q: "Perhatikan iklan berikut!\nhttps://imgur.com/a/uBVyYqC\n\nGambar diatas termasuk jenis iklan nonkomersial yaitu .....",
+    img: "https://i.imgur.com/tLZfO0Q.png",
+    options: [
+      "iklan layanan masyarakat",
+      "pemberitahuan",
+      "undangan",
+      "lingkungan"
+    ],
+    key: "B"
+  },
+  {
+    id: 26,
+    q: "Slogan 'Sekali Merdeka tetap Merdeka!' memiliki makna ...",
+    img: "",
+    options: [
+      "kemerdekaan hanya terjadi satu kali",
+      "jangan pernah merdeka dua kali",
+      "tekad bulat untuk mempertahankan kemerdekaan selamanya",
+      "merdeka adalah impian semua orang"
+    ],
+    key: "C"
+  },
+  {
+    id: 27,
+    q: "Dalam pembuatan poster, hal yang paling perlu diperhatikan dalam pemilihan huruf (tipografi) adalah .....",
+    img: "",
+    options: [
+      "huruf harus sangat kecil agar muat banyak",
+      "gunakan minimal lima jenis huruf berbeda",
+      "huruf harus berwarna hitam saja",
+      "huruf harus jelas dan mudah terbaca dari jarak jauh"
+    ],
+    key: "D"
+  },
+  {
+    id: 28,
+    q: "Perhatikan ilustrasi berikut!\n\nOSIS membuat iklan layanan masyarakat tentang pentingnya menghemat listrik di sekolah. Mereka ingin menggunakan kalimat imperatif yang tepat agar siswa segera melakukan tindakan nyata.\n\nKalimat yang paling sesuai dengan tujuan iklan tersebut adalah .....",
+    img: "",
+    options: [
+      "penggunaan listrik di sekolah perlu diperhatikan oleh seluruh warga sekolah",
+      "listrik merupakan sumber energi yang sangat dibutuhkan dalam kehidupan sehari-hari",
+      "mari kita bersama-sama menghemat energi listrik demi masa depan bumi!",
+      "matikan lampu dan kipas angin ketika tidak digunakan!"
+    ],
+    key: "D"
+  },
+  {
+    id: 29,
+    q: "Bagian iklan yang berisi informasi mengenai cara mendapatkan produk disebut ...",
+    img: "",
+    options: [
+      "headline",
+      "visual",
+      "body copy",
+      "kontak / call to action"
+    ],
+    key: "D"
+  },
+  {
+    id: 30,
+    q: "Perhatikan kalimat iklan berikut!\n\n\"Produk Susu Sehatku mengandung kalsium dan vitamin D yang baik untuk membantu menjaga kesehatan tulang.\"\n\nAgar kalimat tersebut menjadi lebih persuasif dan mampu menarik minat pembeli, perbaikan yang paling tepat adalah .....",
+    img: "",
+    options: [
+      "Susu sehatku merupakan produk susu yang mengandung kalsium dan vitamin D",
+      "Susu sehatku diproduksi dengan bahan-bahan pilihan dan dikemas secara menarik",
+      "Yuk, pilih susu sehatku! Nikmati manfaat kalsium dan vitamin D untuk membantu menjaga kesehatan tulangmu!",
+      "Susu sehatku tersedia di berbagai toko dan supermarket dengan harga yang terjangkau"
+    ],
+    key: "C"
+  },
+  {
+    id: 31,
+    q: "Perhatikan kutipan teks berikut!\n\nTahukah kamu bahwa terlalu lama menatap layar gadget bisa membuat mata lelah? Istilah medisnya adalah digital eye strain. Namun tenang, kita bisa mencegahnya dengan aturan 20-20-20.\n\nMengapa teks tersebut dikategorikan sebagai artikel ilmiah populer?",
+    img: "",
+    options: [
+      "karena ditulis oleh seorang ilmuwan terkenal",
+      "karena menyajikan fakta ilmiah dengan bahasa yang mudah dipahami umum",
+      "karena berisi imajinasi penulis tentang masa depan",
+      "karena hanya memuat angka-angka statistik yang rumit"
+    ],
+    key: "B"
+  },
+  {
+    id: 32,
+    q: "Langkah pertama yang harus dilakukan saat akan menulis artikel ilmiah populer adalah .....",
+    img: "",
+    options: [
+      "menentukan topik yang aktual dan menarik",
+      "langsung membuat kesimpulan tulisan",
+      "mencari penerbit yang mau membeli tulisan",
+      "menghias artikel dengan banyak gambar"
+    ],
+    key: "A"
+  },
+  {
+    id: 33,
+    q: "Perhatikan kutipan artikel berikut!\n\n\"Penggunaan gawai secara berlebihan dapat mengganggu konsentrasi belajar siswa. Berdasarkan survei terhadap 80 siswa, sebanyak 60 siswa mengaku sering membuka media sosial ketika sedang mengerjakan tugas. Kebiasaan tersebut menyebabkan perhatian siswa mudah teralihkan sehingga tugas membutuhkan waktu lebih lama untuk diselesaikan.\"\n\nPernyataan yang merupakan pendapat penulis dalam kutipan tersebut adalah .....",
+    img: "",
+    options: [
+      "survei dilakukan terhadap 80 siswa",
+      "sebanyak 60 siswa sering membuka media sosial ketika mengerjakan tugas",
+      "penggunaan gawai secara berlebihan dapat mengganggu konsentrasi belajar siswa",
+      "siswa mengerjakan tugas sambil membuka media sosial."
+    ],
+    key: "C"
+  },
+  {
+    id: 34,
+    q: "Gaya bahasa dalam artikel ilmiah populer sebaiknya ...",
+    img: "",
+    options: [
+      "sangat formal dan kaku",
+      "menggunakan banyak istilah asing tanpa penjelasan",
+      "komunikatif, santai, namun tetap berdasarkan fakta",
+      "menggunakan bahasa gaul yang tidak sopan"
+    ],
+    key: "C"
+  },
+  {
+    id: 35,
+    q: "Perhatikan kutipan artikel berikut!\n\n\"Menjaga kebersihan kantin sekolah merupakan tanggung jawab seluruh warga sekolah. Berdasarkan hasil pengamatan, masih ditemukan sampah plastik di beberapa meja kantin setelah jam istirahat. Kondisi tersebut dapat mengundang serangga dan mengganggu kenyamanan siswa saat makan.\"\n\nBukti yang digunakan penulis untuk memperkuat pendapatnya adalah .....",
+    img: "",
+    options: [
+      "kebersihan kantin merupakan tanggung jawab seluruh warga sekolah",
+      "sampah plastik ditemukan di beberapa meja kantin setelah jam istirahat",
+      "sampah dapat mengganggu kenyamanan siswa",
+      "siswa harus menjaga kebersihan lingkungan sekolah."
+    ],
+    key: "B"
+  },
+  {
+    id: 36,
+    q: "Seorang siswa menulis artikel ilmiah populer dengan pendapat berikut.\n\"Membiasakan sarapan sebelum berangkat sekolah merupakan hal penting bagi peserta didik.\"\nIa ingin memperkuat pendapat tersebut dengan alasan yang logis. Alasan yang paling tepat adalah .....",
+    img: "",
+    options: [
+      "sarapan merupakan kebiasaan yang dilakukan oleh banyak orang setiap pagi",
+      "makanan yang disajikan saat sarapan biasanya memiliki rasa yang enak",
+      "sarapan dapat menyediakan energi bagi tubuh sehingga siswa lebih siap mengikuti kegiatan belajar",
+      "siswa yang tidak sarapan biasanya tidak menyukai makanan yang tersedia di rumah."
+    ],
+    key: "C"
+  },
+  {
+    id: 37,
+    q: "Data yang disajikan dalam artikel ilmiah populer harus bersifat ...",
+    img: "",
+    options: [
+      "fiktif",
+      "faktual",
+      "rahasia",
+      "berlebihan"
+    ],
+    key: "B"
+  },
+  {
+    id: 38,
+    q: "Manakah judul yang paling sesuai untuk artikel ilmiah populer bagi remaja?",
+    img: "",
+    options: [
+      "Analisis Biokimia pada Hormon Remaja",
+      "Pengaruh Globalisasi terhadap Pertumbuhan Ekonomi Nasional",
+      "Struktur Anatomi Daun Mangifera Indica",
+      "Rahasia di Balik 'Mood Swings' saat Masa Puber"
+    ],
+    key: "D"
+  },
+  {
+    id: 39,
+    q: "Metode pengumpulan data dengan cara tanya jawab langsung kepada narasumber disebut ...",
+    img: "",
+    options: [
+      "observasi",
+      "wawancara",
+      "studi pustaka",
+      "eksperimen"
+    ],
+    key: "B"
+  },
+  {
+    id: 40,
+    q: "Kalimat di bawah ini yang mengandung opini penulis dalam artikel ilmiah populer adalah .....",
+    img: "",
+    options: [
+      "air mendidih pada suhu 100 derajat Celcius",
+      "Indonesia memiliki dua musim, yaitu hujan dan kemarau",
+      "seharusnya kita mulai mengurangi penggunaan kantong plastik",
+      "pohon melakukan fotosintesis di siang hari"
+    ],
+    key: "C"
+  },
+  {
+    id: 41,
+    q: "Mengapa penting bagi penulis artikel ilmiah populer untuk melakukan studi pustaka?",
+    img: "",
+    options: [
+      "agar bisa menjiplak tulisan orang lain",
+      "untuk memperkaya referensi dan akurasi data",
+      "supaya artikel terlihat sangat tebal",
+      "agar tidak perlu melakukan observasi lapangan lagi"
+    ],
+    key: "B"
+  },
+  {
+    id: 42,
+    q: "Perhatikan kutipan artikel berikut!\n\n\"Penggunaan buku digital semakin diminati oleh pelajar karena lebih praktis daripada buku cetak. Buku digital dapat menyimpan banyak bacaan dalam satu perangkat, sedangkan buku cetak membutuhkan tempat penyimpanan khusus.\"\n\nKalimat yang menunjukkan perbandingan dalam kutipan tersebut adalah ....",
+    img: "",
+    options: [
+      "penggunaan buku digital semakin diminati oleh pelajar",
+      "buku digital dapat menyimpan banyak bacaan dalam satu perangkat",
+      "buku digital lebih praktis daripada buku cetak",
+      "buku cetak membutuhkan tempat penyimpanan khusus"
+    ],
+    key: "C"
+  },
+  {
+    id: 43,
+    q: "Perhatikan kalimat berikut!\n\"Penggunaan energi terbarukan menjadi salah satu solusi untuk mengurangi pencemaran lingkungan.\"\n\nKata mengurangi dalam kalimat tersebut memiliki sinonim yang paling tepat, yaitu .....",
+    img: "",
+    options: [
+      "menambahkan",
+      "memperbesar",
+      "meminimalkan",
+      "mengembangkan"
+    ],
+    key: "C"
+  },
+  {
+    id: 44,
+    q: "Perhatikan kutipan artikel berikut!\n\n\"Sebagian masyarakat mulai menerapkan pola hidup hemat energi. Sebaliknya, masih ada masyarakat yang berperilaku boros dalam menggunakan listrik dan air.\"\n\nPasangan kata yang menunjukkan antonim dalam kutipan tersebut adalah ....",
+    img: "",
+    options: [
+      "masyarakat dan lingkungan",
+      "hemat dan boros",
+      "listrik dan air",
+      "menggunakan dan menerapkan"
+    ],
+    key: "B"
+  },
+  {
+    id: 45,
+    q: "Perhatikan kutipan artikel berikut!\n\n\"Menjaga kesehatan otak dapat diibaratkan seperti merawat sebuah komputer. Otak membutuhkan asupan nutrisi dan istirahat yang cukup agar dapat bekerja dengan baik, sebagaimana komputer membutuhkan energi dan perawatan agar tetap berfungsi.\"\n\nTujuan penggunaan kalimat analogi dalam kutipan tersebut adalah ....",
+    img: "",
+    options: [
+      "membuktikan bahwa otak manusia memiliki bentuk yang sama dengan komputer",
+      "membandingkan dua hal yang berbeda untuk mempermudah pembaca memahami suatu konsep",
+      "menjelaskan bahwa komputer lebih penting daripada kesehatan otak manusia",
+      "menunjukkan bahwa otak manusia dapat bekerja tanpa membutuhkan istirahat"
+    ],
+    key: "B"
+  }
+];
+
+// ========================================================
+// 2. DATA SOAL ESAI - TIDAK DIAKAP (Urut sesuai urutan di bawah)
+// ========================================================
+const rawQuestionsEssay = [
+  {
+    id: 1,
+    q: "(Soal 1)\nCermati teks berikut!\n\nPerpustakaan Sekolah\nPerpustakaan sekolah merupakan fasilitas pendidikan yang menyediakan berbagai bahan bacaan bagi siswa dan guru. Perpustakaan biasanya memiliki koleksi buku pelajaran, buku cerita, kamus, ensiklopedia, dan majalah pendidikan.\n\nBerdasarkan pengamatan, perpustakaan sekolah memiliki beberapa rak buku, meja baca, kursi, dan ruang khusus untuk menyimpan koleksi buku. Sebagian besar buku disusun berdasarkan jenis dan kategori tertentu agar mudah ditemukan oleh pengunjung.\n\nPerpustakaan sekolah merupakan tempat paling menyenangkan dan paling hebat dibandingkan semua ruangan lainnya. Semua siswa pasti sangat menyukai perpustakaan karena buku-bukunya sangat menarik.\n\nTentukan dua kalimat subjektif dan dua kalimat objektif dalam teks Laporan Hasil Observasi \"Perpustakaan Sekolah\"!",
+    img: ""
+  },
+  {
+    id: 2,
+    q: "(Soal 2)\nCermati ilustrasi berikut!\n\nDi lingkungan sekolah, masih banyak siswa yang membeli makanan dan minuman menggunakan kemasan plastik sekali pakai. Setelah selesai makan, sebagian siswa membuang kemasan tersebut sembarangan. Akibatnya, tempat sampah cepat penuh dan lingkungan sekolah terlihat kurang bersih.\n\nOSIS berencana mengadakan kegiatan kampanye pengurangan sampah plastik dengan mengajak seluruh siswa membawa tempat makan dan botol minum sendiri dari rumah.\n\nBuatlah slogan yang singkat, menarik, dan mudah diingat sesuai dengan tema tersebut!",
+    img: ""
+  },
+  {
+    id: 3,
+    q: "(Soal 3)\nCermati teks berikut!\n\nSetiap hari, siswa menggunakan berbagai jenis transportasi untuk berangkat ke sekolah. Ada siswa yang berjalan kaki, menggunakan sepeda, diantar orang tua menggunakan sepeda motor atau mobil, dan menggunakan kendaraan umum. Perbedaan alat transportasi tersebut dapat dipengaruhi oleh jarak rumah ke sekolah, ketersediaan kendaraan, dan kebiasaan keluarga.\n\nSeorang siswa kelas VIII ingin menulis artikel ilmiah populer dengan judul \"Penggunaan Transportasi ke Sekolah\". Ia ingin mengumpulkan data melalui wawancara.\n\nBuatlah lima pertanyaan wawancara yang sesuai dengan topik tersebut!",
+    img: ""
+  },
+  {
+    id: 4,
+    q: "(Soal 4)\nCermati kutipan artikel berikut!\n\nPengaruh Olahraga terhadap Konsentrasi Belajar\nOlahraga secara teratur dapat membantu menjaga kebugaran tubuh. Siswa yang rutin berolahraga cenderung memiliki kondisi fisik yang lebih baik dibandingkan siswa yang jarang melakukan aktivitas fisik. Olahraga dapat diibaratkan seperti mengisi ulang baterai pada perangkat elektronik. Tubuh yang mendapatkan aktivitas fisik secara teratur akan lebih siap menjalani kegiatan sehari-hari.\n\nTemukan kalimat perbandingan dalam kutipan tersebut!",
+    img: ""
+  },
+  {
+    id: 5,
+    q: "(Soal 5)\nCermati kutipan artikel berikut!\n\nPengaruh Olahraga terhadap Konsentrasi Belajar\nOlahraga secara teratur dapat membantu menjaga kebugaran tubuh. Siswa yang rutin berolahraga cenderung memiliki kondisi fisik yang lebih baik dibandingkan siswa yang jarang melakukan aktivitas fisik. Olahraga dapat diibaratkan seperti mengisi ulang baterai pada perangkat elektronik. Tubuh yang mendapatkan aktivitas fisik secara teratur akan lebih siap menjalani kegiatan sehari-hari.\n\nTemukan kalimat analogi dalam kutipan tersebut!",
+    img: ""
+  }
+];
+
+    let studentData = [];
+    let currentMode = ""; // 'pg' atau 'essay'
+    let activeQuestions = [];
+    let userAnswers = [];
+    let currentIdx = 0;
+    let quizActive = false;
+    let csvScoresData = [];
+
+    window.onload = function() {
+      checkAccessSchedule();
+      fetchStudentData();
+      setupAntiCheating();
+      setupSecurityProtections();
+      setInterval(checkAccessSchedule, 1000);
+    };
+
+    // FUNGSI JADWAL DAN TIMER
+    function checkAccessSchedule() {
+      const now = new Date();
+      const closeTime = new Date(SCHEDULE_CONFIG.closeTime);
+      const remedStart = new Date(SCHEDULE_CONFIG.remedStart);
+      const remedEnd = new Date(SCHEDULE_CONFIG.remedEnd);
+
+      const loginPage = document.getElementById("login-page");
+      const closedPage = document.getElementById("closed-page");
+      const closedTitle = document.getElementById("closed-title");
+      const closedMsg = document.getElementById("closed-msg");
+      const countdownEl = document.getElementById("countdown-container");
+
+      if (now >= closeTime && now < remedStart) {
+        loginPage.classList.add("hidden");
+        document.getElementById("menu-page").classList.add("hidden");
+        closedPage.classList.remove("hidden");
+        closedTitle.innerText = "Halaman Ujian Ditutup";
+        closedMsg.innerText = SCHEDULE_CONFIG.closedMsgText;
+        countdownEl.classList.remove("hidden");
+        updateCountdown(remedStart - now);
+      } else if (now >= remedStart && now <= remedEnd) {
+        closedPage.classList.add("hidden");
+        if (!quizActive && document.getElementById("result-page").classList.contains("hidden")) {
+          loginPage.classList.remove("hidden");
+        }
+      } else if (now > remedEnd) {
+        loginPage.classList.add("hidden");
+        document.getElementById("menu-page").classList.add("hidden");
+        closedPage.classList.remove("hidden");
+        closedTitle.innerText = "Sesi Ujian & Remedial Telah Berakhir";
+        closedMsg.innerText = "Ujian dan Remedial telah resmi ditutup secara permanen.";
+        countdownEl.classList.add("hidden");
+      } else {
+        closedPage.classList.add("hidden");
+      }
+    }
+
+    function updateCountdown(diffMs) {
+      if (diffMs <= 0) return;
+      const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diffMs % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown-container").innerText = 
+        `${days} Hari ${hours} Jam ${minutes} Menit ${seconds} Detik`;
+    }
+
+    // FUNGSI LOAD & RENDER MODAL CSV HASIL SKOR
+    function openScoreModal() {
+      document.getElementById("score-modal").classList.remove("hidden");
+      if (csvScoresData.length === 0) {
+        fetchCSVData();
+      }
+    }
+
+    function closeScoreModal() {
+      document.getElementById("score-modal").classList.add("hidden");
+    }
+
+    function fetchCSVData() {
+      fetch(CSV_URL)
+        .then(res => res.text())
+        .then(csvText => {
+          parseCSV(csvText);
+        })
+        .catch(err => {
+          console.error("Error CSV:", err);
+          showInfoModal("Gagal memuat data nilai dari spreadsheet.");
+        });
+    }
+
+    function parseCSV(text) {
+      const lines = text.split('\n').filter(line => line.trim() !== '');
+      if (lines.length < 2) return;
+
+      const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
+      const idxNo = headers.findIndex(h => h.toLowerCase() === 'no');
+      const idxNama = headers.findIndex(h => h.toLowerCase() === 'nama');
+      const idxKelas = headers.findIndex(h => h.toLowerCase() === 'kelas');
+      const idxSkor = headers.findIndex(h => h.toLowerCase() === 'skor');
+
+      csvScoresData = [];
+      const classesSet = new Set();
+
+      for (let i = 1; i < lines.length; i++) {
+        const row = lines[i].split(',').map(cell => cell.trim().replace(/^"|"$/g, ''));
+        if (row.length >= 4) {
+          const item = {
+            no: row[idxNo] || i,
+            nama: row[idxNama] || '',
+            kelas: row[idxKelas] || '',
+            skor: parseFloat(row[idxSkor]) || 0
+          };
+          if(item.kelas) classesSet.add(item.kelas);
+          csvScoresData.push(item);
+        }
+      }
+
+      const modalSelect = document.getElementById("modal-select-kelas");
+      modalSelect.innerHTML = '<option value="">-- Pilih Kelas --</option>';
+      Array.from(classesSet).sort().forEach(c => {
+        modalSelect.innerHTML += `<option value="${c}">${c}</option>`;
+      });
+    }
+
+    function renderScoreTable() {
+      const selectedClass = document.getElementById("modal-select-kelas").value;
+      const tbody = document.getElementById("score-table-body");
+      tbody.innerHTML = "";
+
+      if (!selectedClass) {
+        tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; color: var(--text-muted);">Silakan pilih kelas terlebih dahulu.</td></tr>';
+        return;
+      }
+
+      const filtered = csvScoresData.filter(d => d.kelas === selectedClass);
+      const lolosList = filtered.filter(d => d.skor >= 75);
+      const remedList = filtered.filter(d => d.skor < 75);
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; color: var(--text-muted);">Tidak ada data untuk kelas ini.</td></tr>';
+        return;
+      }
+
+      if(lolosList.length > 0) {
+        tbody.innerHTML += `<tr><td colspan="5" style="background: rgba(34, 197, 94, 0.15); font-weight: bold; color: #4ade80;">SISWA LOLOS (SKOR ≥ 75)</td></tr>`;
+        lolosList.forEach((d, index) => {
+          tbody.innerHTML += `
+            <tr>
+              <td>${index + 1}</td>
+              <td>${d.nama}</td>
+              <td>${d.kelas}</td>
+              <td>${d.skor}</td>
+              <td><span class="badge-lolos">Lolos</span></td>
+            </tr>
+          `;
+        });
+      }
+
+      if(remedList.length > 0) {
+        tbody.innerHTML += `<tr><td colspan="5" style="background: rgba(239, 68, 68, 0.15); font-weight: bold; color: #fca5a5;">SISWA REMEDIAL (SKOR < 75)</td></tr>`;
+        remedList.forEach((d, index) => {
+          tbody.innerHTML += `
+            <tr>
+              <td>${index + 1}</td>
+              <td>${d.nama}</td>
+              <td>${d.kelas}</td>
+              <td>${d.skor}</td>
+              <td><span class="badge-remedial">Remedial</span></td>
+            </tr>
+          `;
+        });
+      }
+    }
+
+    function fetchStudentData() {
+      fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({ action: "getStudents" })
+      })
+      .then(res => res.json())
+      .then(data => {
+        if(data.status === "success") {
+          studentData = data.students;
+          populateClasses(data.classes);
+        } else {
+          showInfoModal("Gagal mengambil data siswa: " + data.message);
+        }
+      })
+      .catch(err => {
+        console.error("Detail Error:", err);
+        showInfoModal("Gagal terhubung ke Backend Spreadsheet!");
+      });
+    }
+
+    function populateClasses(classes) {
+      const selectKelas = document.getElementById("select-kelas");
+      selectKelas.innerHTML = '<option value="">-- Pilih Kelas --</option>';
+      classes.forEach(c => {
+        selectKelas.innerHTML += `<option value="${c}">${c}</option>`;
+      });
+    }
+
+    function filterNama() {
+      const selectedClass = document.getElementById("select-kelas").value;
+      const selectNama = document.getElementById("select-nama");
+      
+      selectNama.innerHTML = '<option value="">-- Pilih Nama Siswa --</option>';
+      if(!selectedClass) {
+        selectNama.disabled = true;
+        return;
+      }
+
+      const filtered = studentData.filter(s => s.kelas === selectedClass);
+      filtered.forEach(s => {
+        selectNama.innerHTML += `<option value="${s.nama}">${s.nama}</option>`;
+      });
+      selectNama.disabled = false;
+    }
+
+    function proceedToMenu() {
+      const kelas = document.getElementById("select-kelas").value;
+      const nama = document.getElementById("select-nama").value;
+
+      if(!kelas || !nama) {
+        showInfoModal("Pilih Kelas dan Nama Anda terlebih dahulu!");
+        return;
+      }
+
+      document.getElementById("student-info-label").innerText = `Siswa: ${nama} (${kelas})`;
+      document.getElementById("login-page").classList.add("hidden");
+      document.getElementById("menu-page").classList.remove("hidden");
+
+      const btnEsai = document.getElementById("btn-menu-esai");
+      if (rawQuestionsEssay.length === 0) {
+        btnEsai.classList.add("btn-disabled");
+        btnEsai.onclick = () => showInfoModal("Soal esai belum tersedia / kosong untuk ujian ini.");
+      } else {
+        btnEsai.classList.remove("btn-disabled");
+        btnEsai.onclick = () => startQuiz('essay');
+      }
+    }
+
+    function backToMenu() {
+      document.getElementById("result-page").classList.add("hidden");
+      document.getElementById("menu-page").classList.remove("hidden");
+    }
+
+    function shuffleArray(array) {
+      let arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    function startQuiz(mode) {
+      currentMode = mode;
+      document.getElementById("menu-page").classList.add("hidden");
+      document.getElementById("quiz-page").classList.remove("hidden");
+
+      if (mode === 'pg') {
+        activeQuestions = shuffleArray(rawQuestionsPG).map(q => {
+          const originalKeyIndex = ["A", "B", "C", "D", "E"].indexOf(q.key);
+          const correctText = q.options[originalKeyIndex];
+          return {
+            id: q.id,
+            q: q.q,
+            img: q.img || "",
+            options: shuffleArray(q.options),
+            correctText: correctText
+          };
+        });
+      } else {
+        activeQuestions = [...rawQuestionsEssay];
+      }
+
+      userAnswers = new Array(activeQuestions.length).fill(null);
+      quizActive = true;
+      showQuestion(0);
+    }
+
+    function showQuestion(idx) {
+      currentIdx = idx;
+      const total = activeQuestions.length;
+      document.getElementById("progress-text").innerText = `Progress: ${idx + 1} / ${total}`;
+      
+      const q = activeQuestions[idx];
+      document.getElementById("question-text").innerHTML = q.q;
+
+      const imgElement = document.getElementById("question-img");
+      if (q.img && q.img.trim() !== "") {
+        imgElement.src = q.img;
+        imgElement.classList.remove("hidden");
+      } else {
+        imgElement.src = "";
+        imgElement.classList.add("hidden");
+      }
+
+      const optionsContainer = document.getElementById("options-container");
+      optionsContainer.innerHTML = "";
+
+      if (currentMode === 'essay') {
+        const savedAnswer = userAnswers[idx] ? userAnswers[idx].selectedText : "";
+        optionsContainer.innerHTML = `
+          <div class="form-group" style="margin-top: 15px;">
+            <label style="color: var(--text-main); font-weight: 600; margin-bottom: 8px;">Jawaban Esai Anda:</label>
+            <textarea id="essay-input" rows="6" placeholder="Ketik jawaban esai Anda di sini..." 
+              oninput="saveEssayAnswer(this.value)">${savedAnswer}</textarea>
+          </div>
+        `;
+      } else {
+        const prefixes = ["A", "B", "C", "D", "E"];
+        q.options.forEach((optText, i) => {
+          const char = prefixes[i];
+          const selectedAns = userAnswers[idx];
+          const isSelected = selectedAns && selectedAns.selectedText === optText;
+          
+          const div = document.createElement("div");
+          div.className = `option-item ${isSelected ? 'selected' : ''}`;
+          div.onclick = () => selectOption(optText);
+          
+          div.innerHTML = `
+            <div class="option-prefix">${char}</div>
+            <div>${optText}</div>
+          `;
+          optionsContainer.appendChild(div);
+        });
+      }
+
+      document.getElementById("btn-prev").style.visibility = idx === 0 ? "hidden" : "visible";
+      
+      if(idx === total - 1) {
+        document.getElementById("btn-next").classList.add("hidden");
+        document.getElementById("btn-submit").classList.remove("hidden");
+      } else {
+        document.getElementById("btn-next").classList.remove("hidden");
+        document.getElementById("btn-submit").classList.add("hidden");
+      }
+
+      if (window.MathJax && typeof MathJax.typesetPromise === 'function') {
+        MathJax.typesetPromise().catch((err) => console.log('MathJax error:', err));
+      }
+    }
+
+    function selectOption(optText) {
+      const q = activeQuestions[currentIdx];
+      userAnswers[currentIdx] = {
+        questionId: q.id,
+        selectedText: optText,
+        isCorrect: optText === q.correctText
+      };
+      showQuestion(currentIdx);
+    }
+
+    function saveEssayAnswer(text) {
+      const q = activeQuestions[currentIdx];
+      userAnswers[currentIdx] = {
+        questionId: q.id,
+        selectedText: text,
+        isCorrect: null
+      };
+    }
+
+    function changeQuestion(dir) {
+      const newIdx = currentIdx + dir;
+      if(newIdx >= 0 && newIdx < activeQuestions.length) {
+        showQuestion(newIdx);
+      }
+    }
+
+    function confirmSubmit() {
+      const unanswered = userAnswers.filter(a => a === null || a.selectedText.trim() === "").length;
+      const titleEl = document.getElementById("submit-modal-title");
+      const msgEl = document.getElementById("submit-modal-msg");
+
+      if(unanswered > 0) {
+        titleEl.innerText = "Soal Belum Lengkap!";
+        msgEl.innerText = `Masih ada ${unanswered} soal yang belum Anda isi/jawab. Yakin ingin mengirim sekarang?`;
+      } else {
+        titleEl.innerText = "Konfirmasi Selesai";
+        msgEl.innerText = "Apakah Anda yakin ingin menyelesaikan dan mengirim jawaban ini?";
+      }
+
+      document.getElementById("submit-modal").classList.remove("hidden");
+    }
+
+    function closeSubmitModal() {
+      document.getElementById("submit-modal").classList.add("hidden");
+    }
+
+    function executeSubmit() {
+      closeSubmitModal();
+      quizActive = false;
+      const kelas = document.getElementById("select-kelas").value;
+      const nama = document.getElementById("select-nama").value;
+
+      document.getElementById("quiz-page").classList.add("hidden");
+      document.getElementById("result-page").classList.remove("hidden");
+      
+      let payload = { nama: nama, kelas: kelas };
+
+      if (currentMode === 'pg') {
+        document.getElementById("result-title").innerText = "Pilihan Ganda Selesai!";
+        document.getElementById("score-display").innerText = "Mengirim Nilai PG...";
+        document.getElementById("result-subtitle").innerText = "Jawaban PG Anda telah tersimpan di spreadsheet.";
+
+        // Hitung Skor Langsung di HTML Berdasarkan Properti 'key' di rawQuestionsPG
+        let correctCount = 0;
+        let formattedAnswers = new Array(rawQuestionsPG.length).fill("");
+
+        userAnswers.forEach(ans => {
+          if(ans) {
+            const rawQ = rawQuestionsPG.find(rq => rq.id === ans.questionId);
+            if(rawQ) {
+              const optIndex = rawQ.options.indexOf(ans.selectedText);
+              if(optIndex !== -1) {
+                const charOption = ["A", "B", "C", "D", "E"][optIndex];
+                formattedAnswers[rawQ.id - 1] = charOption;
+                
+                // Cek apakah jawaban siswa sesuai dengan 'key' di rawQuestionsPG
+                if(charOption === rawQ.key) {
+                  correctCount++;
+                }
+              }
+            }
+          }
+        });
+
+        const finalScore = rawQuestionsPG.length > 0 ? Math.round((correctCount / rawQuestionsPG.length) * 100) : 0;
+
+        payload.action = "submitQuiz";
+        payload.jawaban = formattedAnswers;
+        payload.score = finalScore;
+
+        // Kirim ke Google Apps Script
+        fetch(API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(payload)
+        })
+        .then(res => res.json())
+        .then(data => {
+          if(data.status === "success") {
+            document.getElementById("score-display").innerText = "Terima kasih, jawaban Anda telah direkam.";
+          } else {
+            showInfoModal("Error: " + data.message);
+          }
+        })
+        .catch(err => {
+          console.error("Detail Error:", err);
+          showInfoModal("Gagal koneksi ke server saat mengirim jawaban.");
+        });
+
+      } else {
+        document.getElementById("result-title").innerText = "Esai Berhasil Dikirim!";
+        document.getElementById("score-display").innerText = "Menunggu Koreksi Guru";
+        document.getElementById("result-subtitle").innerText = "Jawaban esai tersimpan terpisah dan tidak mempengaruhi nilai otomatis PG.";
+
+        let essayAnswersMap = {};
+        userAnswers.forEach(ans => {
+          if(ans) {
+            essayAnswersMap[`Soal_${ans.questionId}`] = ans.selectedText;
+          }
+        });
+
+        payload.action = "submitEssay";
+        payload.jawabanEsai = essayAnswersMap;
+
+        fetch(API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(payload)
+        })
+        .then(res => res.json())
+        .then(data => {
+          if(data.status === "success") {
+            document.getElementById("score-display").innerText = `Esai Tersimpan`;
+          } else {
+            showInfoModal("Error: " + data.message);
+          }
+        })
+        .catch(err => {
+          console.error("Detail Error:", err);
+          showInfoModal("Gagal koneksi ke server saat mengirim jawaban.");
+        });
+      }
+    }
+
+    function logViolationToSheet(catatanTeks) {
+      const kelas = document.getElementById("select-kelas") ? document.getElementById("select-kelas").value : "-";
+      const nama = document.getElementById("select-nama") ? document.getElementById("select-nama").value : "Anonim";
+
+      const payload = {
+        action: "logViolation",
+        nama: nama,
+        kelas: kelas,
+        catatan: catatanTeks
+      };
+
+      fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(payload),
+        keepalive: true
+      }).catch(err => console.error("Gagal kirim log pelanggaran:", err));
+    }
+
+    function setupAntiCheating() {
+      window.addEventListener("blur", function() {
+        if(quizActive) {
+          quizActive = false;
+          logViolationToSheet("Keluar dari layar/tab ujian (Ujian tereset)");
+          document.getElementById("cheat-modal").classList.remove("hidden");
+        }
+      });
+    }
+
+    function setupSecurityProtections() {
+      document.addEventListener('contextmenu', e => { e.preventDefault(); return false; });
+      document.addEventListener('copy', e => { e.preventDefault(); });
+    }
+
+    function showInfoModal(msg) {
+      document.getElementById("info-modal-msg").innerText = msg;
+      document.getElementById("info-modal").classList.remove("hidden");
+    }
+
+    function closeInfoModal() {
+      document.getElementById("info-modal").classList.add("hidden");
+    }
+  </script>
+</body>
+</html>

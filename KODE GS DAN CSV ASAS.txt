@@ -1,0 +1,142 @@
+B.INDO 7
+https://docs.google.com/spreadsheets/d/e/2PACX-1vRsApgqE7QyRbrFXaep-KiWaFwfnI39qSEdbY3NXk1__dP5rI5YHEfWLSKzhNpURn3XPjwXCpozDmyK/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbxoJdW4J9-sSoj7dZIksuVGgNtptUykQSP8BN5rHRdrMtcOIsi_ZHx8oQMN_ITmXBQ/exec
+
+B.INDO 8
+https://docs.google.com/spreadsheets/d/e/2PACX-1vQdf73lB9D2QeFUqOQ0VDVOZaQRBLkR1ZkDZxtFkLf_UVKjrsm0DTks6UhGH2W1CoX5s6ooUb3rjvte/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbwcH2_AAM-s55H43DXpPGQIJBEAYnb4zwnnwFvYJV2nimB7rbteO-ipduJO1azHpik/exec
+
+B.INDO 9
+https://docs.google.com/spreadsheets/d/e/2PACX-1vQBv_FC_qqzVY6QiTEXKePzRwBuUNZRoPEjK7OUY3lwS6LWn250ohBJ88yWLrhq0Mz7B1oQ3niHcL0v/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycby97j9gUH_F7w2G5XfJEpv_S4F8XbPvQ9jB30fG3SYa5ktgPaEoQ39wKWuQBs28yxg/exec
+
+B.INGG 7
+https://docs.google.com/spreadsheets/d/e/2PACX-1vTXCJMh-ORxtaFUpUgIyOvCD1sKtE9GDBjPc_mInIWVVH06kRrVvodPDPu7zjlfz0W90zeJroMDVyWp/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbziWjIZC65vEkkAIOvdWPWKFxUNLLMtZhWTN1eQB0pwYcN_OTPAu5BntyU7mPyy-kg/exec
+
+B.INGG 8
+https://docs.google.com/spreadsheets/d/e/2PACX-1vRGKSs3hmMqYzC_2eeE0kw7H74EDNy_8W71jhHOmfOQ-5DJ_LiA7jMLuverDeLYAznl3ofgfvF5eeF3/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbwblyVPD68s40qepAgAfGwpUYUlV8IR4OrlriMvb18jDtMDpelvokh_q6yuL4y2GDNi/exec
+
+B.INGG 9
+https://docs.google.com/spreadsheets/d/e/2PACX-1vQBO355dkuZ0ZpLIcowxGmSEjBmjfEIWPHZESlEETQQUHvDE20Qcls14TQVE6jXYOL7U1QNcQlBq9Vc/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbxNh7EdgFohn2xxmLa8p7HapoFbfk4CJShWmoaMv3xxDHrOmEb9MVecel857cEBgpOl/exec
+
+B.SUNDA 7
+https://docs.google.com/spreadsheets/d/e/2PACX-1vQC0hEwGqF2c0wW5c9XqleJfrW0yGZc1YytHW5t0cXAQfrmTMsCr5ClQsQZCimBRGTno4CwETNTnPwt/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbzmju1O5BFQ4N_YaHJiQ0LHx2rvrIrzrig8vJl93t_AMhqUEYIH8_4qZkmVQVr7jRo/exec
+
+B.SUNDA 8
+https://docs.google.com/spreadsheets/d/e/2PACX-1vSsBmJ88DYhzx1DCYOaqrFUVuBdUPoIhRV-pax7SFg1TXgdpFmcawYYIn-gDQTePOuaaGfkjyYMvZGk/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbx-3xIhYHj_9Ha0L519kb_1fuu7CCpWE8uK7oxtg6Gk1yePPkgx1GiABPl5sPSchrM/exec
+
+B.SUNDA 9
+https://docs.google.com/spreadsheets/d/e/2PACX-1vQ7HPdSeo8I-FVEahx6zdBz2rGRETTjTmtVqRhJuzv6mIRi-onx-gNGdvOi9s02soxqwSbDwllIpnLM/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbw9zjFckl3yj0vAKm6OEDG2ALCcplml7Qu41yVLQk5D-Tt5ix6-nn1klqaANCGfvhQ/exec
+
+BTQ 7
+https://docs.google.com/spreadsheets/d/e/2PACX-1vSdEAAmwM-cOL1utgvhKI4EvQv9tNSONJLlktJCHrbTPMGi67PvM36RR5U-LOEYqdBBNA4UpfP2DiKZ/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbzN_F7YFKnaZHR26FLOY3cH1R1nPtVX-th6RRZVNT5K5SXEKt7lfL2gVi5KvyTnOUDy/exec
+
+BTQ 8
+https://docs.google.com/spreadsheets/d/e/2PACX-1vQEynoSKpespd7viGZdJHMNSZ416q_De3BjusXjTlpQK-fwkrLxeA9IGGCeSsgkYH0eB6E_y4IP1P12/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbxwiQuD2nGH_-iBFH0TfWofMQqyfHRQzNqtR4u_K6XqWroYEHajv5j94mBEoAoJm0c/exec
+
+BTQ 9
+https://docs.google.com/spreadsheets/d/e/2PACX-1vRiMRpsDH3OH5oC4sDkGTaxU609E1hFfYlNDjK9YETuln5bp8xKjaAmihy4xqoqRJDifRj6EU_xTL6u/pub?gid=107493068&single=true&output=csvhttps://script.google.com/macros/s/AKfycbyqyhEItHgicTzCZWXjXXHlbWLd2xq4EjZBfSuRTiYBfU_3Jt0o_5Rm-cbt3wfLQh4/exec
+
+INFORMATIKA 7
+https://docs.google.com/spreadsheets/d/e/2PACX-1vTUMxTsvvzAaQUcOD_cT_S0QsQl79lcmIRKA2AvJrloottO5vvZn1Q5pYJ53l5zpsQeascI3mcsHcMK/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbzFgkFASDNqdCdDDp1jGXneWaeY9rEi3MXL7A1jUkzO4sikaGbKerkh6znfGDiTKQc/exec
+
+INFORMATIKA 8
+https://docs.google.com/spreadsheets/d/e/2PACX-1vS8td-srU62AQmDthQZ0FVEeqQn6SRQPVhiDEGtVZlkb99ANtbRx_j6yVewn0erk93Q2l8t8Z2ZbfnM/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbyPSsvjA5fKGdpA0ngE3e_ustlv42J2e2A4KXedQeiaXzeV_ULBW7_g-BU1LdIefa5D/exec
+
+INFORMATIKA 9
+https://docs.google.com/spreadsheets/d/e/2PACX-1vRa2q8ndQNhFe_Jkvb7bWYbaebfg85b6sa858KHFOzUNKr6ccDGxHfQDPrA3hY82FFRKzmOmB2zOcMc/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbwdJCqHRI8GHcaEQaqAxSERLPq0RPPd6DNNtFiBgu-4_fqpI10d-u-HSP1LidUe46cT/exec
+
+IPA 7
+https://docs.google.com/spreadsheets/d/e/2PACX-1vQW1Gikom1csfeSRDiXmDPWYFFPN_ox2_RgwwWGsU7lcK-JHN4AfSj3ryEmjQQlhQgRYqqTF9jLu8f2/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbxnfWyd1YWC8yqT0SMFQXkoEdqIZTpzeT2KGOwDlRPK22BABkf3UL7jlzUEAjwX0es/exec
+
+IPA 8
+https://docs.google.com/spreadsheets/d/e/2PACX-1vQ9t8jquLhdyGMoHIttYq5YGuAxzLzg69tkAmxuRr7DCH6TZV9VajMaEi2q6rudBQ9_BmCPzvOnHhSF/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbzVuLxpzTyXcm8Yz9HEKFjamaNd9x_Hk0AuwdKYxe_x2FmWO__jpsSN_5M0W5VpITs/exec
+
+IPA 9
+https://docs.google.com/spreadsheets/d/e/2PACX-1vQwQMUN1EtAQdVTbpw-UhG0Z6_sBzP-bcGC8MPq7LjvgDeFAyAaXsqPTQqI8JuvwkchcTZtc7_IF7Nc/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbx6L15pyj2fz0oZlcU9nFxyKy5oLLhRGlPMWzNmQS094sk4IqKGAOuQlYHw43Ludto/exec
+
+IPS 7
+https://docs.google.com/spreadsheets/d/e/2PACX-1vSE44n6J2l98Y38udbb4VEN-8NCiqMOslh-mod7hULHdkwIbdLHFGMLzXS8rQ1JKXr1UK59fiuR6y3o/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbwGV-0SoqmNrAo0EdwNio8YGNZ--HX1GK2GZE6XRgalXLZpsRGpMU4Q0XIG0SPQtA/exec
+
+IPS 8
+https://docs.google.com/spreadsheets/d/e/2PACX-1vT1smDv4Jk7He-_v_kawajiB2WE2apJNkg2MV_KELiHs-acP1aOF2F0_mx04cV4VyrLya_7XB6wOK89/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbywAQvCh7oRcQ02Nepz7g6vQgMCcECfHY-e8I2Yh8ScURLTnluK5nurJXl8DXbi3Q/exec
+
+IPS 9
+https://docs.google.com/spreadsheets/d/e/2PACX-1vTcRAmbnhBn9BoykyH5F9Y7y1DW5CvBHnk2YbW7OA4QaW35r-260f4r0UAVbQbzXtwzy94OMJ8gLPDC/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbyfGOaNqY5DIy9KOnCpgDzyixUhc_JOiGmrVYo-DzOKX0zW7pejMDxv4TH8OUr3Zczk/exec
+
+PAIBP 7
+https://docs.google.com/spreadsheets/d/e/2PACX-1vTMSXrVBRr8usSQ881T5zVMuEISTP345mY4LFNt7KzN3LS7q7NlGQUkNTQw2SJ4dwv1RNDkRIQA-rSa/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbzYp03FHD2qFu2t5lLRPhpTwPR3B2W35448szkDNHJk2BhqbsYYcM_QyC2GGfafRQ/exec
+
+PAIBP 8
+https://docs.google.com/spreadsheets/d/e/2PACX-1vQc_DddJWAA0pzvgt7odZIGHz_uD_YiS1m1s3tqNiuKuUzvdGi-4PsjAKgA9Vuh0LaDgdu2KAuhSBdE/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbz713vMFzF6w3AvFVXMgJi0EJEl6kKMbQQuP7ItJR5OLqs8pk5KAV-RiynRIT2CAw/exec
+
+PAIBP 9
+https://docs.google.com/spreadsheets/d/e/2PACX-1vTmuVn_bIkaFWXOvs8lO4eW6I_RpysKjFAX04bhIkPO8Pl8t4_24_0ok6lLckB4YEcsPK-zajuIvTL_/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbyg8R0mFSE3fnKOrG9yL_D85p7oxytVmuBxaDT2Z01DIZPcXiHP5m4ros-pbNFObPQ/exec
+
+PJOK 7
+https://docs.google.com/spreadsheets/d/e/2PACX-1vRCkrsZ16W2LlBasTjv0qI_XTf3iVL8AuC0BlTHRfllDd94HdlzXNHOH0uZhzIbtvWYndGe8bi8tB7Q/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycby1o3stQJq0idRHCQZnfd-hsdo5uf_tns1DQTqw7XqZDzPIzydDOlIUQ2aWnzp7M8k/exec
+
+PJOK 8
+https://docs.google.com/spreadsheets/d/e/2PACX-1vTnIkrjV9UttKGDLwUCa46q021R3XaA09CStqaycQqpRKOz-LMhyNRvUZus9DzI_U_LYjTwmoy-K7z8/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbzhOFrxOP_Spl-mGRbUzQj07XnBGS5NC6CUrEDzrFBw74tXyQ3FmZHZDkbM3ubp1SU/exec
+
+PJOK 9
+https://docs.google.com/spreadsheets/d/e/2PACX-1vQk0eyb4m_QtEsrqpcF0hmM9hIroOLnL7YaFf3nLfwF9RaMTgCL7_p3PqrkYX6qYBo8byGMEF4r35iJ/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbxtsfaVEYYsyjO71-XsmYi8zqJzww0ug2rTaC4xuY9Yc8iy4GwP0VtJnC7ufPOE1ucB/exec
+
+PKN 7
+https://docs.google.com/spreadsheets/d/e/2PACX-1vTuFtbk8SqWsnUrJ4RSURrbyFp6aevl-dX-9uZxK8c7ME39z1e8dIhxdF-0rgS2qni-CCyl_XW4YVqd/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbxxepvFJWySEJ0sOtxrKrKsKM72fGQIMvqQKNBc0X9u_ezwrrW7ui1Ro6Zf9RDmLdE/exec
+
+PKN 8
+https://docs.google.com/spreadsheets/d/e/2PACX-1vS6gx78WZwB599NSbTTCuyoyopyt-rZhsm5RbgcHqnX2T2rwCHJ4Bg8Ed-fM3nIE0dFpbkbW64PahKE/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbzIqbJyhpN20xH3VwtGvcimoSxXmY2nd0NDWHSwUb-Ed_KKr7HtChgxrkTq1bOW5ew/exec
+
+PKN 9
+https://docs.google.com/spreadsheets/d/e/2PACX-1vTHbULz7AegH5Bf2x4B4N4hRraED8qZpiIm5_Xnvf-hUCa8pDS0hvjB_oRFnn1f5yCJA9YzauD_S-ZZ/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbwk4_miMf8aR8Uz2WaDIPDi61nq1p1OnM_XAZwvE9XpXEyKA7mMBUYgdAXSjzJFGbKJ/exec
+
+SENI 7
+https://docs.google.com/spreadsheets/d/e/2PACX-1vTmcXqF1DUrBf-rhK1AVDhD80xsgiuefcBdUY84BcXxiG8YnxZcp5GiP7pKK0hsSLRYIAyWSybK0KaP/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbwN9kqbMFRMBQP0VbiYtE6Sfp1d5YUZNFASInN9lPCGJlmTu9bEQoeVAeR5UXhGliZ8/exec
+
+SENI 8
+https://docs.google.com/spreadsheets/d/e/2PACX-1vR6Z_dhQ__PpLHb8UDCCrD-t-VQfyTynN9V9WwD2M0Wg7-B0ENjo10IknNNimr80t4-p6czPEA5lnAv/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbynmzMsOpEEpI4zgA4tsVF8GA5hRhSMFslewx1KQb7_giiEMxRbsYygKxVamo2_d_nj/exec
+
+SENI 9
+https://docs.google.com/spreadsheets/d/e/2PACX-1vTspixtjnuPaeUD9wEXW3deEFWNpv2ONs--S84fQVVZqcsAOVoazvM9Ny8xjv7wPYsDl_hKOkUkBT2R/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbwLiz1HrfX3s0oIX7jeu1389ywyLsjYVp-Bf45mkWQy69bPSTlsftwbH4r3UETK6ps/exec
+
+MTK 7
+https://docs.google.com/spreadsheets/d/e/2PACX-1vTy_wJcN8ymXv410_VxmTg0IlL6du_7PVswTd4sdR5NFDPVB7fW_cYzFL0YVOStGhWHWZbB0t5v78Ar/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbxMd7zus8cHtc0-KdXH__bZWEIPeLLUHZS8qz4Qzz9sn16KxguTbBcQciIN_81f_JI/exec
+
+MTK 8
+https://docs.google.com/spreadsheets/d/e/2PACX-1vQRjPCtFpxXej0TbMBbiBMCtKTS_nOAzdlpRfpO3VkhAmdJaO6pac5XGnanxOKLL2rB254M5IXj-yBj/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbyDRFCrAue0Js_3ZQHRVZKaTfCKj4keiav_Tg55_fMikkrNQax9QtMyWb5qXF1Mg658/exec
+
+MTK 9
+https://docs.google.com/spreadsheets/d/e/2PACX-1vQYNwf_AkxdZocvK2KIvLZaxsD8shJmmaXTBj-n2p767CA2h5WwtVD8EaaBtne_Gnas95V96d6ARrZ0/pub?gid=107493068&single=true&output=csv
+https://script.google.com/macros/s/AKfycbwCxfJqZ8YSfYf5kPCohW0L7kJ9f4voV94X5O1b_Jp0a8XSuJ3s3KW7TBVg_CQPFeg/exec

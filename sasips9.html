@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASAS ILMU PENGETAHUAN SOSIAL KELAS IX 2026/2027</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- Google Fonts untuk Font Arab Standar Utsmani -->
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- MathJax untuk Render Persamaan Matematika -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script id="MathJax-Script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="icon" type="image/png" href="https://i.imgur.com/mRmw86t.jpeg">
+  
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+      --card-bg: rgba(30, 41, 59, 0.7);
+      --card-border: rgba(255, 255, 255, 0.1);
+      --accent-color: #6366f1;
+      --accent-hover: #4f46e5;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    body {
+      background: var(--bg-gradient);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .header-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 15px 20px;
+      text-align: center;
+      margin-bottom: 15px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+
+    .header-card h1 {
+      font-size: 1.2rem;
+      color: #38bdf8;
+      margin-bottom: 4px;
+    }
+
+    .header-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      margin-bottom: 15px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    select, button, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid var(--card-border);
+      background: rgba(15, 23, 42, 0.8);
+      color: var(--text-main);
+      font-size: 0.95rem;
+      outline: none;
+      transition: all 0.3s;
+    }
+
+    select:focus, textarea:focus {
+      border-color: var(--accent-color);
+      box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #4f46e5, #06b6d4);
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 10px;
+      color: #ffffff;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .btn-disabled {
+      background: rgba(255, 255, 255, 0.05) !important;
+      color: var(--text-muted) !important;
+      cursor: not-allowed !important;
+      border: 1px dashed var(--card-border) !important;
+    }
+
+    .progress-bar {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      text-align: right;
+    }
+
+    .question-box {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 10px;
+      white-space: pre-line;
+    }
+
+    .arabic-text {
+      font-family: 'Amiri', 'Scheherazade New', serif;
+      font-size: 1.5rem;
+      direction: rtl;
+      text-align: right;
+      line-height: 2.2;
+      color: #38bdf8;
+      margin: 10px 0;
+      display: block;
+    }
+
+    .question-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin: 10px 0 15px 0;
+      display: block;
+      border: 1px solid var(--card-border);
+    }
+
+    .option-item {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      background: rgba(15, 23, 42, 0.4);
+      transition: 0.2s;
+    }
+
+    .option-item:hover {
+      background: rgba(99, 102, 241, 0.15);
+    }
+
+    .option-item.selected {
+      border-color: var(--accent-color);
+      background: rgba(99, 102, 241, 0.3);
+    }
+
+    .option-prefix {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 12px;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .option-item.selected .option-prefix {
+      background: var(--accent-color);
+    }
+
+    .nav-controls {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .btn-nav {
+      width: 48%;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      border: 1px solid var(--card-border);
+      padding: 12px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .warning-box {
+      background: rgba(239, 68, 68, 0.2);
+      border: 1px solid #ef4444;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      color: #fca5a5;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 20px;
+    }
+
+    .modal-card {
+      background: rgba(30, 41, 59, 0.95);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 25px 20px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-icon-danger { font-size: 3rem; color: #ef4444; margin-bottom: 12px; }
+    .modal-icon-warning { font-size: 3rem; color: #f59e0b; margin-bottom: 12px; }
+
+    .modal-card h3 { font-size: 1.2rem; color: var(--text-main); margin-bottom: 8px; }
+    .modal-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 20px; }
+
+    .modal-buttons { display: flex; gap: 10px; }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      cursor: pointer;
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+    }
+
+    .modal-score-card {
+      max-width: 700px !important;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      text-align: left;
+    }
+
+    .score-table-container {
+      overflow-y: auto;
+      max-height: 50vh;
+      margin-top: 15px;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+    }
+
+    .score-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+
+    .score-table th, .score-table td {
+      padding: 10px;
+      border: 1px solid var(--card-border);
+      text-align: left;
+    }
+
+    .score-table th {
+      background: rgba(15, 23, 42, 0.9);
+      position: sticky;
+      top: 0;
+      color: #38bdf8;
+    }
+
+    .badge-lolos {
+      background: rgba(34, 197, 94, 0.2);
+      color: #4ade80;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 0.75rem;
+    }
+
+    .badge-remedial {
+      background: rgba(239, 68, 68, 0.2);
+      color: #fca5a5;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 0.75rem;
+    }
+
+    .countdown-timer {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #f59e0b;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px dashed #f59e0b;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header-card">
+      <h1><i class="fa-solid fa-flask"></i> ASAS ILMU PENGETAHUAN SOSIAL KELAS IX 2026/2027</h1>
+      <p>SMP NEGERI 8 CIKARANG UTARA</p>
+    </div>
+
+    <!-- HALAMAN PENUTUPAN UJIAN (JIKA TERKUNCI JADWAL) -->
+    <div id="closed-page" class="card hidden" style="text-align: center;">
+      <i class="fa-solid fa-lock" style="font-size: 3rem; color: #ef4444; margin-bottom: 12px;"></i>
+      <h2 id="closed-title">Halaman Ditutup</h2>
+      <p id="closed-msg" style="margin-top: 8px; color: var(--text-muted);"></p>
+      <div id="countdown-container" class="countdown-timer hidden">--:--:--:--</div>
+      <button class="btn-primary" style="margin-top: 15px;" onclick="openScoreModal()">
+        <i class="fa-solid fa-list-check"></i> Lihat Skor Akhir Siswa
+      </button>
+    </div>
+
+    <!-- 1. HALAMAN LOGIN -->
+    <div id="login-page" class="card">
+      <h2 style="font-size: 1.1rem; margin-bottom: 15px; text-align: center;">Masuk Ke Ujian</h2>
+      
+      <div class="warning-box">
+        <i class="fa-solid fa-triangle-exclamation"></i> Dilarang keluar dari layar/tab selama ujian. Jika Anda keluar atau berpindah aplikasi, ujian akan otomatis direset!
+      </div>
+
+      <div class="form-group">
+        <label>Pilih Kelas</label>
+        <select id="select-kelas" onchange="filterNama()">
+          <option value="">-- Memuat Kelas... --</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Pilih Nama Siswa</label>
+        <select id="select-nama" disabled>
+          <option value="">-- Pilih Kelas Terlebih Dahulu --</option>
+        </select>
+      </div>
+
+      <button class="btn-primary" onclick="proceedToMenu()">Lanjutkan <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+    <!-- 2. HALAMAN MENU PILIH MODE (PG / ESAI) -->
+    <div id="menu-page" class="card hidden" style="text-align: center;">
+      <h2 style="font-size: 1.1rem; margin-bottom: 5px;">Pilih Bagian Ujian</h2>
+      <p id="student-info-label" style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;"></p>
+      
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <button class="btn-primary" onclick="startQuiz('pg')" style="padding: 15px;">
+          <i class="fa-solid fa-list-check"></i> Kerjakan Pilihan Ganda (PG)
+        </button>
+        <button id="btn-menu-esai" class="btn-primary" style="padding: 15px; background: linear-gradient(90deg, #f59e0b, #d97706);">
+          <i class="fa-solid fa-pen-to-square"></i> Kerjakan Soal Esai
+        </button>
+      </div>
+      <button class="btn-secondary" style="margin-top: 15px;" onclick="location.reload()">Ganti Akun / Kelas</button>
+    </div>
+
+    <!-- 3. HALAMAN UJIAN -->
+    <div id="quiz-page" class="card hidden">
+      <div class="progress-bar" id="progress-text">Progress: 1 / 0</div>
+
+      <div class="question-box" id="question-text"></div>
+      <img id="question-img" class="question-image hidden" alt="Gambar Soal">
+      <div id="options-container"></div>
+
+      <div class="nav-controls">
+        <button class="btn-nav" id="btn-prev" onclick="changeQuestion(-1)"><i class="fa-solid fa-chevron-left"></i> Sebelum</button>
+        <button class="btn-nav" id="btn-next" onclick="changeQuestion(1)">Berikut <i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+
+      <button class="btn-primary hidden" id="btn-submit" style="margin-top: 15px; background: linear-gradient(90deg, #22c55e, #10b981);" onclick="confirmSubmit()">
+        Kirim Jawaban <i class="fa-solid fa-check"></i>
+      </button>
+    </div>
+
+    <!-- 4. HALAMAN HASIL -->
+    <div id="result-page" class="card hidden" style="text-align: center;">
+      <i class="fa-solid fa-circle-check" style="font-size: 3rem; color: #22c55e; margin-bottom: 10px;"></i>
+      <h2 id="result-title">Bagian Selesai!</h2>
+      <p style="color: var(--text-muted); margin-top: 5px;" id="result-subtitle">Jawaban Anda telah tersimpan.</p>
+      <div id="score-display" style="font-size: 1.8rem; font-weight: bold; color: #38bdf8; margin: 20px 0;"></div>
+      <button class="btn-primary" onclick="backToMenu()">Kembali ke Menu Utama</button>
+    </div>
+  </div>
+
+  <!-- MODAL PERINGATAN CURANG -->
+  <div id="cheat-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <i class="fa-solid fa-triangle-exclamation modal-icon-danger"></i>
+      <h3>Pelanggaran Terdeteksi!</h3>
+      <p>Anda terdeteksi meninggalkan layar/tab ujian. Ujian Anda direset.</p>
+      <button class="btn-primary" style="background: #ef4444; width: 100%; padding: 12px; border-radius: 10px;" onclick="location.reload()">Mengerti & Ulangi</button>
+    </div>
+  </div>
+
+  <!-- MODAL KONFIRMASI SUBMIT -->
+  <div id="submit-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <i class="fa-solid fa-circle-question modal-icon-warning"></i>
+      <h3 id="submit-modal-title">Konfirmasi Selesai</h3>
+      <p id="submit-modal-msg">Apakah Anda yakin ingin mengirimkan jawaban?</p>
+      <div class="modal-buttons">
+        <button class="btn-secondary" onclick="closeSubmitModal()">Batal</button>
+        <button class="btn-primary" style="margin-top:0; background: linear-gradient(90deg, #22c55e, #10b981); width: 100%; padding: 12px; border-radius: 10px;" onclick="executeSubmit()">Kirim</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL INFORMASI -->
+  <div id="info-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <i class="fa-solid fa-circle-info modal-icon-warning"></i>
+      <h3>Pemberitahuan</h3>
+      <p id="info-modal-msg">Pesan</p>
+      <button class="btn-primary" style="width: 100%; padding: 12px; border-radius: 10px;" onclick="closeInfoModal()">OK</button>
+    </div>
+  </div>
+
+  <!-- MODAL HASIL SKOR SISWA (DARI CSV) -->
+  <div id="score-modal" class="modal-overlay hidden">
+    <div class="modal-card modal-score-card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+        <h3><i class="fa-solid fa-trophy" style="color: #f59e0b;"></i> Hasil Skor Siswa</h3>
+        <button class="btn-secondary" style="width: auto; padding: 5px 12px;" onclick="closeScoreModal()">Tutup</button>
+      </div>
+
+      <div class="form-group" style="margin-bottom: 10px;">
+        <label>Pilih Kelas:</label>
+        <select id="modal-select-kelas" onchange="renderScoreTable()">
+          <option value="">-- Pilih Kelas --</option>
+        </select>
+      </div>
+
+      <div class="score-table-container">
+        <table class="score-table">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama</th>
+              <th>Kelas</th>
+              <th>Skor</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="score-table-body">
+            <tr>
+              <td colspan="5" style="text-align: center; color: var(--text-muted);">Silakan pilih kelas terlebih dahulu.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const API_URL = "https://script.google.com/macros/s/AKfycbyfGOaNqY5DIy9KOnCpgDzyixUhc_JOiGmrVYo-DzOKX0zW7pejMDxv4TH8OUr3Zczk/exec";
+    const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTcRAmbnhBn9BoykyH5F9Y7y1DW5CvBHnk2YbW7OA4QaW35r-260f4r0UAVbQbzXtwzy94OMJ8gLPDC/pub?gid=107493068&single=true&output=csv";
+
+    // Konfigurasi Jadwal Ujian (Set ke tahun 2099 agar terbuka sekarang)
+    const SCHEDULE_CONFIG = {
+      closeTime: "2099-12-31T09:59:59+07:00",
+      remedStart: "2099-12-31T23:59:59+07:00",
+      remedEnd: "2099-12-31T23:59:59+07:00",
+      closedMsgText: "Ujian telah ditutup."
+    };
+
+    // ==========================================
+    // 1. DATA SOAL PILIHAN GANDA (PG) - Diacak
+    // ==========================================
+    const rawQuestionsPG = [
+{
+    id: 1,
+    q: "Perubahan sosial merupakan bagian yang tidak terpisahkan dari kehidupan manusia dalam bermasyarakat. Menurut Selo Soemardjan, perubahan sosial adalah perubahan pada lembaga-lembaga kemasyarakatan di dalam suatu masyarakat yang memengaruhi ....",
+    img: "",
+    options: ["Jumlah penduduk dan luas wilayah administrasi negara", "Sistem sosialnya, termasuk nilai-nilai, sikap, dan pola perilaku di antara kelompok masyarakat", "Kondisi geografis dan iklim mikro di daerah perkotaan", "Kekayaan sumber daya alam tambang dan hasil hutan"],
+    key: "B"
+  },
+  {
+    id: 2,
+    q: "Proses perubahan sosial yang berlangsung secara lambat, memerlukan waktu yang sangat lama, dan merupakan rentetan perubahan kecil yang saling mengikuti dengan sendirinya disebut ....",
+    img: "",
+    options: ["Revolusi", "Evolusi", "Difusi", "Asimilasi"],
+    key: "B"
+  },
+  {
+    id: 3,
+    q: "Revolusi Industri yang pertama kali terjadi di Inggris pada abad ke-18 mengubah pola produksi masyarakat dari tenaga manusia dan hewan menjadi tenaga mesin. Berdasarkan dampaknya terhadap sendi-sendi kehidupan masyarakat, peristiwa tersebut termasuk perubahan sosial ....",
+    img: "",
+    options: ["Kecil", "Lambat", "Besar", "Tidak direncanakan"],
+    key: "C"
+  },
+  {
+    id: 4,
+    q: "Pembangunan infrastruktur jalan tol Trans-Jawa dan kereta cepat Jakarta–Bandung merupakan contoh perubahan sosial yang ....",
+    img: "",
+    options: ["Tidak dikehendaki masyarakat", "Direncanakan (planned change) oleh pemerintah sebagai agen perubahan", "Terjadi secara alami tanpa campur tangan manusia", "Bersifat regress atau mengalami kemunduran"],
+    key: "B"
+  },
+  {
+    id: 5,
+    q: "Perubahan model potongan rambut, tren busana remaja setiap tahun, dan gaya dekorasi kafe kekinian merupakan contoh perubahan sosial yang pengaruhnya kecil karena ....",
+    img: "",
+    options: ["Mengubah struktur pemerintahan negara secara menyeluruh", "Hanya diikuti oleh golongan tertentu dan tidak mengubah lembaga kemasyarakatan yang mendasar", "Menyebabkan konflik horizontal antar-etnis di perkotaan", "Menghapuskan seluruh norma hukum yang berlaku"],
+    key: "B"
+  },
+  {
+    id: 6,
+    q: "Bencana alam seperti gempa bumi besar, tsunami, dan letusan gunung berapi dapat memicu terjadinya perubahan sosial di wilayah terdampak karena ....",
+    img: "",
+    options: ["Masyarakat harus beradaptasi membangun kembali permukiman, mata pencaharian, dan tatanan sosial baru", "Pemerintah menghapus seluruh program bantuan sosial bagi pengungsi", "Masyarakat kembali menerapkan sistem barter dalam perdagangan", "Tidak ada perubahan struktur kependudukan sama sekali"],
+    key: "A"
+  },
+  {
+    id: 7,
+    q: "Perhatikan faktor-faktor penyebab perubahan sosial berikut:\n1. Bertambah dan berkurangnya jumlah penduduk\n2. Peperangan dengan negara lain\n3. Penemuan-penemuan baru (discovery dan invention)\n4. Pengaruh kebudayaan masyarakat lain\n5. Pertentangan atau konflik dalam masyarakat\nFaktor penyebab perubahan sosial yang berasal dari dalam masyarakat itu sendiri (faktor internal) ditunjukkan oleh nomor ....",
+    img: "",
+    options: ["(1), (2), dan (3)", "(1), (3), dan (5)", "(2), (3), dan (4)", "(2), (4), dan (5)"],
+    key: "B"
+  },
+  {
+    id: 8,
+    q: "Penemuan teknologi jaringan internet 5G dan kecerdasan buatan (Artificial Intelligence) yang dikembangkan lebih lanjut menjadi berbagai aplikasi cerdas untuk mempermudah pekerjaan manusia merupakan wujud dari proses ....",
+    img: "",
+    options: ["Discovery menjadi Invention", "Asimilasi budaya", "Akulturasi paksa", "Enkulturasi tradisional"],
+    key: "A"
+  },
+  {
+    id: 9,
+    q: "Urbanisasi yang tinggi menyebabkan kepadatan penduduk di kota-kota besar meningkat pesat sehingga memunculkan permukiman padat penduduk dan perubahan struktur pekerjaan. Fenomena ini menunjukkan perubahan sosial yang disebabkan oleh faktor ....",
+    img: "",
+    options: ["Lingkungan alam", "Dinamika kependudukan (demografi)", "Peperangan antarnegara", "Isolasi geografis"],
+    key: "B"
+  },
+  {
+    id: 10,
+    q: "Perpaduan dua kebudayaan atau lebih yang berbeda sehingga menghasilkan kebudayaan baru dengan menghilangkan ciri khas kebudayaan aslinya disebut ....",
+    img: "",
+    options: ["Akulturasi", "Asimilasi", "Difusi", "Penetrasi"],
+    key: "B"
+  },
+  {
+    id: 11,
+    q: "Masjid Menara Kudus di Jawa Tengah memiliki arsitektur menara yang menyerupai bangunan candi bercorak Hindu-Jawa, namun difungsikan sebagai tempat mengumandangkan azan dalam tradisi Islam. Wujud interaksi budaya tersebut merupakan contoh ....",
+    img: "",
+    options: ["Asimilasi", "Akulturasi", "Konflik budaya", "Invasi budaya"],
+    key: "B"
+  },
+  {
+    id: 12,
+    q: "Sebagian masyarakat di daerah pedalaman yang terisolasi sulit menerima pembaruan teknologi dan ilmu pengetahuan dari luar karena minimnya akses informasi dan transportasi. Faktor penghambat perubahan sosial pada kondisi tersebut adalah ....",
+    img: "",
+    options: ["Sikap masyarakat yang sangat terbuka terhadap hal baru", "Kurangnya hubungan dengan masyarakat lain (isolasi geografis)", "Sistem pendidikan formal yang sudah sangat maju", "Tingginya tingkat heterogenitas penduduk"],
+    key: "B"
+  },
+  {
+    id: 13,
+    q: "Sikap masyarakat yang mengagung-agungkan tradisi masa lalu secara berlebihan dan menganggap perubahan dari luar sebagai ancaman terhadap kemurnian budaya disebut sikap ....",
+    img: "",
+    options: ["Demokratis", "Tradisionalis / konservatif", "Progresif", "Kosmopolitan"],
+    key: "B"
+  },
+  {
+    id: 14,
+    q: "Perhatikan faktor-faktor berikut:\n1. Kontak dengan kebudayaan lain\n2. Sistem pendidikan formal yang maju\n3. Prasangka terhadap hal-hal baru atau asing\n4. Orientasi ke masa depan\n5. Adat istiadat atau kebiasaan yang sukar diubah\nFaktor pendorong terjadinya perubahan sosial ditunjukkan oleh nomor ....",
+    img: "",
+    options: ["(1), (2), dan (4)", "(1), (3), dan (5)", "(2), (3), dan (5)", "(3), (4), dan (5)"],
+    key: "A"
+  },
+  {
+    id: 15,
+    q: "Modernisasi dalam kehidupan masyarakat diartikan sebagai proses transformasi dari kehidupan tradisional menuju kehidupan yang lebih maju di berbagai bidang dengan mengedepankan ....",
+    img: "",
+    options: ["Peniruan gaya hidup negara Barat secara mutlak tanpa penyaringan", "Pola pikir rasional, ilmiah, efektif, dan efisien sesuai perkembangan IPTEK", "Penghapusan seluruh bahasa daerah dan kesenian tradisional", "Ketergantungan penuh pada bantuan impor luar negeri"],
+    key: "B"
+  },
+  {
+    id: 16,
+    q: "Perbedaan mendasar antara modernisasi dan westernisasi terletak pada ....",
+    img: "",
+    options: ["Modernisasi menolak kemajuan teknologi, sedangkan westernisasi mendukung teknologi", "Modernisasi berorientasi pada kemajuan rasional dan IPTEK tanpa meninggalkan jati diri bangsa, sedangkan westernisasi meniru gaya hidup Barat secara mutlak", "Modernisasi hanya terjadi di desa, sedangkan westernisasi hanya di kota", "Modernisasi bersifat merusak moral, sedangkan westernisasi menjaga budaya lokal"],
+    key: "B"
+  },
+  {
+    id: 17,
+    q: "Globalisasi telah membuat batas-batas antarnegara menjadi semakin kabur (borderless world) sehingga arus informasi, barang, jasa, dan modal dapat bergerak dengan sangat cepat. Faktor utama yang mempercepat proses globalisasi saat ini adalah ....",
+    img: "",
+    options: ["Keterbatasan sarana transportasi laut antarbenua", "Kemajuan pesat teknologi informasi, komunikasi, dan transportasi", "Pembatasan kuota ekspor dan impor oleh seluruh negara", "Menurunnya jumlah penduduk usia produktif di dunia"],
+    key: "B"
+  },
+  {
+    id: 18,
+    q: "Saat ini masyarakat Indonesia dapat dengan mudah menikmati makanan khas Jepang dan Korea, menonton pertandingan sepak bola liga Eropa secara langsung, serta berkomunikasi dengan kerabat di luar negeri melalui panggilan video. Fenomena tersebut merupakan wujud globalisasi di bidang ....",
+    img: "",
+    options: ["Pertahanan dan militer", "Budaya dan komunikasi", "Hukum agraria", "Pertambangan"],
+    key: "B"
+  },
+  {
+    id: 19,
+    q: "Kerja sama perdagangan bebas seperti AFTA (ASEAN Free Trade Area) dan WTO (World Trade Organization) memungkinkan produk-produk luar negeri masuk ke pasar dalam negeri dengan tarif bea masuk yang rendah. Dampak positif globalisasi ekonomi tersebut bagi konsumen di Indonesia adalah ....",
+    img: "",
+    options: ["Pilihan barang dan jasa semakin beragam dengan kualitas dan harga yang kompetitif", "Produsen lokal kecil otomatis menguasai seluruh pasar global", "Tidak ada lagi persaingan harga antarperusahaan", "Seluruh barang impor digratiskan oleh pemerintah"],
+    key: "A"
+  },
+  {
+    id: 20,
+    q: "Salah satu dampak negatif globalisasi di bidang sosial budaya yang ditandai dengan kecenderungan masyarakat membeli barang secara berlebihan demi gengsi dan gaya hidup, bukan berdasarkan kebutuhan pokok, disebut ....",
+    img: "",
+    options: ["Sekularisme", "Konsumerisme", "Nasionalisme", "Patriotisme"],
+    key: "B"
+  },
+  {
+    id: 21,
+    q: "Globalisasi juga dapat memicu terjadinya cultural lag (ketertinggalan budaya) di tengah masyarakat, yaitu kondisi ketika ....",
+    img: "",
+    options: ["Seluruh lapisan masyarakat menguasai teknologi digital secara merata", "Perkembangan teknologi dan budaya material berlangsung lebih cepat dibandingkan kesiapan nilai, norma, dan mental masyarakat penggunanya", "Kebudayaan lokal mendominasi seluruh negara maju di dunia", "Pemerintah melarang penggunaan internet di lingkungan sekolah"],
+    key: "B"
+  },
+  {
+    id: 22,
+    q: "Upaya paling tepat yang dapat dilakukan oleh generasi muda (pelajar) dalam menyikapi arus globalisasi budaya agar tidak kehilangan jati diri bangsa adalah ....",
+    img: "",
+    options: ["Menutup diri dari seluruh informasi dan pergaulan internasional", "Bersikap selektif dengan menyaring budaya asing sesuai nilai-nilai Pancasila serta melestarikan budaya lokal", "Mengganti seluruh tradisi daerah dengan budaya populer asing", "Menghindari penggunaan teknologi digital dalam pembelajaran"],
+    key: "B"
+  },
+  {
+    id: 23,
+    q: "Kearifan lokal (local wisdom) merupakan pandangan hidup, ilmu pengetahuan, dan berbagai strategi kehidupan berwujud aktivitas yang dilakukan oleh masyarakat lokal dalam menjawab berbagai masalah pemenuhan kebutuhan mereka. Salah satu contoh kearifan lokal Nusantara dalam menjaga kelestarian lingkungan adalah ....",
+    img: "",
+    options: ["Sistem pengairan sawah Subak di Bali dan tradisi Sasi di Maluku", "Pembukaan hutan lindung secara besar-besaran dengan cara dibakar", "Penggunaan bom ikan untuk meningkatkan hasil tangkapan nelayan", "Pembuangan limbah industri langsung ke aliran sungai utama"],
+    key: "A"
+  },
+  {
+    id: 24,
+    q: "Mengapa kearifan lokal memiliki peran penting sebagai benteng pertahanan sosial di era globalisasi?",
+    img: "",
+    options: ["Karena kearifan lokal menolak semua bentuk pendidikan modern", "Karena kearifan lokal mengandung nilai-nilai luhur kebersamaan, gotong royong, dan kelestarian alam yang memperkuat identitas bangsa", "Karena kearifan lokal hanya berlaku bagi masyarakat lanjut usia", "Karena kearifan lokal menghambat pertumbuhan ekonomi kreatif"],
+    key: "B"
+  },
+  {
+    id: 25,
+    q: "Perkembangan teknologi informasi dan internet telah melahirkan era ekonomi digital. Pengertian ekonomi digital yang paling tepat adalah ....",
+    img: "",
+    options: ["Seluruh kegiatan ekonomi yang hanya mengandalkan transaksi uang tunai di pasar tradisional", "Kegiatan ekonomi yang berbasis pada pemanfaatan teknologi informasi, jaringan internet, dan platform digital dalam proses produksi, distribusi, maupun konsumsi", "Sistem perekonomian yang melarang keterlibatan pelaku usaha mikro, kecil, dan menengah (UMKM)", "Kegiatan perdagangan barang tambang secara eksklusif antarpemerintah"],
+    key: "B"
+  },
+  {
+    id: 26,
+    q: "Perhatikan karakteristik berikut:\n1. Transaksi dapat dilakukan lintas wilayah dan waktu (24 jam nonstop)\n2. Mengandalkan data, jaringan internet, dan inovasi perangkat lunak\n3. Memperpendek rantai distribusi antara produsen dan konsumen\n4. Mewajibkan pertemuan fisik secara langsung antara penjual dan pembeli\nKarakteristik utama ekonomi digital ditunjukkan oleh nomor ....",
+    img: "",
+    options: ["(1), (2), dan (3)", "(1), (2), dan (4)", "(1), (3), dan (4)", "(2), (3), dan (4)"],
+    key: "A"
+  },
+  {
+    id: 27,
+    q: "Sebelum mengenal uang sebagai alat tukar, masyarakat pada masa lampau memenuhi kebutuhannya dengan cara menukarkan barang dengan barang secara langsung. Sistem transaksi tersebut dikenal dengan istilah ....",
+    img: "",
+    options: ["Uang giral", "Barter", "Kliring", "Uang elektronik"],
+    key: "B"
+  },
+  {
+    id: 28,
+    q: "Salah satu kelemahan utama sistem barter yang mendorong manusia menciptakan uang sebagai alat tukar adalah ....",
+    img: "",
+    options: ["Barang yang ditukarkan terlalu mudah disimpan dalam jangka waktu lama", "Sulitnya menemukan dua pihak yang saling membutuhkan barang satu sama lain pada waktu yang bersamaan (double coincidence of wants)", "Nilai tukar setiap barang sudah terstandarisasi secara internasional", "Proses transaksi berlangsung terlalu cepat dan praktis"],
+    key: "B"
+  },
+  {
+    id: 29,
+    q: "Uang memiliki fungsi asli dan fungsi turunan. Berikut ini yang merupakan fungsi asli dari uang adalah ....",
+    img: "",
+    options: ["Sebagai alat penimbun kekayaan dan alat pembayaran utang", "Sebagai alat tukar (medium of exchange) dan alat satuan hitung (unit of account)", "Sebagai alat pemindah kekayaan dan pendorong kegiatan ekonomi", "Sebagai simbol status sosial dan alat investasi properti"],
+    key: "B"
+  },
+  {
+    id: 30,
+    q: "Uang kertas dan uang logam yang diterbitkan oleh Bank Indonesia dan wajib diterima oleh seluruh masyarakat sebagai alat pembayaran yang sah disebut ....",
+    img: "",
+    options: ["Uang giral", "Uang kartal", "Uang kuasi", "Cek dan bilyet giro"],
+    key: "B"
+  },
+  {
+    id: 31,
+    q: "Alat pembayaran nontunai berbasis saldo yang tersimpan secara digital dalam media penyimpanan seperti kartu cip (chip-based) maupun aplikasi ponsel pintar (server-based) disebut ....",
+    img: "",
+    options: ["Uang kartal", "Uang elektronik (e-money / e-wallet)", "Uang barang", "Wesel pos"],
+    key: "B"
+  },
+  {
+    id: 32,
+    q: "Bank Indonesia meluncurkan standar kode QR nasional yang disebut QRIS (Quick Response Code Indonesian Standard). Manfaat utama penggunaan QRIS bagi pelaku UMKM dan konsumen adalah ....",
+    img: "",
+    options: ["Menyulitkan pedagang karena harus menyediakan banyak mesin pemindai berbeda", "Mempermudah transaksi pembayaran nontunai menjadi lebih cepat, aman, higienis, dan tercatat secara otomatis dengan satu kode QR", "Menghapuskan kewajiban bank dalam mengawasi transaksi keuangan", "Menaikkan harga jual seluruh barang kebutuhan pokok"],
+    key: "B"
+  },
+  {
+    id: 33,
+    q: "Lembaga keuangan memiliki peran vital dalam menghimpun dan menyalurkan dana masyarakat. Lembaga keuangan di Indonesia yang bertugas melaksanakan kebijakan moneter, mengatur kelancaran sistem pembayaran, serta menjaga stabilitas nilai rupiah adalah ....",
+    img: "",
+    options: ["Otoritas Jasa Keuangan (OJK)", "Bank Indonesia (BI) selaku Bank Sentral", "Bank Perkreditan Rakyat (BPR)", "Lembaga Penjamin Simpanan (LPS)"],
+    key: "B"
+  },
+  {
+    id: 34,
+    q: "Lembaga independen di Indonesia yang berfungsi menyelenggarakan sistem pengaturan dan pengawasan yang terintegrasi terhadap keseluruhan kegiatan di dalam sektor jasa keuangan (perbankan, pasar modal, asuransi, dan fintech) adalah ....",
+    img: "",
+    options: ["Badan Pemeriksa Keuangan (BPK)", "Otoritas Jasa Keuangan (OJK)", "Kementerian Perdagangan", "Badan Pusat Statistik (BPS)"],
+    key: "B"
+  },
+  {
+    id: 35,
+    q: "Berikut ini yang termasuk lembaga keuangan bukan bank (LKBB) yang memberikan perlindungan finansial atas risiko kerugian jiwa, kesehatan, maupun harta benda nasabah di masa depan adalah ....",
+    img: "",
+    options: ["Pegadaian", "Perusahaan Asuransi", "Koperasi Simpan Pinjam", "Pasar Modal"],
+    key: "B"
+  },
+  {
+    id: 36,
+    q: "Perkembangan Financial Technology (Fintech) menghadirkan layanan pinjaman daring (peer-to-peer lending). Hal utama yang harus diperiksa masyarakat sebelum menggunakan layanan pinjaman daring agar terhindar dari jeratan penipuan adalah ....",
+    img: "",
+    options: ["Besarnya hadiah langsung yang ditawarkan melalui pesan singkat", "Status legalitas dan izin resmi penyelenggara yang terdaftar dan diawasi oleh OJK", "Banyaknya iklan aplikasi tersebut di media sosial", "Kemudahan mencairkan dana tanpa identitas diri sama sekali"],
+    key: "B"
+  },
+  {
+    id: 37,
+    q: "Perdagangan elektronik atau e-commerce (seperti marketplace daring) memberikan peluang besar bagi pelaku UMKM di daerah karena ....",
+    img: "",
+    options: ["Mengharuskan UMKM menyewa gedung perkantoran mewah di ibu kota", "Memperluas jangkauan pemasaran produk hingga ke seluruh Indonesia bahkan pasar ekspor tanpa biaya sewa toko fisik yang mahal", "Membatasi jumlah pembeli hanya dari lingkungan satu kecamatan", "Menghilangkan kebutuhan akan kualitas dan kemasan produk yang baik"],
+    key: "B"
+  },
+  {
+    id: 38,
+    q: "Di balik kemudahan berbelanja melalui e-commerce, terdapat tantangan yang harus diwaspadai oleh pelaku usaha lokal dalam negeri, yaitu ....",
+    img: "",
+    options: ["Berkurangnya pengguna telepon pintar di Indonesia", "Persaingan harga yang sangat ketat dengan produk impor berharga murah serta risiko penipuan daring", "Terbatasnya jasa ekspedisi dan logistik pengiriman barang", "Tidak tersedianya metode pembayaran digital"],
+    key: "B"
+  },
+  {
+    id: 39,
+    q: "Kemampuan seseorang untuk mengakses, memahami, mengevaluasi, menciptakan, serta berkomunikasi menggunakan teknologi digital secara cerdas, bijak, dan bertanggung jawab disebut ....",
+    img: "",
+    options: ["Literasi finansial", "Literasi digital", "Literasi numerasi", "Literasi sejarah"],
+    key: "B"
+  },
+  {
+    id: 40,
+    q: "Perhatikan perilaku pengguna internet berikut:\n1. Memeriksa kebenaran sumber berita sebelum membagikannya ke grup pesan\n2. Menggunakan kata sandi (password) yang kuat dan mengaktifkan autentikasi dua faktor\n3. Membagikan foto KTP dan kode OTP perbankan di kolom komentar media sosial\n4. Menghargai hak cipta karya orang lain di ruang digital\nPerilaku yang mencerminkan kecakapan dan keamanan dalam literasi digital ditunjukkan oleh nomor ....",
+    img: "",
+    options: ["(1), (2), dan (3)", "(1), (2), dan (4)", "(1), (3), dan (4)", "(2), (3), dan (4)"],
+    key: "B"
+  },
+  {
+    id: 41,
+    q: "Kejahatan siber berupa upaya penipuan untuk mencuri data sensitif pengguna (seperti nomor kartu kredit, kata sandi akun, dan kode OTP) dengan menyamar sebagai lembaga resmi melalui tautan palsu disebut ....",
+    img: "",
+    options: ["Phishing", "Cloud computing", "Crowdfunding", "E-learning"],
+    key: "A"
+  },
+  {
+    id: 42,
+    q: "Kode OTP (One-Time Password) yang dikirimkan melalui SMS atau email saat melakukan transaksi perbankan digital bersifat sangat rahasia karena ....",
+    img: "",
+    options: ["Merupakan kode promo potongan harga belanja bulanan", "Berfungsi sebagai kunci verifikasi keamanan yang jika diketahui orang lain dapat digunakan untuk membobol rekening", "Digunakan untuk menambah kuota internet secara gratis", "Merupakan nomor antrean pelayanan di kantor cabang bank"],
+    key: "B"
+  },
+  {
+    id: 43,
+    q: "Masyarakat jaringan (network society) yang berkembang di era digital memiliki ciri utama berupa ....",
+    img: "",
+    options: ["Interaksi sosial dan pertukaran informasi yang terhubung secara cepat melalui jejaring internet lintas ruang dan waktu", "Keterbatasan komunikasi hanya melalui surat menyurat pos konvensional", "Hilangnya seluruh kelompok sosial di dunia nyata", "Ketergantungan penuh pada media cetak koran harian"],
+    key: "A"
+  },
+  {
+    id: 44,
+    q: "Penerapan etika digital (netiquette) yang baik saat berinteraksi di media sosial ditunjukkan dengan sikap ....",
+    img: "",
+    options: ["Menyebarkan ujaran kebencian dan perundungan siber (cyberbullying)", "Berkomentar dengan bahasa yang santun, menghormati perbedaan pendapat, dan tidak menyebarkan hoaks", "Mengunggah data pribadi orang lain tanpa izin pemiliknya", "Mengajak masyarakat memboikot seluruh produk lokal dalam negeri"],
+    key: "B"
+  },
+  {
+    id: 45,
+    q: "Sinergi antara literasi finansial dan literasi digital sangat penting bagi generasi muda di era ekonomi digital agar mampu ....",
+    img: "",
+    options: ["Menghabiskan seluruh uang saku untuk fitur gim daring tanpa perencanaan", "Mengelola keuangan secara bijak, menabung atau berinvestasi di instrumen yang legal, serta terhindar dari pinjaman daring ilegal dan penipuan digital", "Menggunakan kartu kredit tanpa batas untuk membeli barang mewah", "Menghindari seluruh layanan perbankan modern"],
+    key: "B"
+  }
+];
+
+    // ========================================================
+    // 2. DATA SOAL ESAI - TIDAK DIAKAP (Urut sesuai urutan di bawah)
+    // ========================================================
+    const rawQuestionsEssay = [
+  {
+    id: 1,
+    q: "(Soal 1)\nJelaskan perbedaan antara perubahan sosial yang direncanakan (planned change) dan perubahan sosial yang tidak direncanakan (unplanned change), serta berikan masing-masing satu (1) contoh konkret dalam kehidupan masyarakat Indonesia!",
+    img: ""
+  },
+  {
+    id: 2,
+    q: "(Soal 2)\nGlobalisasi membawa pengaruh besar terhadap kehidupan generasi muda di Indonesia. Analisislah dua (2) dampak positif dan dua (2) dampak negatif globalisasi di bidang sosial budaya bagi pelajar, serta jelaskan upaya yang dapat dilakukan untuk mengatasi dampak negatif tersebut!",
+    img: ""
+  },
+  {
+    id: 3,
+    q: "(Soal 3)\nJelaskan pengertian kearifan lokal (local wisdom) dan berikan dua (2) contoh bentuk kearifan lokal di Indonesia beserta nilai luhur yang terkandung di dalamnya!",
+    img: ""
+  },
+  {
+    id: 4,
+    q: "(Soal 4)\nPerkembangan ekonomi digital telah mengubah cara masyarakat bertransaksi dari tunai menjadi nontunai. Jelaskan tiga (3) manfaat penggunaan sistem pembayaran digital (seperti QRIS dan e-wallet) bagi pelaku UMKM dan konsumen, serta sebutkan dua (2) risiko yang harus diwaspadai!",
+    img: ""
+  },
+  {
+    id: 5,
+    q: "(Soal 5)\nBanyak masyarakat yang terjebak kasus penipuan digital (seperti phishing tautan undangan palsu) maupun pinjaman daring ilegal karena rendahnya pemahaman digital. Jelaskan empat (4) langkah konkret yang harus dilakukan untuk menjaga keamanan data pribadi dan keuangan saat beraktivitas di ruang digital!",
+    img: ""
+  }
+];
+
+    let studentData = [];
+    let currentMode = ""; // 'pg' atau 'essay'
+    let activeQuestions = [];
+    let userAnswers = [];
+    let currentIdx = 0;
+    let quizActive = false;
+    let csvScoresData = [];
+
+    window.onload = function() {
+      checkAccessSchedule();
+      fetchStudentData();
+      setupAntiCheating();
+      setupSecurityProtections();
+      setInterval(checkAccessSchedule, 1000);
+    };
+
+    // FUNGSI JADWAL DAN TIMER
+    function checkAccessSchedule() {
+      const now = new Date();
+      const closeTime = new Date(SCHEDULE_CONFIG.closeTime);
+      const remedStart = new Date(SCHEDULE_CONFIG.remedStart);
+      const remedEnd = new Date(SCHEDULE_CONFIG.remedEnd);
+
+      const loginPage = document.getElementById("login-page");
+      const closedPage = document.getElementById("closed-page");
+      const closedTitle = document.getElementById("closed-title");
+      const closedMsg = document.getElementById("closed-msg");
+      const countdownEl = document.getElementById("countdown-container");
+
+      if (now >= closeTime && now < remedStart) {
+        loginPage.classList.add("hidden");
+        document.getElementById("menu-page").classList.add("hidden");
+        closedPage.classList.remove("hidden");
+        closedTitle.innerText = "Halaman Ujian Ditutup";
+        closedMsg.innerText = SCHEDULE_CONFIG.closedMsgText;
+        countdownEl.classList.remove("hidden");
+        updateCountdown(remedStart - now);
+      } else if (now >= remedStart && now <= remedEnd) {
+        closedPage.classList.add("hidden");
+        if (!quizActive && document.getElementById("result-page").classList.contains("hidden")) {
+          loginPage.classList.remove("hidden");
+        }
+      } else if (now > remedEnd) {
+        loginPage.classList.add("hidden");
+        document.getElementById("menu-page").classList.add("hidden");
+        closedPage.classList.remove("hidden");
+        closedTitle.innerText = "Sesi Ujian & Remedial Telah Berakhir";
+        closedMsg.innerText = "Ujian dan Remedial telah resmi ditutup secara permanen.";
+        countdownEl.classList.add("hidden");
+      } else {
+        closedPage.classList.add("hidden");
+      }
+    }
+
+    function updateCountdown(diffMs) {
+      if (diffMs <= 0) return;
+      const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diffMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diffMs % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diffMs % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown-container").innerText = 
+        `${days} Hari ${hours} Jam ${minutes} Menit ${seconds} Detik`;
+    }
+
+    // FUNGSI LOAD & RENDER MODAL CSV HASIL SKOR
+    function openScoreModal() {
+      document.getElementById("score-modal").classList.remove("hidden");
+      if (csvScoresData.length === 0) {
+        fetchCSVData();
+      }
+    }
+
+    function closeScoreModal() {
+      document.getElementById("score-modal").classList.add("hidden");
+    }
+
+    function fetchCSVData() {
+      fetch(CSV_URL)
+        .then(res => res.text())
+        .then(csvText => {
+          parseCSV(csvText);
+        })
+        .catch(err => {
+          console.error("Error CSV:", err);
+          showInfoModal("Gagal memuat data nilai dari spreadsheet.");
+        });
+    }
+
+    function parseCSV(text) {
+      const lines = text.split('\n').filter(line => line.trim() !== '');
+      if (lines.length < 2) return;
+
+      const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
+      const idxNo = headers.findIndex(h => h.toLowerCase() === 'no');
+      const idxNama = headers.findIndex(h => h.toLowerCase() === 'nama');
+      const idxKelas = headers.findIndex(h => h.toLowerCase() === 'kelas');
+      const idxSkor = headers.findIndex(h => h.toLowerCase() === 'skor');
+
+      csvScoresData = [];
+      const classesSet = new Set();
+
+      for (let i = 1; i < lines.length; i++) {
+        const row = lines[i].split(',').map(cell => cell.trim().replace(/^"|"$/g, ''));
+        if (row.length >= 4) {
+          const item = {
+            no: row[idxNo] || i,
+            nama: row[idxNama] || '',
+            kelas: row[idxKelas] || '',
+            skor: parseFloat(row[idxSkor]) || 0
+          };
+          if(item.kelas) classesSet.add(item.kelas);
+          csvScoresData.push(item);
+        }
+      }
+
+      const modalSelect = document.getElementById("modal-select-kelas");
+      modalSelect.innerHTML = '<option value="">-- Pilih Kelas --</option>';
+      Array.from(classesSet).sort().forEach(c => {
+        modalSelect.innerHTML += `<option value="${c}">${c}</option>`;
+      });
+    }
+
+    function renderScoreTable() {
+      const selectedClass = document.getElementById("modal-select-kelas").value;
+      const tbody = document.getElementById("score-table-body");
+      tbody.innerHTML = "";
+
+      if (!selectedClass) {
+        tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; color: var(--text-muted);">Silakan pilih kelas terlebih dahulu.</td></tr>';
+        return;
+      }
+
+      const filtered = csvScoresData.filter(d => d.kelas === selectedClass);
+      const lolosList = filtered.filter(d => d.skor >= 75);
+      const remedList = filtered.filter(d => d.skor < 75);
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; color: var(--text-muted);">Tidak ada data untuk kelas ini.</td></tr>';
+        return;
+      }
+
+      if(lolosList.length > 0) {
+        tbody.innerHTML += `<tr><td colspan="5" style="background: rgba(34, 197, 94, 0.15); font-weight: bold; color: #4ade80;">SISWA LOLOS (SKOR ≥ 75)</td></tr>`;
+        lolosList.forEach((d, index) => {
+          tbody.innerHTML += `
+            <tr>
+              <td>${index + 1}</td>
+              <td>${d.nama}</td>
+              <td>${d.kelas}</td>
+              <td>${d.skor}</td>
+              <td><span class="badge-lolos">Lolos</span></td>
+            </tr>
+          `;
+        });
+      }
+
+      if(remedList.length > 0) {
+        tbody.innerHTML += `<tr><td colspan="5" style="background: rgba(239, 68, 68, 0.15); font-weight: bold; color: #fca5a5;">SISWA REMEDIAL (SKOR < 75)</td></tr>`;
+        remedList.forEach((d, index) => {
+          tbody.innerHTML += `
+            <tr>
+              <td>${index + 1}</td>
+              <td>${d.nama}</td>
+              <td>${d.kelas}</td>
+              <td>${d.skor}</td>
+              <td><span class="badge-remedial">Remedial</span></td>
+            </tr>
+          `;
+        });
+      }
+    }
+
+    function fetchStudentData() {
+      fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({ action: "getStudents" })
+      })
+      .then(res => res.json())
+      .then(data => {
+        if(data.status === "success") {
+          studentData = data.students;
+          populateClasses(data.classes);
+        } else {
+          showInfoModal("Gagal mengambil data siswa: " + data.message);
+        }
+      })
+      .catch(err => {
+        console.error("Detail Error:", err);
+        showInfoModal("Gagal terhubung ke Backend Spreadsheet!");
+      });
+    }
+
+    function populateClasses(classes) {
+      const selectKelas = document.getElementById("select-kelas");
+      selectKelas.innerHTML = '<option value="">-- Pilih Kelas --</option>';
+      classes.forEach(c => {
+        selectKelas.innerHTML += `<option value="${c}">${c}</option>`;
+      });
+    }
+
+    function filterNama() {
+      const selectedClass = document.getElementById("select-kelas").value;
+      const selectNama = document.getElementById("select-nama");
+      
+      selectNama.innerHTML = '<option value="">-- Pilih Nama Siswa --</option>';
+      if(!selectedClass) {
+        selectNama.disabled = true;
+        return;
+      }
+
+      const filtered = studentData.filter(s => s.kelas === selectedClass);
+      filtered.forEach(s => {
+        selectNama.innerHTML += `<option value="${s.nama}">${s.nama}</option>`;
+      });
+      selectNama.disabled = false;
+    }
+
+    function proceedToMenu() {
+      const kelas = document.getElementById("select-kelas").value;
+      const nama = document.getElementById("select-nama").value;
+
+      if(!kelas || !nama) {
+        showInfoModal("Pilih Kelas dan Nama Anda terlebih dahulu!");
+        return;
+      }
+
+      document.getElementById("student-info-label").innerText = `Siswa: ${nama} (${kelas})`;
+      document.getElementById("login-page").classList.add("hidden");
+      document.getElementById("menu-page").classList.remove("hidden");
+
+      const btnEsai = document.getElementById("btn-menu-esai");
+      if (rawQuestionsEssay.length === 0) {
+        btnEsai.classList.add("btn-disabled");
+        btnEsai.onclick = () => showInfoModal("Soal esai belum tersedia / kosong untuk ujian ini.");
+      } else {
+        btnEsai.classList.remove("btn-disabled");
+        btnEsai.onclick = () => startQuiz('essay');
+      }
+    }
+
+    function backToMenu() {
+      document.getElementById("result-page").classList.add("hidden");
+      document.getElementById("menu-page").classList.remove("hidden");
+    }
+
+    function shuffleArray(array) {
+      let arr = [...array];
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+
+    function startQuiz(mode) {
+      currentMode = mode;
+      document.getElementById("menu-page").classList.add("hidden");
+      document.getElementById("quiz-page").classList.remove("hidden");
+
+      if (mode === 'pg') {
+        activeQuestions = shuffleArray(rawQuestionsPG).map(q => {
+          const originalKeyIndex = ["A", "B", "C", "D", "E"].indexOf(q.key);
+          const correctText = q.options[originalKeyIndex];
+          return {
+            id: q.id,
+            q: q.q,
+            img: q.img || "",
+            options: shuffleArray(q.options),
+            correctText: correctText
+          };
+        });
+      } else {
+        activeQuestions = [...rawQuestionsEssay];
+      }
+
+      userAnswers = new Array(activeQuestions.length).fill(null);
+      quizActive = true;
+      showQuestion(0);
+    }
+
+    function showQuestion(idx) {
+      currentIdx = idx;
+      const total = activeQuestions.length;
+      document.getElementById("progress-text").innerText = `Progress: ${idx + 1} / ${total}`;
+      
+      const q = activeQuestions[idx];
+      document.getElementById("question-text").innerHTML = q.q;
+
+      const imgElement = document.getElementById("question-img");
+      if (q.img && q.img.trim() !== "") {
+        imgElement.src = q.img;
+        imgElement.classList.remove("hidden");
+      } else {
+        imgElement.src = "";
+        imgElement.classList.add("hidden");
+      }
+
+      const optionsContainer = document.getElementById("options-container");
+      optionsContainer.innerHTML = "";
+
+      if (currentMode === 'essay') {
+        const savedAnswer = userAnswers[idx] ? userAnswers[idx].selectedText : "";
+        optionsContainer.innerHTML = `
+          <div class="form-group" style="margin-top: 15px;">
+            <label style="color: var(--text-main); font-weight: 600; margin-bottom: 8px;">Jawaban Esai Anda:</label>
+            <textarea id="essay-input" rows="6" placeholder="Ketik jawaban esai Anda di sini..." 
+              oninput="saveEssayAnswer(this.value)">${savedAnswer}</textarea>
+          </div>
+        `;
+      } else {
+        const prefixes = ["A", "B", "C", "D", "E"];
+        q.options.forEach((optText, i) => {
+          const char = prefixes[i];
+          const selectedAns = userAnswers[idx];
+          const isSelected = selectedAns && selectedAns.selectedText === optText;
+          
+          const div = document.createElement("div");
+          div.className = `option-item ${isSelected ? 'selected' : ''}`;
+          div.onclick = () => selectOption(optText);
+          
+          div.innerHTML = `
+            <div class="option-prefix">${char}</div>
+            <div>${optText}</div>
+          `;
+          optionsContainer.appendChild(div);
+        });
+      }
+
+      document.getElementById("btn-prev").style.visibility = idx === 0 ? "hidden" : "visible";
+      
+      if(idx === total - 1) {
+        document.getElementById("btn-next").classList.add("hidden");
+        document.getElementById("btn-submit").classList.remove("hidden");
+      } else {
+        document.getElementById("btn-next").classList.remove("hidden");
+        document.getElementById("btn-submit").classList.add("hidden");
+      }
+
+      if (window.MathJax && typeof MathJax.typesetPromise === 'function') {
+        MathJax.typesetPromise().catch((err) => console.log('MathJax error:', err));
+      }
+    }
+
+    function selectOption(optText) {
+      const q = activeQuestions[currentIdx];
+      userAnswers[currentIdx] = {
+        questionId: q.id,
+        selectedText: optText,
+        isCorrect: optText === q.correctText
+      };
+      showQuestion(currentIdx);
+    }
+
+    function saveEssayAnswer(text) {
+      const q = activeQuestions[currentIdx];
+      userAnswers[currentIdx] = {
+        questionId: q.id,
+        selectedText: text,
+        isCorrect: null
+      };
+    }
+
+    function changeQuestion(dir) {
+      const newIdx = currentIdx + dir;
+      if(newIdx >= 0 && newIdx < activeQuestions.length) {
+        showQuestion(newIdx);
+      }
+    }
+
+    function confirmSubmit() {
+      const unanswered = userAnswers.filter(a => a === null || a.selectedText.trim() === "").length;
+      const titleEl = document.getElementById("submit-modal-title");
+      const msgEl = document.getElementById("submit-modal-msg");
+
+      if(unanswered > 0) {
+        titleEl.innerText = "Soal Belum Lengkap!";
+        msgEl.innerText = `Masih ada ${unanswered} soal yang belum Anda isi/jawab. Yakin ingin mengirim sekarang?`;
+      } else {
+        titleEl.innerText = "Konfirmasi Selesai";
+        msgEl.innerText = "Apakah Anda yakin ingin menyelesaikan dan mengirim jawaban ini?";
+      }
+
+      document.getElementById("submit-modal").classList.remove("hidden");
+    }
+
+    function closeSubmitModal() {
+      document.getElementById("submit-modal").classList.add("hidden");
+    }
+
+    function executeSubmit() {
+      closeSubmitModal();
+      quizActive = false;
+      const kelas = document.getElementById("select-kelas").value;
+      const nama = document.getElementById("select-nama").value;
+
+      document.getElementById("quiz-page").classList.add("hidden");
+      document.getElementById("result-page").classList.remove("hidden");
+      
+      let payload = { nama: nama, kelas: kelas };
+
+      if (currentMode === 'pg') {
+        document.getElementById("result-title").innerText = "Pilihan Ganda Selesai!";
+        document.getElementById("score-display").innerText = "Mengirim Nilai PG...";
+        document.getElementById("result-subtitle").innerText = "Jawaban PG Anda telah tersimpan di spreadsheet.";
+
+        // Hitung Skor Langsung di HTML Berdasarkan Properti 'key' di rawQuestionsPG
+        let correctCount = 0;
+        let formattedAnswers = new Array(rawQuestionsPG.length).fill("");
+
+        userAnswers.forEach(ans => {
+          if(ans) {
+            const rawQ = rawQuestionsPG.find(rq => rq.id === ans.questionId);
+            if(rawQ) {
+              const optIndex = rawQ.options.indexOf(ans.selectedText);
+              if(optIndex !== -1) {
+                const charOption = ["A", "B", "C", "D", "E"][optIndex];
+                formattedAnswers[rawQ.id - 1] = charOption;
+                
+                // Cek apakah jawaban siswa sesuai dengan 'key' di rawQuestionsPG
+                if(charOption === rawQ.key) {
+                  correctCount++;
+                }
+              }
+            }
+          }
+        });
+
+        const finalScore = rawQuestionsPG.length > 0 ? Math.round((correctCount / rawQuestionsPG.length) * 100) : 0;
+
+        payload.action = "submitQuiz";
+        payload.jawaban = formattedAnswers;
+        payload.score = finalScore;
+
+        // Kirim ke Google Apps Script
+        fetch(API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(payload)
+        })
+        .then(res => res.json())
+        .then(data => {
+          if(data.status === "success") {
+            document.getElementById("score-display").innerText = "Terima kasih, jawaban Anda telah direkam.";
+          } else {
+            showInfoModal("Error: " + data.message);
+          }
+        })
+        .catch(err => {
+          console.error("Detail Error:", err);
+          showInfoModal("Gagal koneksi ke server saat mengirim jawaban.");
+        });
+
+      } else {
+        document.getElementById("result-title").innerText = "Esai Berhasil Dikirim!";
+        document.getElementById("score-display").innerText = "Menunggu Koreksi Guru";
+        document.getElementById("result-subtitle").innerText = "Jawaban esai tersimpan terpisah dan tidak mempengaruhi nilai otomatis PG.";
+
+        let essayAnswersMap = {};
+        userAnswers.forEach(ans => {
+          if(ans) {
+            essayAnswersMap[`Soal_${ans.questionId}`] = ans.selectedText;
+          }
+        });
+
+        payload.action = "submitEssay";
+        payload.jawabanEsai = essayAnswersMap;
+
+        fetch(API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(payload)
+        })
+        .then(res => res.json())
+        .then(data => {
+          if(data.status === "success") {
+            document.getElementById("score-display").innerText = `Esai Tersimpan`;
+          } else {
+            showInfoModal("Error: " + data.message);
+          }
+        })
+        .catch(err => {
+          console.error("Detail Error:", err);
+          showInfoModal("Gagal koneksi ke server saat mengirim jawaban.");
+        });
+      }
+    }
+
+    function logViolationToSheet(catatanTeks) {
+      const kelas = document.getElementById("select-kelas") ? document.getElementById("select-kelas").value : "-";
+      const nama = document.getElementById("select-nama") ? document.getElementById("select-nama").value : "Anonim";
+
+      const payload = {
+        action: "logViolation",
+        nama: nama,
+        kelas: kelas,
+        catatan: catatanTeks
+      };
+
+      fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(payload),
+        keepalive: true
+      }).catch(err => console.error("Gagal kirim log pelanggaran:", err));
+    }
+
+    function setupAntiCheating() {
+      window.addEventListener("blur", function() {
+        if(quizActive) {
+          quizActive = false;
+          logViolationToSheet("Keluar dari layar/tab ujian (Ujian tereset)");
+          document.getElementById("cheat-modal").classList.remove("hidden");
+        }
+      });
+    }
+
+    function setupSecurityProtections() {
+      document.addEventListener('contextmenu', e => { e.preventDefault(); return false; });
+      document.addEventListener('copy', e => { e.preventDefault(); });
+    }
+
+    function showInfoModal(msg) {
+      document.getElementById("info-modal-msg").innerText = msg;
+      document.getElementById("info-modal").classList.remove("hidden");
+    }
+
+    function closeInfoModal() {
+      document.getElementById("info-modal").classList.add("hidden");
+    }
+  </script>
+</body>
+</html>
