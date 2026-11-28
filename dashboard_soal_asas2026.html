@@ -177,13 +177,13 @@
         <!-- Info KKM per Jenjang -->
         <div class="flex flex-wrap gap-2.5 text-xs relative z-10">
           <div class="px-3.5 py-2 rounded-2xl bg-sky-500/20 border border-sky-400/40 text-sky-200 font-bold">
-            Kelas 7 &bull; KKM 70
+            Kelas 7 &bull; KKM 73
           </div>
           <div class="px-3.5 py-2 rounded-2xl bg-amber-500/20 border border-amber-400/40 text-amber-200 font-bold">
-            Kelas 8 &bull; KKM 75
+            Kelas 8 &bull; KKM 76
           </div>
           <div class="px-3.5 py-2 rounded-2xl bg-pink-500/20 border border-pink-400/40 text-pink-200 font-bold">
-            Kelas 9 &bull; KKM 78
+            Kelas 9 &bull; KKM 79
           </div>
         </div>
       </div>
@@ -241,7 +241,7 @@
               <div class="flex flex-wrap items-center gap-2">
                 <h3 id="selectedKelasTitle" class="text-xl sm:text-2xl font-extrabold text-white">Kelas 7A</h3>
                 <span id="selectedMapelBadge" class="px-3 py-0.5 rounded-full text-xs font-extrabold bg-pink-500/30 text-pink-200 border border-pink-400/40">Semua Mapel</span>
-                <span id="selectedKelasKKM" class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-indigo-500/40 text-indigo-200 border border-indigo-400/40">KKM: 70</span>
+                <span id="selectedKelasKKM" class="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-indigo-500/40 text-indigo-200 border border-indigo-400/40">KKM: 73</span>
               </div>
               <p id="selectedKelasSummary" class="text-xs text-purple-200 mt-1">Total 0 data nilai tercatat</p>
             </div>
@@ -751,12 +751,12 @@
 
     function getKKMByKelas(kelasStr) {
       const clean = kelasStr.toUpperCase().trim();
-      if (clean.startsWith("7") || clean.startsWith("VII-") || clean.startsWith("VII ")) return 70;
-      if (clean.startsWith("8") || clean.startsWith("VIII-") || clean.startsWith("VIII ")) return 75;
-      if (clean.startsWith("9") || clean.startsWith("IX-") || clean.startsWith("IX ")) return 78;
-      if (clean.includes("7")) return 70;
-      if (clean.includes("8")) return 75;
-      if (clean.includes("9")) return 78;
+      if (clean.startsWith("7") || clean.startsWith("VII-") || clean.startsWith("VII ")) return 73;
+      if (clean.startsWith("8") || clean.startsWith("VIII-") || clean.startsWith("VIII ")) return 76;
+      if (clean.startsWith("9") || clean.startsWith("IX-") || clean.startsWith("IX ")) return 79;
+      if (clean.includes("7")) return 73;
+      if (clean.includes("8")) return 76;
+      if (clean.includes("9")) return 79;
       return 75;
     }
 
@@ -781,8 +781,8 @@
       uniqueClasses.forEach(kelasName => {
         const kkm = getKKMByKelas(kelasName);
         let accentColor = "from-sky-500/25 to-indigo-500/25 border-sky-400/40 hover:from-sky-500 hover:to-indigo-600";
-        if (kkm === 75) accentColor = "from-amber-500/25 to-orange-500/25 border-amber-400/40 hover:from-amber-500 hover:to-orange-600";
-        if (kkm === 78) accentColor = "from-pink-500/25 to-purple-500/25 border-pink-400/40 hover:from-pink-500 hover:to-purple-600";
+        if (kkm === 76) accentColor = "from-amber-500/25 to-orange-500/25 border-amber-400/40 hover:from-amber-500 hover:to-orange-600";
+        if (kkm === 79) accentColor = "from-pink-500/25 to-purple-500/25 border-pink-400/40 hover:from-pink-500 hover:to-purple-600";
 
         const btn = document.createElement("button");
         btn.onclick = () => selectHasilKelas(kelasName, btn);
